@@ -1,0 +1,11 @@
+---
+title: RYouWithMe
+author: Jen Richmond
+date: '2021-10-03'
+slug: []
+categories: []
+tags: []
+---
+R-Ladies Sydney #RYouWithMe modules are the best place for beginner R user to start their learning journey- I am not at all biased. 
+
+Start with [Basic Basics here](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-0/).

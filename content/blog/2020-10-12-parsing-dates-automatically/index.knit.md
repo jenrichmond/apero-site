@@ -1,0 +1,111 @@
+---
+title: lubridate parsing dates automatically
+author: ''
+date: '2020-10-18'
+slug: parsing-dates-automatically
+output:
+  html_document:
+    keep_md: yes
+
+---
+
+
+
+
+I've been looking at old Tidy Tuesday datasets this week to try and work out why sometimes date data is automatically parsed as dates, like in the palmer penguin dataset...
+
+
+
+```r
+penguins_raw <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins_raw.csv') %>%
+  clean_names
+
+# check class
+class(penguins_raw$date_egg)
+```
+
+```
+## [1] "Date"
+```
+
+```r
+# pull first date observation
+penguins_raw$date_egg[[1]]
+```
+
+```
+## [1] "2007-11-11"
+```
+
+And other times R thinks dates are characters, like in the marbles data. 
+
+
+```r
+# read data from Tidy Tuesday
+marbles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-06-02/marbles.csv')
+
+# check class
+class(marbles$date)
+```
+
+```
+## [1] "character"
+```
+
+```r
+# pull first date observation
+marbles$date[[1]]
+```
+
+```
+## [1] "15-Feb-20"
+```
+
+
+I have already learned [how to use dmy()](http://jenrichmond.rbind.io/post/converting-characters-to-dates/) and could convert the marble dates into date format pretty easily but...
+
+
+```r
+# convert date to dmy
+marbles$date <- dmy(marbles$date)
+# check class again
+class(marbles$date)
+```
+
+```
+## [1] "Date"
+```
+
+... why doesn't R recognise them as dates automatically?
+
+In the marbles data, the raw dates are in day-month-year format (i.e. 15-Feb-20). I like this format (because I live in Australia and it is consistent with how we write dates here), but maybe R prefers [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#:~:text=Although%20the%20standard%20allows%20both,YYYY%2DMM%20format%20is%20allowed1
+) format (i.e. YYYY-MM-DD) and will only parse dates in that format? 
+
+To test this hypothesis, I made a google form that asked respondents to enter their birthday 3 times...
+
+- first, however they wanted
+- second, using a date template
+- third, in yyyy-mm-dd format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

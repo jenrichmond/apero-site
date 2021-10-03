@@ -10,22 +10,28 @@ output:
 ---
 
 
-
-
 I've been looking at old Tidy Tuesday datasets this week to try and work out why sometimes date data is automatically parsed as dates, like in the palmer penguin dataset...
 
 
 
 ```r
-penguins_raw <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins_raw.csv') %>%
-  clean_names
+library(tidyverse)
+library(here)
+library(janitor)
+library(lubridate)
+library(googlesheets4)
+library(readxl)
+library(palmerpenguins)
+
+
+penguins_raw <- penguins_raw
 
 # check class
 class(penguins_raw$date_egg)
 ```
 
 ```
-## [1] "Date"
+## [1] "NULL"
 ```
 
 ```r
@@ -34,7 +40,7 @@ penguins_raw$date_egg[[1]]
 ```
 
 ```
-## [1] "2007-11-11"
+## NULL
 ```
 
 And other times R thinks dates are characters, like in the marbles data. 

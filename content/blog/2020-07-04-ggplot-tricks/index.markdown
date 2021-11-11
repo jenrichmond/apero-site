@@ -223,7 +223,12 @@ ggsave("testplot.png")
 
 Use fig.path in your RMarkdown setup chunk (the one that looks like this at the top of your .Rmd) to export all your plots to a figures folder. 
 
-<img src="/Users/jenny/Desktop/Desktop - N591/git/apero-site/content/blog/2020-07-04-ggplot-tricks/setup.png" width="1280" />
+
+```r
+knitr::include_graphics("/img/setup.png", error = FALSE)
+```
+
+![](/img/setup.png)<!-- -->
 
 
 This is where chunk labels are important. If your chunks are not labelled the exported files will be called "unnamed-chunk-somenumber.png" BUT if you label the chunk the file name of the exported plot will be meaningful. 

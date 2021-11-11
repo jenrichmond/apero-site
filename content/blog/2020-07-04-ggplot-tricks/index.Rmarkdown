@@ -187,7 +187,7 @@ ggsave("testplot.png")
 Use fig.path in your RMarkdown setup chunk (the one that looks like this at the top of your .Rmd) to export all your plots to a figures folder. 
 
 ```{r echo=FALSE}
-knitr::include_graphics(here::here("content", "blog", "2020-07-04-ggplot-tricks", "setup.png"))
+knitr::include_graphics("/img/setup.png", error = FALSE)
 ```
 
 

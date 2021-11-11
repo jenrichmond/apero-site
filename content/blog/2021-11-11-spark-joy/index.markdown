@@ -1,0 +1,35 @@
+---
+title: spark joy
+author: Jen Richmond
+date: '2021-11-11'
+slug: []
+categories:
+  - howto
+tags:
+  - blogdown
+  - workflow
+summary: "Working out how to Marie Kondo my blogdown workflow with categories and tags"
+---
+
+I am gradually moving my blog from my old hugo portfolio themed repo into this new hugo apero themed site, and I'm realising that my blog posts are getting plentiful enough that I need to think about structure. I need a little Marie Kondo in my blog life. 
+
+In my old blog, the posts were all on one page, with cards that were presented in a jigsaw pattern so I can just scroll down pretty quickly to find what I am looking for. 
+
+In the hugo apero theme, I have chosen a grid layout where the most recent 8 posts appear but then I have to click Older to page across to the next 8. 
+
+Some kind of category or tagging system is going to be helpful. 
+
+In the yaml, there are fields to add tags and categories, I think they have always been there, I have just never tried to use them... so here we go. 
+
+
+![](/img/tags.png)<!-- -->
+
+
+Lets see what that does... if anything!
+
+![](/img/details.png)<!-- -->
+
+Ahhh it does something! The tags end up in the details section that you can pull down from each post. There is also a read time estimate and word count there- nice!
+
+What about categories?
+

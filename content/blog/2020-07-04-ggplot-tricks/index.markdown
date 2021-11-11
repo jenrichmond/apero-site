@@ -20,13 +20,13 @@ Working from home and pivoting to teaching online has made me realise that my wi
 
 # Packages for reading data into R
 
-```{r message=FALSE, warning=FALSE}
+
+```r
 library(tidyverse) # includes readr for .csv files
 library(readxl) #for excel files
 library(googlesheets4) #read straight from google sheets
 library(datapasta) # for pasting data into R
 library(janitor) # quick name cleaning
-
 ```
 
 
@@ -36,14 +36,32 @@ The standard way to get data into R is to read a file that you have downloaded.
 
 Read a .csv file
 
-```{r}
+
+```r
 speed1 <- read_csv("crappy_internet.csv") %>%
   clean_names()
+```
 
+```
+## Rows: 50 Columns: 5
+```
+
+```
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (3): Timestamp, Where do you live, Is it raining?
+## dbl (2): Download speed, Upload speed
+```
+
+```
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 Read an excel file
-```{r eval = FALSE}
+
+```r
  speed2 <- read_excel("crappy_internet.xlsx")
 ```
 
@@ -52,28 +70,27 @@ Read an excel file
 
 But the `googlesheets4` package allows you to authenticate your google account and read data straight from from googlesheets using only the url. More info here https://googlesheets4.tidyverse.org/
 
-```{r message=FALSE, warning=FALSE, eval = FALSE}
 
+```r
 speed3 <- read_sheet("insertgooglesheetURLhere") %>%
   clean_names()
-
 ```
 
 #### 3. datapasta
 
 Alternatively, you can copy and "paste" the data into R using the datapasta package. Find the [vignette here](https://cran.r-project.org/web/packages/datapasta/vignettes/how-to-datapasta.html)
 
-```{r eval=FALSE}
 
+```r
 speed4 <- # select your data and do Ctrl-C, put your cursor here, and choose Addins, paste as dataframe, and then run the chunk
-
 ```
 
 
 
 # Packages for plotting
 
-```{r}
+
+```r
 library(ggbeeswarm) # add noise to point plots
 library(ggeasy) # easy wrappers for difficult to remember ggplot things
 library(papaja) # this is mostly a package for writing APA formatted manuscripts, but it also includes a ggplot theme that is nice
@@ -81,7 +98,8 @@ library(papaja) # this is mostly a package for writing APA formatted manuscripts
 
 
 ### First make the data long
-```{r}
+
+```r
 speedlong <- speed1 %>%
   select(where_do_you_live, is_it_raining, ends_with("speed")) %>%
   pivot_longer(names_to = "updown", values_to = "speed", download_speed:upload_speed)
@@ -94,46 +112,59 @@ speedlong$is_it_raining <- fct_relevel(speedlong$is_it_raining, c("Yes", "No"))
 There is 1 lucky person in the dataset who apparently has download speeds of > 150 mb/s, just filtering them out of each plot. 
 
 #### 1. geom_point()
-```{r pointplot}
+
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed)) +
   geom_point(size = 3) 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/pointplot-1.png" width="672" />
+
 This plot is ok, but all the points are on top of each other. 
 Use the ggbeeswarm package to add a little noise. 
 
 #### 2. geom_beeswarm()
-```{r ggbeeswarm}
+
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed)) +
   geom_beeswarm(size = 3) 
 ```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/ggbeeswarm-1.png" width="672" />
 Beeswarm is better but I'd like more noise. 
 
 #### 3. geom_quasirandom()
-```{r quasirandom}
+
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed)) +
   geom_quasirandom(width = 0.2, size = 3)
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/quasirandom-1.png" width="672" />
+
 Now I want to know which of these points were collected when it was raining. 
 
 #### 4. colouring the points
 
-```{r colourrain}
+
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed, colour = is_it_raining)) +
   geom_quasirandom(width = 0.2, size = 3)
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/colourrain-1.png" width="672" />
+
 #### 5. facet_wrap()
-```{r facet-rain}
+
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed, colour = is_it_raining)) +
@@ -141,13 +172,15 @@ speedlong %>%
   facet_wrap(~ is_it_raining)
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/facet-rain-1.png" width="672" />
+
 ## Making ggplot easy
 
 Now this version has lots of duplicated information. We probably don’t need the legend. How to remove the legend is something I have to google EVERY TIME. The ggplot solution is `+ theme(legend.title = element_blank())` — hard to remember
 
 #### 6. easily remove the legend
-```{r easynolegend}
 
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed, colour = is_it_raining)) +
@@ -156,11 +189,13 @@ speedlong %>%
   easy_remove_legend() 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/easynolegend-1.png" width="672" />
+
 #### 7. fix the formatting
 
 I really dislike the grey default of ggplot. Use theme_apa() to get nice formatting
-```{r apa-plot}
 
+```r
 speedlong %>%
   filter(speed < 100) %>%
  ggplot(aes(x = updown, y = speed, colour = is_it_raining)) +
@@ -170,6 +205,8 @@ speedlong %>%
   easy_remove_legend() 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/apa-plot-1.png" width="672" />
+
 
 ## Getting plots out of ggplot
 
@@ -177,18 +214,16 @@ speedlong %>%
 
 Put ggsave("nameofplot.png") at the end of each chunk and it will export the most recent plot. 
 
-```{r eval = FALSE}
-ggsave("testplot.png")
 
+```r
+ggsave("testplot.png")
 ```
 
 #### Option 2: RMarkdown magic
 
 Use fig.path in your RMarkdown setup chunk (the one that looks like this at the top of your .Rmd) to export all your plots to a figures folder. 
 
-```{r echo=FALSE}
-knitr::include_graphics(here::here("content", "blog", "2020-07-04-ggplot-tricks", "setup.png"))
-```
+<img src="/Users/jenny/Desktop/Desktop - N591/git/apero-site/content/blog/2020-07-04-ggplot-tricks/setup.png" width="1280" />
 
 
 This is where chunk labels are important. If your chunks are not labelled the exported files will be called "unnamed-chunk-somenumber.png" BUT if you label the chunk the file name of the exported plot will be meaningful. 

@@ -2,10 +2,13 @@
 title: making maps with R
 author: Jen Richmond
 date: '2021-10-13'
-slug: []
-image: "/map.png"
-categories: []
-tags: []
+categories:
+  - codeclub
+  - tidytuesday
+tags:
+  - maps
+  - ggplot
+summary: "Using TidyTuesday data to learn how to make maps in R"
 ---
 
 For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven't done in R before, so thought it might be useful to document my process. 

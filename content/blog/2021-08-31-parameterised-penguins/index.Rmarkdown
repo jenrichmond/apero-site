@@ -2,9 +2,13 @@
 title: parameterised penguins
 author: Jen Richmond
 date: '2021-08-31'
-slug: []
-categories: []
-tags: []
+categories:
+  - howto
+  - rmarkdown
+tags:
+  - parameters
+  - penguins
+summary: "Knit many reports at once using parameters in RMarkdown"
 ---
 
 ### How to use parameters and purrr to render many Rmd reports

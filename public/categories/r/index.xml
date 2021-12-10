@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Hugo Apéro</title>
+    <link>https://jennyrichmond.netlify.app/categories/r/</link>
+    <description>Recent content in R on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A campfire</title>
+      <link>https://jennyrichmond.netlify.app/talk/lubridate/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/lubridate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BYOD Getting started with the tidyverse</title>
+      <link>https://jennyrichmond.netlify.app/talk/byod/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/byod/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

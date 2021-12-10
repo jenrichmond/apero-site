@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>writing on Hugo Apéro</title>
+    <link>https://jennyrichmond.netlify.app/categories/writing/</link>
+    <description>Recent content in writing on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polish your thesis</title>
+      <link>https://jennyrichmond.netlify.app/talk/polish/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/polish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to write like a psychologist</title>
+      <link>https://jennyrichmond.netlify.app/talk/writing/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/writing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

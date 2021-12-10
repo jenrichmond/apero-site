@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Other R Projects on Hugo Apéro</title>
+    <link>https://jennyrichmond.netlify.app/project/</link>
+    <description>Recent content in My Other R Projects on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Am Learning R</title>
+      <link>https://jennyrichmond.netlify.app/project/2021-10-03-i-am-learning-r/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/project/2021-10-03-i-am-learning-r/</guid>
+      <description>Students often ask me what the best resources for learning R are&amp;hellip; #RYouWithMe is a great start, but I have another Distill site that showcases some of my other favourites at iamlearningr.netlify.app</description>
+    </item>
+    
+    <item>
+      <title>PSYC3361 internship</title>
+      <link>https://jennyrichmond.netlify.app/project/2021-10-03-psyc3361-internship/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/project/2021-10-03-psyc3361-internship/</guid>
+      <description>My favourite course is PSYC3361: Research internship. In recent years, we have gone all in on R and computational reproducibility. You can check out the course site (made with Distill) here.</description>
+    </item>
+    
+    <item>
+      <title>RYouWithMe</title>
+      <link>https://jennyrichmond.netlify.app/project/2021-10-03-ryouwithme/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/project/2021-10-03-ryouwithme/</guid>
+      <description>R-Ladies Sydney #RYouWithMe modules are the best place for beginner R user to start their learning journey- I am not at all biased.
+Start with Basic Basics here.</description>
+    </item>
+    
+  </channel>
+</rss>

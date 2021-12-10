@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Notes to Myself on Hugo Apéro</title>
+    <link>https://jennyrichmond.netlify.app/blog/</link>
+    <description>Recent content in R Notes to Myself on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>spark joy</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</guid>
+      <description>Working out how to Marie Kondo my blogdown workflow with categories and tags</description>
+    </item>
+    
+    <item>
+      <title>knitting to pdf</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/</guid>
+      <description>I&amp;rsquo;ve never really liked the default font that is used when Rmd knits to pdf. When knitting to pdf, R uses LaTex (which is why you often need to install the tinytex package) and the default in LaTex is called Computer Modern.
+You can customise fonts, size, and line spacing in the yaml. To change the font style you need to use a LaTex engine like xelatex and specify the mainfont (your main text) and monofont (code chunks and output).</description>
+    </item>
+    
+    <item>
+      <title>making maps with R</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/</guid>
+      <description>For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven&amp;rsquo;t done in R before, so thought it might be useful to document my process.
+first google   When I am trying something completely new in R, I generally google &amp;ldquo;how to do X in R blog&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>parameterised penguins</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/</guid>
+      <description>How to use parameters and purrr to render many Rmd reports I am beginning a project where we want to create a distill site that has lots of profile pages that all have the same format but pull different data from a dataframe. Here I am learning how to use set up parameters within RMarkdown so that I can use purrr to render many reports at once.
+how to customise your yaml yaml stands for “yet another markup language” and it is the code that you see at the top of your RMarkdown document that is between the sets of dashes.</description>
+    </item>
+    
+    <item>
+      <title>PAT for GitHub</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/</guid>
+      <description>I have been avoiding setting up a Personal Access Token to authenticate my github account for a while because it seemed complicated. Never fear Happy Git with R and usethis() to the rescue.
+create a token     install.packages(&amp;quot;usethis&amp;quot;) library(usethis) usethis::create_github_token() This will take you to github and create a token for you. Accept the defaults and copy the token.
+Go back to RStudio
+store it in your credentials     install.</description>
+    </item>
+    
+    <item>
+      <title>across and summary tables</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/</guid>
+      <description>Thanks to Tom Mock for saving me from this blogpost on twitter. I was monster number 6… beginning to convince myself that there were gremlins in the across() function.
+In fact, I had forgotten the golden rule:
+ don’t make objects that have the same names a functions
+ That is for another post…
+the across() function   I have been playing with the new across() function in dplyr which is a magical solution when you are looking to get several summary statistics across a range of variables.</description>
+    </item>
+    
+    <item>
+      <title>idhtg how to annotate plots</title>
+      <link>https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/</guid>
+      <description>A new post in my I Don&amp;rsquo;t Have to Google (idhtg) series. I&amp;rsquo;ve been wanting to work out how to add annotations to plots for a while and this plot from the @WeAreRladies account this week got me inspired!
+I also looked at activity by week. You can see that there are some weeks when there was a break between curators. You can also see curators are totally different - both in terms of number of tweets and the number of retweets and replies.</description>
+    </item>
+    
+    <item>
+      <title>ggplot tricks</title>
+      <link>https://jennyrichmond.netlify.app/blog/ggplot-tricks/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/ggplot-tricks/</guid>
+      <description>Here are some ggplot tricks that I shared at the R-Ladies Sydney June Show and Tell.
+Why is my internet speed so terrible?   Working from home and pivoting to teaching online has made me realise that my wifi connection is really bad, particularly when it rains. I have been teaching new honours students R and needed a little dataset to demo how to get data into R, so made a google form and put it out on twitter to confirm to myself that my connection really is worse than most other people.</description>
+    </item>
+    
+  </channel>
+</rss>

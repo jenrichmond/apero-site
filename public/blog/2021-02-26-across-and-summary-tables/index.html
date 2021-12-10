@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.84.0" />
+<title>across and summary tables | Hugo Apéro</title>
+
+
+<meta property="twitter:site" content="@jenrichmondPhD">
+<meta property="twitter:creator" content="@jenrichmondPhD">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Notes and talks and projects, a place to keep things that speed up my google process">
+
+
+<meta property="og:site_name" content="Hugo Apéro">
+<meta property="og:title" content="across and summary tables | Hugo Apéro">
+<meta property="og:description" content="Notes and talks and projects, a place to keep things that speed up my google process" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="across and summary tables">
+<meta itemprop="description" content="Thanks to Tom Mock for saving me from this blogpost on twitter. I was monster number 6… beginning to convince myself that there were gremlins in the across() function.
+In fact, I had forgotten the golden rule:
+ don’t make objects that have the same names a functions
+ That is for another post…
+the across() function   I have been playing with the new across() function in dplyr which is a magical solution when you are looking to get several summary statistics across a range of variables."><meta itemprop="datePublished" content="2021-02-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3196"><meta itemprop="image" content="https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/featured.jpg">
+<meta itemprop="keywords" content="" />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.d2c552db446b4f85e3b9747e754ea6fffbfdc03414f31ef55dab563fba201024.css" integrity="sha256-0sVS20RrT4XjuXR&#43;dU6m//v9wDQU8x71XatWP7ogECQ=" media="screen">
+  
+  
+  <script src="/panelset.min.d74e921a1b9af2d938fdff19e433ba539cdb202961eddae2356a54199f0653ec.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://jennyrichmond.netlify.app" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Hugo Apéro">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="R things I work on">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">across and summary tables</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Jen Richmond</p>
+        <p class="f7 db mv0 ttu">February 26, 2021</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>Thanks to 
+<a href="@thomas_mock">Tom Mock</a> for saving me from this blogpost on twitter. I was monster number 6… beginning to convince myself that there were gremlins in the <code>across()</code> function.</p>
+<p><img src="debugging.jpg" width="3364" /></p>
+<p>In fact, I had forgotten the golden rule:</p>
+<blockquote>
+<p>don’t make objects that have the same names a functions</p>
+</blockquote>
+<p>That is for another post…</p>
+
+
+
+
+<h1 id="the-across-function">the across() function
+  <a href="#the-across-function"></a>
+</h1>
+<p>I have been playing with the new <code>across()</code> function in <code>dplyr</code> which is a magical solution when you are looking to get several summary statistics across a range of variables. BUT…. working out how to get those summary stats nicely formatted in a table is a bit of a challenge.</p>
+
+
+
+
+<h1 id="load-packages">load packages
+  <a href="#load-packages"></a>
+</h1>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">library</span>(tidyverse)
+<span style="color:#900;font-weight:bold">library</span>(palmerpenguins)
+<span style="color:#900;font-weight:bold">library</span>(skimr)
+<span style="color:#900;font-weight:bold">library</span>(tableone)
+<span style="color:#900;font-weight:bold">library</span>(gt)
+</code></pre></div>
+
+
+
+<h1 id="get-data">get data
+  <a href="#get-data"></a>
+</h1>
+<p>Here I am using data from the palmer penguins package.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">penguins <span style="color:#000;font-weight:bold">&lt;-</span> penguins
+</code></pre></div>
+
+
+
+<h1 id="the-goal">the goal
+  <a href="#the-goal"></a>
+</h1>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">df <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tibble</span>(penguin_bits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;bill&#34;</span>, <span style="color:#d14">&#34;flipper&#34;</span>),
+             mean <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">43.92</span>, <span style="color:#099">200.92</span>), 
+             sd <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">5.46</span>, <span style="color:#099">14.06</span>), 
+             min <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">32.1</span>, <span style="color:#099">172</span>), 
+             max <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">59.6</span>, <span style="color:#099">231</span>))
+
+df <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">gt</span>()
+</code></pre></div><div id="dkrhbekpxj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+<p>#dkrhbekpxj .gt_table {
+display: table;
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}</p>
+<p>#dkrhbekpxj .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 0;
+padding-bottom: 6px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}</p>
+<p>#dkrhbekpxj .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}</p>
+<p>#dkrhbekpxj .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}</p>
+<p>#dkrhbekpxj .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}</p>
+<p>#dkrhbekpxj .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}</p>
+<p>#dkrhbekpxj .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}</p>
+<p>#dkrhbekpxj .gt_group_heading {
+padding: 8px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#dkrhbekpxj .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#dkrhbekpxj .gt_from_md &gt; :first-child {
+margin-top: 0;
+}</p>
+<p>#dkrhbekpxj .gt_from_md &gt; :last-child {
+margin-bottom: 0;
+}</p>
+<p>#dkrhbekpxj .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}</p>
+<p>#dkrhbekpxj .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 12px;
+}</p>
+<p>#dkrhbekpxj .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#dkrhbekpxj .gt_first_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#dkrhbekpxj .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}</p>
+<p>#dkrhbekpxj .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#dkrhbekpxj .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#dkrhbekpxj .gt_sourcenote {
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#dkrhbekpxj .gt_left {
+text-align: left;
+}</p>
+<p>#dkrhbekpxj .gt_center {
+text-align: center;
+}</p>
+<p>#dkrhbekpxj .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}</p>
+<p>#dkrhbekpxj .gt_font_normal {
+font-weight: normal;
+}</p>
+<p>#dkrhbekpxj .gt_font_bold {
+font-weight: bold;
+}</p>
+<p>#dkrhbekpxj .gt_font_italic {
+font-style: italic;
+}</p>
+<p>#dkrhbekpxj .gt_super {
+font-size: 65%;
+}</p>
+<p>#dkrhbekpxj .gt_footnote_marks {
+font-style: italic;
+font-weight: normal;
+font-size: 65%;
+}
+</style></p>
+<table class="gt_table">
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">penguin_bits</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">max</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">bill</td>
+<td class="gt_row gt_right">43.92</td>
+<td class="gt_row gt_right">5.46</td>
+<td class="gt_row gt_right">32.1</td>
+<td class="gt_row gt_right">59.6</td></tr>
+    <tr><td class="gt_row gt_left">flipper</td>
+<td class="gt_row gt_right">200.92</td>
+<td class="gt_row gt_right">14.06</td>
+<td class="gt_row gt_right">172.0</td>
+<td class="gt_row gt_right">231.0</td></tr>
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+<p>I want to get summary stats for bill and flipper length (mean, sd, min, and max) and have them display in a nice table like this. But this manual dataframe construction is a bit silly and not at all reproducable.</p>
+<blockquote>
+<p>Is there an easy way to get summary stats in this format so they are compatible with the gt package?</p>
+</blockquote>
+
+
+
+
+<h1 id="create-summary-stats-the-old-way">create summary stats the old way
+  <a href="#create-summary-stats-the-old-way"></a>
+</h1>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">penguins <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">summarise</span>(bill_mean <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">mean</span>(bill_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+            bill_sd <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">sd</span>(bill_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+             bill_min <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">min</span>(bill_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+             bill_max <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">max</span>(bill_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>), 
+             flipper_mean <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">mean</span>(flipper_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+            flipper_sd <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">sd</span>(flipper_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+             flipper_min <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">min</span>(flipper_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>),
+             flipper_max <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">max</span>(flipper_length_mm, na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">gt</span>()
+</code></pre></div><div id="sahlrlrsxk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+<p>#sahlrlrsxk .gt_table {
+display: table;
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}</p>
+<p>#sahlrlrsxk .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 0;
+padding-bottom: 6px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}</p>
+<p>#sahlrlrsxk .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}</p>
+<p>#sahlrlrsxk .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}</p>
+<p>#sahlrlrsxk .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}</p>
+<p>#sahlrlrsxk .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}</p>
+<p>#sahlrlrsxk .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}</p>
+<p>#sahlrlrsxk .gt_group_heading {
+padding: 8px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#sahlrlrsxk .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#sahlrlrsxk .gt_from_md &gt; :first-child {
+margin-top: 0;
+}</p>
+<p>#sahlrlrsxk .gt_from_md &gt; :last-child {
+margin-bottom: 0;
+}</p>
+<p>#sahlrlrsxk .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}</p>
+<p>#sahlrlrsxk .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 12px;
+}</p>
+<p>#sahlrlrsxk .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#sahlrlrsxk .gt_first_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#sahlrlrsxk .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}</p>
+<p>#sahlrlrsxk .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#sahlrlrsxk .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#sahlrlrsxk .gt_sourcenote {
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#sahlrlrsxk .gt_left {
+text-align: left;
+}</p>
+<p>#sahlrlrsxk .gt_center {
+text-align: center;
+}</p>
+<p>#sahlrlrsxk .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}</p>
+<p>#sahlrlrsxk .gt_font_normal {
+font-weight: normal;
+}</p>
+<p>#sahlrlrsxk .gt_font_bold {
+font-weight: bold;
+}</p>
+<p>#sahlrlrsxk .gt_font_italic {
+font-style: italic;
+}</p>
+<p>#sahlrlrsxk .gt_super {
+font-size: 65%;
+}</p>
+<p>#sahlrlrsxk .gt_footnote_marks {
+font-style: italic;
+font-weight: normal;
+font-size: 65%;
+}
+</style></p>
+<table class="gt_table">
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_max</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_max</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_right">43.92193</td>
+<td class="gt_row gt_right">5.459584</td>
+<td class="gt_row gt_right">32.1</td>
+<td class="gt_row gt_right">59.6</td>
+<td class="gt_row gt_right">200.9152</td>
+<td class="gt_row gt_right">14.06171</td>
+<td class="gt_row gt_right">172</td>
+<td class="gt_row gt_right">231</td></tr>
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+<p>The summarise function spits out summary stats in a SUPER wide format.</p>
+
+
+
+
+<h1 id="create-summary-stats-using-across">create summary stats using <code>across()</code>
+  <a href="#create-summary-stats-using-across"></a>
+</h1>
+<p>The new <code>across()</code> function gets you the same thing in many fewer lines of code, but still, it is VERY wide.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">penguins <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">summarise</span>(<span style="color:#900;font-weight:bold">across</span>(<span style="color:#900;font-weight:bold">contains</span>(<span style="color:#d14">&#34;length&#34;</span>),
+        <span style="color:#900;font-weight:bold">list</span>(mean <span style="color:#000;font-weight:bold">=</span> mean, sd <span style="color:#000;font-weight:bold">=</span> sd, min <span style="color:#000;font-weight:bold">=</span> min, max <span style="color:#000;font-weight:bold">=</span> max), na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">gt</span>()
+</code></pre></div><div id="jeofhivzxo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+<p>#jeofhivzxo .gt_table {
+display: table;
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}</p>
+<p>#jeofhivzxo .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 0;
+padding-bottom: 6px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}</p>
+<p>#jeofhivzxo .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}</p>
+<p>#jeofhivzxo .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}</p>
+<p>#jeofhivzxo .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}</p>
+<p>#jeofhivzxo .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}</p>
+<p>#jeofhivzxo .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}</p>
+<p>#jeofhivzxo .gt_group_heading {
+padding: 8px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#jeofhivzxo .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#jeofhivzxo .gt_from_md &gt; :first-child {
+margin-top: 0;
+}</p>
+<p>#jeofhivzxo .gt_from_md &gt; :last-child {
+margin-bottom: 0;
+}</p>
+<p>#jeofhivzxo .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}</p>
+<p>#jeofhivzxo .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 12px;
+}</p>
+<p>#jeofhivzxo .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#jeofhivzxo .gt_first_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#jeofhivzxo .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}</p>
+<p>#jeofhivzxo .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#jeofhivzxo .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#jeofhivzxo .gt_sourcenote {
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#jeofhivzxo .gt_left {
+text-align: left;
+}</p>
+<p>#jeofhivzxo .gt_center {
+text-align: center;
+}</p>
+<p>#jeofhivzxo .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}</p>
+<p>#jeofhivzxo .gt_font_normal {
+font-weight: normal;
+}</p>
+<p>#jeofhivzxo .gt_font_bold {
+font-weight: bold;
+}</p>
+<p>#jeofhivzxo .gt_font_italic {
+font-style: italic;
+}</p>
+<p>#jeofhivzxo .gt_super {
+font-size: 65%;
+}</p>
+<p>#jeofhivzxo .gt_footnote_marks {
+font-style: italic;
+font-weight: normal;
+font-size: 65%;
+}
+</style></p>
+<table class="gt_table">
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_length_mm_mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_length_mm_sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_length_mm_min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">bill_length_mm_max</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_length_mm_mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_length_mm_sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_length_mm_min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">flipper_length_mm_max</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_right">43.92193</td>
+<td class="gt_row gt_right">5.459584</td>
+<td class="gt_row gt_right">32.1</td>
+<td class="gt_row gt_right">59.6</td>
+<td class="gt_row gt_right">200.9152</td>
+<td class="gt_row gt_right">14.06171</td>
+<td class="gt_row gt_right">172</td>
+<td class="gt_row gt_right">231</td></tr>
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+
+
+
+
+<h1 id="skimr">skimr
+  <a href="#skimr"></a>
+</h1>
+<p>The skimr package is nice because it is tidyverse compatible (i.e. you can select with contains) AND the output can be a dataframe, which you can then edit.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">skimtable <span style="color:#000;font-weight:bold">&lt;-</span> penguins <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">select</span>(<span style="color:#900;font-weight:bold">contains</span>(<span style="color:#d14">&#34;length&#34;</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">skim</span>()
+
+skimtable
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Name</td>
+<td style="text-align:left">Piped data</td>
+</tr>
+<tr>
+<td style="text-align:left">Number of rows</td>
+<td style="text-align:left">344</td>
+</tr>
+<tr>
+<td style="text-align:left">Number of columns</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">_______________________</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Column type frequency:</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">numeric</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">________________________</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Group variables</td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: Data summary</p>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">skim_variable</th>
+<th style="text-align:right">n_missing</th>
+<th style="text-align:right">complete_rate</th>
+<th style="text-align:right">mean</th>
+<th style="text-align:right">sd</th>
+<th style="text-align:right">p0</th>
+<th style="text-align:right">p25</th>
+<th style="text-align:right">p50</th>
+<th style="text-align:right">p75</th>
+<th style="text-align:right">p100</th>
+<th style="text-align:left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bill_length_mm</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">43.92</td>
+<td style="text-align:right">5.46</td>
+<td style="text-align:right">32.1</td>
+<td style="text-align:right">39.23</td>
+<td style="text-align:right">44.45</td>
+<td style="text-align:right">48.5</td>
+<td style="text-align:right">59.6</td>
+<td style="text-align:left">▃▇▇▆▁</td>
+</tr>
+<tr>
+<td style="text-align:left">flipper_length_mm</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right">200.92</td>
+<td style="text-align:right">14.06</td>
+<td style="text-align:right">172.0</td>
+<td style="text-align:right">190.00</td>
+<td style="text-align:right">197.00</td>
+<td style="text-align:right">213.0</td>
+<td style="text-align:right">231.0</td>
+<td style="text-align:left">▂▇▃▅▂</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<p>For my purpose it is more than I need though. There is some selecting and renaming to do after the fact.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">skimtable_renamed <span style="color:#000;font-weight:bold">&lt;-</span> skimtable <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">select</span>(skim_variable, numeric.mean, numeric.sd, numeric.p0, numeric.p100) <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">rename</span>(penguin_bits <span style="color:#000;font-weight:bold">=</span> skim_variable, mean <span style="color:#000;font-weight:bold">=</span> numeric.mean, sd <span style="color:#000;font-weight:bold">=</span> numeric.sd, min <span style="color:#000;font-weight:bold">=</span> numeric.p0, max <span style="color:#000;font-weight:bold">=</span> numeric.p100)
+</code></pre></div><p>You do end up with a gt compatible dataframe.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">skimtable_renamed <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">gt</span>()
+</code></pre></div><div id="irqvmjyvki" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+<p>#irqvmjyvki .gt_table {
+display: table;
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}</p>
+<p>#irqvmjyvki .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 0;
+padding-bottom: 6px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}</p>
+<p>#irqvmjyvki .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}</p>
+<p>#irqvmjyvki .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}</p>
+<p>#irqvmjyvki .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}</p>
+<p>#irqvmjyvki .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}</p>
+<p>#irqvmjyvki .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}</p>
+<p>#irqvmjyvki .gt_group_heading {
+padding: 8px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#irqvmjyvki .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}</p>
+<p>#irqvmjyvki .gt_from_md &gt; :first-child {
+margin-top: 0;
+}</p>
+<p>#irqvmjyvki .gt_from_md &gt; :last-child {
+margin-bottom: 0;
+}</p>
+<p>#irqvmjyvki .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}</p>
+<p>#irqvmjyvki .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 12px;
+}</p>
+<p>#irqvmjyvki .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#irqvmjyvki .gt_first_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}</p>
+<p>#irqvmjyvki .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}</p>
+<p>#irqvmjyvki .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#irqvmjyvki .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}</p>
+<p>#irqvmjyvki .gt_sourcenote {
+font-size: 90%;
+padding: 4px;
+}</p>
+<p>#irqvmjyvki .gt_left {
+text-align: left;
+}</p>
+<p>#irqvmjyvki .gt_center {
+text-align: center;
+}</p>
+<p>#irqvmjyvki .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}</p>
+<p>#irqvmjyvki .gt_font_normal {
+font-weight: normal;
+}</p>
+<p>#irqvmjyvki .gt_font_bold {
+font-weight: bold;
+}</p>
+<p>#irqvmjyvki .gt_font_italic {
+font-style: italic;
+}</p>
+<p>#irqvmjyvki .gt_super {
+font-size: 65%;
+}</p>
+<p>#irqvmjyvki .gt_footnote_marks {
+font-style: italic;
+font-weight: normal;
+font-size: 65%;
+}
+</style></p>
+<table class="gt_table">
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">penguin_bits</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">mean</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">sd</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">min</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">max</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">bill_length_mm</td>
+<td class="gt_row gt_right">43.92193</td>
+<td class="gt_row gt_right">5.459584</td>
+<td class="gt_row gt_right">32.1</td>
+<td class="gt_row gt_right">59.6</td></tr>
+    <tr><td class="gt_row gt_left">flipper_length_mm</td>
+<td class="gt_row gt_right">200.91520</td>
+<td class="gt_row gt_right">14.061714</td>
+<td class="gt_row gt_right">172.0</td>
+<td class="gt_row gt_right">231.0</td></tr>
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+
+
+
+
+<h1 id="tableone-package">tableone package
+  <a href="#tableone-package"></a>
+</h1>
+<p>The TableOne package gives you mean and SD, is there a way to add other summary stats (like min &amp; max to TableOne?) And make the formatted nicer?</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">variables <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;bill_length_mm&#34;</span>, <span style="color:#d14">&#34;flipper_length_mm&#34;</span>)
+
+<span style="color:#900;font-weight:bold">CreateTableOne</span>(vars <span style="color:#000;font-weight:bold">=</span> variables, data <span style="color:#000;font-weight:bold">=</span> penguins)
+</code></pre></div><pre><code>##                                
+##                                 Overall       
+##   n                                344        
+##   bill_length_mm (mean (SD))     43.92 (5.46) 
+##   flipper_length_mm (mean (SD)) 200.92 (14.06)
+</code></pre>
+<br>
+<br>
+
+
+
+
+<h1 id="summarise--across--pivot-">summarise + across + pivot ?
+  <a href="#summarise--across--pivot-"></a>
+</h1>
+<p>Ideally, I want to be able to use <code>summarise()</code> and <code>across()</code> and somehow make the wide output long. The problem is that <code>pivot_longer()</code> will take more than 1 “names_to” argument, but not more than a single “values_to” argument.</p>
+<p>I would like to be able to pivot wide summary stats long like this…</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">penguins <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">summarise</span>(<span style="color:#900;font-weight:bold">across</span>(<span style="color:#900;font-weight:bold">contains</span>(<span style="color:#d14">&#34;length&#34;</span>),
+        <span style="color:#900;font-weight:bold">list</span>(mean <span style="color:#000;font-weight:bold">=</span> mean, sd <span style="color:#000;font-weight:bold">=</span> sd, min <span style="color:#000;font-weight:bold">=</span> min, max <span style="color:#000;font-weight:bold">=</span> max), na.rm <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+      <span style="color:#900;font-weight:bold">pivot_longer</span>(names_to <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;penguin_bits&#34;</span>, values_to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;mean&#34;</span>, <span style="color:#d14">&#34;sd&#34;</span>, <span style="color:#d14">&#34;max&#34;</span>, <span style="color:#d14">&#34;min&#34;</span>), <span style="color:#099">1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#099">8</span>, values_sep <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;_&#34;</span>)
+</code></pre></div><p>… but not sure if that is possible.</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 26, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">16 minute read, 3196 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/">&larr; PAT for GitHub</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/">idhtg how to annotate plots &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/jenrichmond/apero-site" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/JenRichmondPhD" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-5808-4249" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/blog/index.xml" title="rss" >
+      <i class="fas fa-rss fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

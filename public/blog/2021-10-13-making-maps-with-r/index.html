@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.84.0" />
+<title>making maps with R | Hugo Apéro</title>
+
+
+<meta property="twitter:site" content="@jenrichmondPhD">
+<meta property="twitter:creator" content="@jenrichmondPhD">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Notes and talks and projects, a place to keep things that speed up my google process">
+
+
+<meta property="og:site_name" content="Hugo Apéro">
+<meta property="og:title" content="making maps with R | Hugo Apéro">
+<meta property="og:description" content="Notes and talks and projects, a place to keep things that speed up my google process" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png" >
+    
+    
+  <meta itemprop="name" content="making maps with R">
+<meta itemprop="description" content="For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven&rsquo;t done in R before, so thought it might be useful to document my process.
+first google   When I am trying something completely new in R, I generally google &ldquo;how to do X in R blog&rdquo;."><meta itemprop="datePublished" content="2021-10-13T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-10-13T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1512"><meta itemprop="image" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png">
+<meta itemprop="keywords" content="" />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.d2c552db446b4f85e3b9747e754ea6fffbfdc03414f31ef55dab563fba201024.css" integrity="sha256-0sVS20RrT4XjuXR&#43;dU6m//v9wDQU8x71XatWP7ogECQ=" media="screen">
+  
+  
+  <script src="/panelset.min.d74e921a1b9af2d938fdff19e433ba539cdb202961eddae2356a54199f0653ec.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://jennyrichmond.netlify.app" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Hugo Apéro">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="R things I work on">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">making maps with R</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Jen Richmond</p>
+        <p class="f7 db mv0 ttu">October 13, 2021</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven&rsquo;t done in R before, so thought it might be useful to document my process.</p>
+
+
+
+
+<h1 id="first-google">first google
+  <a href="#first-google"></a>
+</h1>
+<p>When I am trying something completely new in R, I generally google <em>&ldquo;how to do X in R blog&rdquo;</em>. Rather than looking for packages or documentation, I look for &ldquo;walk through&rdquo; style blog posts, preferably written by other beginners, or people I know to be really good R teachers. This time my search pulled up 
+<a href="https://www.littlemissdata.com/blog/maps" target="_blank" rel="noopener">this post</a> by Little Miss Data aka 
+<a href="@littlemissdata">Laura Ellis</a>. I &ldquo;know&rdquo; Laura from #rstats twitter and her blog is awesome, so seemed like a good place to start.
+That post turned out to be about the <code>ggmap</code> package, which if you are looking to plot things on a city map might be useful. Not so good for plotting a US map though. Laura&rsquo;s blog has a search function (I need to upgrade my blog so I can search it) though and when I searched the blog for &ldquo;map&rdquo;, it turns out that she has 
+<a href="https://www.littlemissdata.com/search?q=map" target="_blank" rel="noopener">lots of map-related posts</a>, including 
+<a href="https://www.littlemissdata.com/blog/usmap?rq=map" target="_blank" rel="noopener">this one</a> about easy US maps.</p>
+<p>The post uses the 
+<a href="https://cran.r-project.org/web/packages/usmap/vignettes/mapping.html" target="_blank" rel="noopener">usmap package</a>, which is pretty easy to work with.</p>
+<p>Here goes&hellip;</p>
+
+
+
+
+<h3 id="load-packages">load packages
+  <a href="#load-packages"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">library</span>(tidytuesdayR) <span style="color:#998;font-style:italic"># to get tidytuesday data</span>
+<span style="color:#900;font-weight:bold">library</span>(tidyverse) <span style="color:#998;font-style:italic"># for ggplot</span>
+<span style="color:#900;font-weight:bold">library</span>(usmap) <span style="color:#998;font-style:italic"># to get maps</span>
+<span style="color:#900;font-weight:bold">library</span>(janitor) <span style="color:#998;font-style:italic"># for clean_names</span>
+<span style="color:#900;font-weight:bold">library</span>(ggeasy) <span style="color:#998;font-style:italic"># making ggplot customisation easy</span>
+<span style="color:#900;font-weight:bold">library</span>(gganimate) <span style="color:#998;font-style:italic"># for animating map by year</span>
+<span style="color:#900;font-weight:bold">library</span>(transformr) <span style="color:#998;font-style:italic"># i think i need this for gganimate</span>
+<span style="color:#900;font-weight:bold">library</span>(patchwork) <span style="color:#998;font-style:italic"># to patch plots together</span>
+</code></pre></div>
+
+
+
+<h3 id="read-data">read data
+  <a href="#read-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>The tidytuesdayR package makes it super easy to read data straight from github. We are working with the registered nurses data from Oct 5th. Here I am using double brackets to pull out the dataframe from the list, and <code>clean_names()</code> to make all of the variable names lower case with underscores in the gaps.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tt <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tt_load</span>(<span style="color:#d14">&#34;2021-10-05&#34;</span>)
+</code></pre></div><pre><code>## 
+## 	Downloading file 1 of 1: `nurses.csv`
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">nurses <span style="color:#000;font-weight:bold">&lt;-</span> tt[[1]]
+
+nurses <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">clean_names</span>(nurses)
+</code></pre></div>
+
+
+
+<h3 id="make-it-smaller">make it smaller
+  <a href="#make-it-smaller"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Using the <code>glimpse()</code> function, I can see that there are 22 variables in this dataset.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">glimpse</span>(nurses)
+</code></pre></div><pre><code>## Rows: 1,242
+## Columns: 22
+## $ state                                        &lt;chr&gt; &quot;Alabama&quot;, &quot;Alaska&quot;, &quot;Ari…
+## $ year                                         &lt;dbl&gt; 2020, 2020, 2020, 2020, 2…
+## $ total_employed_rn                            &lt;dbl&gt; 48850, 6240, 55520, 25300…
+## $ employed_standard_error_percent              &lt;dbl&gt; 2.9, 13.0, 3.7, 4.2, 2.0,…
+## $ hourly_wage_avg                              &lt;dbl&gt; 28.96, 45.81, 38.64, 30.6…
+## $ hourly_wage_median                           &lt;dbl&gt; 28.19, 45.23, 37.98, 29.9…
+## $ annual_salary_avg                            &lt;dbl&gt; 60230, 95270, 80380, 6364…
+## $ annual_salary_median                         &lt;dbl&gt; 58630, 94070, 79010, 6233…
+## $ wage_salary_standard_error_percent           &lt;dbl&gt; 0.8, 1.4, 0.9, 1.4, 1.0, …
+## $ hourly_10th_percentile                       &lt;dbl&gt; 20.75, 31.50, 27.66, 21.4…
+## $ hourly_25th_percentile                       &lt;dbl&gt; 23.73, 36.94, 32.58, 25.7…
+## $ hourly_75th_percentile                       &lt;dbl&gt; 33.15, 53.31, 44.67, 35.4…
+## $ hourly_90th_percentile                       &lt;dbl&gt; 38.67, 60.70, 50.14, 39.6…
+## $ annual_10th_percentile                       &lt;dbl&gt; 43150, 65530, 57530, 4466…
+## $ annual_25th_percentile                       &lt;dbl&gt; 49360, 76830, 67760, 5349…
+## $ annual_75th_percentile                       &lt;dbl&gt; 68960, 110890, 92920, 736…
+## $ annual_90th_percentile                       &lt;dbl&gt; 80420, 126260, 104290, 82…
+## $ location_quotient                            &lt;dbl&gt; 1.20, 0.98, 0.91, 1.00, 0…
+## $ total_employed_national_aggregate            &lt;dbl&gt; 140019790, 140019790, 140…
+## $ total_employed_healthcare_national_aggregate &lt;dbl&gt; 8632190, 8632190, 8632190…
+## $ total_employed_healthcare_state_aggregate    &lt;dbl&gt; 128600, 17730, 171010, 80…
+## $ yearly_total_employed_state_aggregate        &lt;dbl&gt; 1903210, 296300, 2835110,…
+</code></pre><p>I think that hourly_wage_median is probably the most interesting variable to look at by state. So I am going to select just state, year, and median wage.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">wages <span style="color:#000;font-weight:bold">&lt;-</span> nurses <span style="color:#000;font-weight:bold">%&gt;%</span>
+ <span style="color:#900;font-weight:bold">select</span>(state, year, hourly_wage_median) 
+</code></pre></div><p>I am interested in changes over time and can use <code>unique()</code> to see that the data ranges from 1998 to 2000. I am going to try plotting a map of wages in 1998 and compare that to a map in 2000. To do that I am going to filter the data for only 1998 and 2000 and make separate dataframes for each year.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">unique</span>(wages<span style="color:#000;font-weight:bold">$</span>year)
+</code></pre></div><pre><code>##  [1] 2020 2018 2015 2013 2012 2019 2009 2008 2010 2007 2002 2001 2006 2003 2005
+## [16] 2004 2016 2017 2011 2014 2000 1999 1998
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">wages1998 <span style="color:#000;font-weight:bold">&lt;-</span> wages <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">filter</span>(year <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">1998</span>)
+
+wages2020 <span style="color:#000;font-weight:bold">&lt;-</span> wages <span style="color:#000;font-weight:bold">%&gt;%</span>
+  <span style="color:#900;font-weight:bold">filter</span>(year <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">2020</span>)
+</code></pre></div>
+
+
+
+<h3 id="get-a-map-template">get a map template
+  <a href="#get-a-map-template"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Now for the map. The <code>usmap</code> package has a map template that pulls Alaska and Hawaii into a convenient, if not geographically accurate, location on the map.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">plot_usmap</span>()
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+
+
+
+
+<h3 id="fill-with-your-data">fill with your data
+  <a href="#fill-with-your-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>You can fill the states by a particular variable by telling the function what data and values should be mapped. Here I am plotting 1998 and 2020 median wage data separately and using the <code>patchwork</code> package to display two plots side by side.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">p1 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages1998, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>)
+
+p2 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages2020, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>)
+
+p1 <span style="color:#000;font-weight:bold">+</span> p2
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+
+
+
+
+<h3 id="customise-the-colourslegend">customise the colours/legend
+  <a href="#customise-the-colourslegend"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A few issues to fix&hellip;</p>
+<ul>
+<li>the colour palette isn&rsquo;t great</li>
+<li>the legend is obscuring the map</li>
+<li>we could do with labels/titles</li>
+</ul>
+<p>The nice thing about <code>usmap</code> objects is that they are ggplot compatible, so you can customise colours/legends/labels as you would any other ggplot.</p>
+<p>Here I am using <code>scale_fill_continuous()</code> to change the colours to be from white to red, adding a name (aka label) to the legend, and adjusting the limits so that the colour scale is comparable across 1998 and 2020. I am also moving the legend to the right, using <code>easy_move_legend()</code> from the <code>ggeasy</code> package. I am adding a title to each plot using <code>labs()</code> and putting a box around each map the <code>theme()</code> function.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">p3 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages1998, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">scale_fill_continuous</span>(low <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;white&#34;</span>, high <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;red&#34;</span>, 
+                         name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>, 
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 1998&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p4 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages2020, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">scale_fill_continuous</span>(low <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;white&#34;</span>, high <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;red&#34;</span>, 
+                         name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>, 
+                       limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+   <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 2020&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p3 <span style="color:#000;font-weight:bold">+</span> p4
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+
+
+
+
+<h3 id="try-different-palettes">try different palettes
+  <a href="#try-different-palettes"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>OK the shades of red plot is a little hard to look at so I did a little googling about other options for continuous colour palettes. I found that <code>scale_viridis_c()</code> gets quite a nice effect.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">p5 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages1998, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">scale_fill_viridis_c</span>(name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>, 
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 1998&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p6 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages2020, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">scale_fill_viridis_c</span>(name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>, 
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+   <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 2020&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p5 <span style="color:#000;font-weight:bold">+</span> p6
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>But don&rsquo;t limit yourself to ggplot defaults; there are lots of different palette packages that have continuous palettes. I learned about a new one at Code Club today called 
+<a href="https://github.com/jakelawlor/PNWColors" target="_blank" rel="noopener">PNWColors</a> that is inspired by Pacific North West landscapes.</p>
+<p>Here I am setting the &ldquo;pal&rdquo; and using that to define colours within a <code>scale_fill_gradientn()</code> instead of <code>scale_fill_continous()</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#900;font-weight:bold">library</span>(PNWColors)
+
+pal <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">pnw_palette</span>(<span style="color:#d14">&#34;Bay&#34;</span>, n<span style="color:#000;font-weight:bold">=</span><span style="color:#099">100</span>, type<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;continuous&#34;</span>)
+
+p7 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages1998, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">scale_fill_gradientn</span>(colours <span style="color:#000;font-weight:bold">=</span> pal, 
+                       name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>,
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 1998&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p8 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages2020, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+ <span style="color:#900;font-weight:bold">scale_fill_gradientn</span>(colours <span style="color:#000;font-weight:bold">=</span> pal, 
+                       name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>,
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+   <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Hourly wage in 2020&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+
+p7 <span style="color:#000;font-weight:bold">+</span> p8
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Ooooo,  that pretty nicely captures the massive change in registered nurses wages from 1998 to 2020. What about if we wanted to see what was happening in between&hellip; enter&hellip;</p>
+
+
+
+
+<h3 id="gganimate">gganimate
+  <a href="#gganimate"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>The <code>gganimate</code> package makes it pretty easy to illustrate transitions (like changes across time) in your plot. Start by making a static plot that contains the data over all years. Here I am going to use the wage dataframe (rather than the ones filtered for just 1998 and 2020).</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">plot <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">plot_usmap</span>(data <span style="color:#000;font-weight:bold">=</span> wages, values <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;hourly_wage_median&#34;</span>, labels<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+ <span style="color:#900;font-weight:bold">scale_fill_gradientn</span>(colours <span style="color:#000;font-weight:bold">=</span> pal, 
+                       name <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;median&#34;</span>,
+                        limits <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">10</span>,<span style="color:#099">60</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">easy_move_legend</span>(to <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;right&#34;</span>)) <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">theme</span>(panel.background <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">element_rect</span>(colour <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;black&#34;</span>))
+
+plot
+</code></pre></div><p><img src="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Then to that plot I am going to use <code>labs()</code> to add a title that will count up each year. It is important to make the frame_time an integer here so that you don&rsquo;t get in between year states in your animation. Then I am adding <code>transition_time(year)</code>, which will make a separate plot for each year that can be animated together.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">transition <span style="color:#000;font-weight:bold">&lt;-</span> plot <span style="color:#000;font-weight:bold">+</span>
+  <span style="color:#900;font-weight:bold">labs</span>(title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Median nurse hourly rate each year {as.integer(frame_time)}&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+    <span style="color:#900;font-weight:bold">transition_time</span>(year) 
+</code></pre></div><p>Then you use the <code>animate()</code> function, playing with the frames per second to work out the optimal transition speed. This animate process will chug a little if your computer is as old and slow as mine, but be patient&hellip;</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">anim <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">animate</span>(transition, fps<span style="color:#000;font-weight:bold">=</span><span style="color:#099">10</span>)
+</code></pre></div><p>You will end up with a gif image called &ldquo;anim&rdquo; which you can preview in the Viewer pane and/or save to .gif using the <code>anim_save()</code> function.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># show in the viewer</span>
+anim
+</code></pre></div><p><img src="index_files/figure-html/unnamed-chunk-14-1.gif" alt=""><!-- --></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># save to .gif</span>
+
+<span style="color:#900;font-weight:bold">anim_save</span>(<span style="color:#d14">&#34;map_nurses.gif&#34;</span>, anim)
+</code></pre></div>
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">October 13, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">8 minute read, 1512 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/">&larr; knitting to pdf</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/">parameterised penguins &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/jenrichmond/apero-site" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/JenRichmondPhD" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-5808-4249" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/blog/index.xml" title="rss" >
+      <i class="fas fa-rss fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

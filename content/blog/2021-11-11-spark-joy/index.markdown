@@ -5,6 +5,7 @@ date: '2021-11-11'
 slug: []
 categories:
   - howto
+  - blogdown
 tags:
   - blogdown
   - workflow
@@ -22,14 +23,26 @@ Some kind of category or tagging system is going to be helpful.
 In the yaml, there are fields to add tags and categories, I think they have always been there, I have just never tried to use them... so here we go. 
 
 
-![](/img/tags.png)<!-- -->
+<img src="tags.png" width="646" />
 
 
 Lets see what that does... if anything!
 
-![](/img/details.png)<!-- -->
+<img src="details.png" width="417" />
+
 
 Ahhh it does something! The tags end up in the details section that you can pull down from each post. There is also a read time estimate and word count there- nice!
 
+
+
 What about categories?
 
+
+<img src="howto.png" width="522" />
+
+
+Ah ha! It didn't look like the category did anything until I did `serve_site()` and pushed back to github, but it worked. 
+
+The category appears next to the author line and tags appear in the details- excellent!
+
+I also really like being able to specify a summary in the yaml. By default it prints the first paragraph or so from your post, but maybe with shorter descriptions, I might be able to git more posts on a page! 

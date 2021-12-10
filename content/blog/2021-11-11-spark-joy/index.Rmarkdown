@@ -24,27 +24,30 @@ In the yaml, there are fields to add tags and categories, I think they have alwa
 
 
 ```{r echo=FALSE}
-knitr::include_graphics("/img/tags.png", error = FALSE)
+knitr::include_graphics("tags.png", error = FALSE)
 ```
 
 
 Lets see what that does... if anything!
 
 ```{r echo=FALSE}
-knitr::include_graphics("/img/details.png", error = FALSE)
+knitr::include_graphics("details.png", error = FALSE)
 ```
 
+
 Ahhh it does something! The tags end up in the details section that you can pull down from each post. There is also a read time estimate and word count there- nice!
+
+
 
 What about categories?
 
 
 ```{r echo=FALSE}
-knitr::include_graphics("/img/howto.png", error = FALSE)
+knitr::include_graphics("howto.png", error = FALSE)
 ```
 
 
-Ah ha! It didn't look like the category did anything until I did serve_site() and pushed back to github, but it worked. 
+Ah ha! It didn't look like the category did anything until I did `serve_site()` and pushed back to github, but it worked. 
 
 The category appears next to the author line and tags appear in the details- excellent!
 

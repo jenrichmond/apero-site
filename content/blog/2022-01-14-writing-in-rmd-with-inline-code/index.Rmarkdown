@@ -1,0 +1,117 @@
+---
+title: writing in Rmd with inline code
+author: ''
+date: '2022-01-14'
+slug: []
+categories: []
+tags: []
+---
+One of the best things about RMarkdown is that you can use inline code to report summary and inferential statistics in your text. This means that it is impossible to make an error and if your data/values change, the text automatically updates. 
+
+Here I play with some penguin data and reporting summary stats using inline code. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# load packages/data
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(janitor)
+library(palmerpenguins)
+library(gt)
+
+options(digits=2)
+
+penguins <- penguins
+
+```
+
+
+# count the penguins
+
+Lets make a table that counts how many penguins there are in each species. 
+
+Here I'm using the `tabyl()` function from the `janitor` package to count how many penguins there are in each species and adorn a total column, then printing the table using `gt()`. 
+
+```{r}
+count_penguins <- penguins %>%
+  tabyl(species) %>%
+  adorn_totals() 
+
+
+gt(count_penguins)
+
+```
+
+
+
+Now I can use inline text to refer to values in the count_penguins dataframe. The syntax goes like this...
+
+> r dataframe$column[rownumber]
+
+For example, the following text in my Rmd file... 
+
+```{r echo=FALSE}
+knitr::include_graphics(here::here("content", "blog", "2022-01-14-writing-in-rmd-with-inline-code",  "count_inline.png"))
+
+```
+
+... knits into the text below. 
+
+
+In the Palmer penguins dataset, there are body measurements from a total of `r count_penguins$n[4]` penguins. There are 3 species represented (N = `r count_penguins$n[3]` Gentoo, N = `r count_penguins$n[2]` Chinstrap and N = `r count_penguins$n[1]` Adelie). 
+
+Lets get some summary statistics. 
+
+```{r}
+body_mass <- penguins %>%
+  group_by(species) %>%
+  summarise(mean = mean(body_mass_g, na.rm = TRUE))
+
+gt(body_mass)
+
+```
+
+Now this text in my Rmd file... 
+
+```{r echo=FALSE}
+knitr::include_graphics(here::here("content", "blog", "2022-01-14-writing-in-rmd-with-inline-code", "mean.png"))
+
+```
+
+... knits into the text below. 
+
+On average, Gentoo penguins are the heaviest (*M* = `r body_mass$mean[3]` g); Chinstrap (*M* = `r body_mass$mean[2]` g) and Adelie (*M* = `r body_mass$mean[1]` g) penguins are smaller. 
+
+
+# Reproducibility risks with inline code
+
+Writing  reports with Rmd can save you tons of time because once you have the code, you can reuse it with different data. But there are also risks... what if in the next penguin experiment, the mean body mass that ended up in the 3rd row of this table wasn't for the Gentoo penguins, but rather some other species.  
+
+You can refer to rows by name in inline code using the column_to_rowname() function from `tibble`. 
+
+```{r}
+
+body_mass <- penguins %>%
+  group_by(species) %>%
+  summarise(mean = mean(body_mass_g, na.rm = TRUE)) %>%
+  column_to_rownames(var = "species") # this replaces rownames that are numbers with species values
+
+# print the rownames
+rownames(body_mass)
+
+```
+
+Once the species values are rownames, you can refer to a particular row,column by their name within square brackets. Not sure why you need quotes to refer by row/col name... its a mystery but it works! 
+
+```{r echo=FALSE}
+knitr::include_graphics(here::here("content", "blog", "2022-01-14-writing-in-rmd-with-inline-code", "rownames.png"))
+
+```
+
+On average, Gentoo penguins are the heaviest (*M* = `r body_mass["Gentoo", "mean"]` g); Chinstrap (*M* = `r body_mass["Chinstrap", "mean"]` g) and Adelie (*M* = `r body_mass["Adelie", "mean"]` g) penguins are smaller. 
+
+
+
+

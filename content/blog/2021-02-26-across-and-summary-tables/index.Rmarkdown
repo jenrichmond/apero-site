@@ -3,16 +3,13 @@ title: across and summary tables
 author: Jen Richmond
 date: '2021-02-26'
 categories:
-  - howto
   - dplyr
   - across
   - tables
 tags:
-  - howto
   - dplyr
   - across
   - tables
-tags: []
 output:
   html_document:
     keep_md: yes
@@ -26,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Thanks to [Tom Mock](@thomas_mock) for saving me from this blogpost on twitter. I was monster number 6... beginning to convince myself that there were gremlins in the `across()` function. 
 
 ```{r echo=FALSE}
-knitr::include_graphics("debugging.jpg")
+knitr::include_graphics("/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2021-02-26-across-and-summary-tables/monsters.jpeg")
 ```
 
 In fact, I had forgotten the golden rule: 

@@ -49,6 +49,4 @@ gitcreds_get()
 
 ```
 
-```{r echo=FALSE}
-knitr::include_graphics("gitcreds.png")
-```
+<img src="gitcreds.png" width="270" />

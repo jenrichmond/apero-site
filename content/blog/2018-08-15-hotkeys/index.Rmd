@@ -3,7 +3,12 @@ title: hotkeys
 author: ''
 date: '2018-08-15'
 slug: hotkeys
-categories: []
+categories:
+  - shortcuts
+  - workflow
+tags:
+  - shortcuts
+  - workflow
 output:
   html_document:
     keep_md: yes

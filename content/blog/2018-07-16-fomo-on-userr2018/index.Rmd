@@ -3,8 +3,10 @@ title: 'fomo on #useR2018'
 author: Jen Richmond
 date: '2018-07-16'
 slug: fomo-on-user2018
-categories: []
-tags: []
+categories:
+  - useR
+tags:
+  - useR
 output:
   html_document:
     keep_md: yes

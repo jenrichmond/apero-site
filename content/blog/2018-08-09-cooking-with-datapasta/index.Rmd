@@ -3,7 +3,12 @@ title: cooking with datapasta
 author: ''
 date: '2018-08-09'
 slug: cooking-with-datapasta
-categories: []
+categories:
+  - datapasta
+  - EMG
+tags:
+  - datapasta
+  - EMG
 output:
   html_document:
     keep_md: yes

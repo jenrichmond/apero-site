@@ -3,8 +3,10 @@ title: calculating age
 author: ''
 date: '2018-08-04'
 slug: calculating-age
-categories: []
-tags: []
+categories:
+  - lubridate
+tags:
+  - lubridate
 output:
   html_document:
     keep_md: yes

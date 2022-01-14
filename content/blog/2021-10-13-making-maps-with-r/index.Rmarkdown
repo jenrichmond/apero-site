@@ -5,7 +5,11 @@ date: '2021-10-13'
 categories:
   - codeclub
   - tidytuesday
+  - maps
+  - ggplot
 tags:
+  - codeclub
+  - tidytuesday
   - maps
   - ggplot
 summary: "Using TidyTuesday data to learn how to make maps in R"

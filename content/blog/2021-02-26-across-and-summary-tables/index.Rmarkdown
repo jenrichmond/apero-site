@@ -2,7 +2,16 @@
 title: across and summary tables
 author: Jen Richmond
 date: '2021-02-26'
-categories: []
+categories:
+  - howto
+  - dplyr
+  - across
+  - tables
+tags:
+  - howto
+  - dplyr
+  - across
+  - tables
 tags: []
 output:
   html_document:

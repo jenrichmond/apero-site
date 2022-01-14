@@ -16,11 +16,10 @@ sidebar:
   description: |
     A PSYC3361 internship documentation challenge
     
-    Check out the _index.md file in the /blog/spoonful-series
-    folder to edit this content.
+    
   text_link_label: ""
   text_link_url: ""
-  show_sidebar_adunit: false # show ad container
+  show_sidebar_adunit: true # show ad container
 
 # set up common front matter for all individual pages in series
 cascade:
@@ -32,7 +31,7 @@ cascade:
   sidebar:
     text_link_label: ""
     text_link_url: ""
-    show_sidebar_adunit: false # show ad container
+    show_sidebar_adunit: true # show ad container
     text_series_label: "In this series" 
     text_contents_label: "On this page" 
   tags:

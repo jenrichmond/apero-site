@@ -3,8 +3,14 @@ title: i am learning about... clean_names
 author: ''
 date: '2021-06-16'
 slug: []
-categories: []
-tags: []
+categories: 
+- i am learning about...
+- clean_names
+- janitor
+tags: 
+- i am learning about...
+- clean_names
+- janitor
 ---
 
 
@@ -112,15 +118,7 @@ glimpse(screaming_snake)
 
 # tips and tricks
 
-The janitor package [vignette](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html) has good coverage of how to use the clean_names function and Garth Tarr has a nice summary at [this site](https://garthtarr.github.io/meatR/janitor.html). We found the [RDocumentation](https://www.rdocumentation.org/packages/janitor/versions/1.2.0/topics/clean_names) useful to work out the argument options for different types of case preferences. You can find great art from Allison Horst re clean_names and other R functions here [here](https://github.com/allisonhorst/stats-illustrations) 
-
-
-
-```r
-knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/janitor_clean_names.png")
-```
-
-![](https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/janitor_clean_names.png)<!-- -->
+The janitor package [vignette](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html) has good coverage of how to use the clean_names function and Garth Tarr has a nice summary at [this site](https://garthtarr.github.io/meatR/janitor.html). We found the [RDocumentation](https://www.rdocumentation.org/packages/janitor/versions/1.2.0/topics/clean_names) useful to work out the argument options for different types of case preferences. You can find great art from Allison Horst re clean_names and other R functions [here](https://github.com/allisonhorst/stats-illustrations) 
 
 
 

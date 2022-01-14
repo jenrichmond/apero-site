@@ -3,8 +3,14 @@ title: i am learning about... case_when
 author: ''
 date: '2022-01-14'
 slug: []
-categories: []
-tags: []
+categories: 
+- i am learning about...
+- case_when
+- dplyr
+tags: 
+- i am learning about...
+- case_when
+- dplyr
 ---
 
 # tell us
@@ -75,12 +81,12 @@ summary %>%
   )
 ```
 
-<div id="zzwmjjcnku" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="czhgxnenfa" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zzwmjjcnku .gt_table {
+#czhgxnenfa .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -105,7 +111,7 @@ summary %>%
   border-left-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_heading {
+#czhgxnenfa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -117,7 +123,7 @@ summary %>%
   border-right-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_title {
+#czhgxnenfa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -127,7 +133,7 @@ summary %>%
   border-bottom-width: 0;
 }
 
-#zzwmjjcnku .gt_subtitle {
+#czhgxnenfa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -137,13 +143,13 @@ summary %>%
   border-top-width: 0;
 }
 
-#zzwmjjcnku .gt_bottom_border {
+#czhgxnenfa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_col_headings {
+#czhgxnenfa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -158,7 +164,7 @@ summary %>%
   border-right-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_col_heading {
+#czhgxnenfa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -178,7 +184,7 @@ summary %>%
   overflow-x: hidden;
 }
 
-#zzwmjjcnku .gt_column_spanner_outer {
+#czhgxnenfa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -190,15 +196,15 @@ summary %>%
   padding-right: 4px;
 }
 
-#zzwmjjcnku .gt_column_spanner_outer:first-child {
+#czhgxnenfa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zzwmjjcnku .gt_column_spanner_outer:last-child {
+#czhgxnenfa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zzwmjjcnku .gt_column_spanner {
+#czhgxnenfa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -210,7 +216,7 @@ summary %>%
   width: 100%;
 }
 
-#zzwmjjcnku .gt_group_heading {
+#czhgxnenfa .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -232,7 +238,7 @@ summary %>%
   vertical-align: middle;
 }
 
-#zzwmjjcnku .gt_empty_group_heading {
+#czhgxnenfa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -247,15 +253,15 @@ summary %>%
   vertical-align: middle;
 }
 
-#zzwmjjcnku .gt_from_md > :first-child {
+#czhgxnenfa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zzwmjjcnku .gt_from_md > :last-child {
+#czhgxnenfa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zzwmjjcnku .gt_row {
+#czhgxnenfa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -274,7 +280,7 @@ summary %>%
   overflow-x: hidden;
 }
 
-#zzwmjjcnku .gt_stub {
+#czhgxnenfa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -286,7 +292,7 @@ summary %>%
   padding-left: 12px;
 }
 
-#zzwmjjcnku .gt_summary_row {
+#czhgxnenfa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -296,7 +302,7 @@ summary %>%
   padding-right: 5px;
 }
 
-#zzwmjjcnku .gt_first_summary_row {
+#czhgxnenfa .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -306,7 +312,7 @@ summary %>%
   border-top-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_grand_summary_row {
+#czhgxnenfa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -316,7 +322,7 @@ summary %>%
   padding-right: 5px;
 }
 
-#zzwmjjcnku .gt_first_grand_summary_row {
+#czhgxnenfa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -326,11 +332,11 @@ summary %>%
   border-top-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_striped {
+#czhgxnenfa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zzwmjjcnku .gt_table_body {
+#czhgxnenfa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -339,7 +345,7 @@ summary %>%
   border-bottom-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_footnotes {
+#czhgxnenfa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -353,13 +359,13 @@ summary %>%
   border-right-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_footnote {
+#czhgxnenfa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zzwmjjcnku .gt_sourcenotes {
+#czhgxnenfa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -373,41 +379,41 @@ summary %>%
   border-right-color: #D3D3D3;
 }
 
-#zzwmjjcnku .gt_sourcenote {
+#czhgxnenfa .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zzwmjjcnku .gt_left {
+#czhgxnenfa .gt_left {
   text-align: left;
 }
 
-#zzwmjjcnku .gt_center {
+#czhgxnenfa .gt_center {
   text-align: center;
 }
 
-#zzwmjjcnku .gt_right {
+#czhgxnenfa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zzwmjjcnku .gt_font_normal {
+#czhgxnenfa .gt_font_normal {
   font-weight: normal;
 }
 
-#zzwmjjcnku .gt_font_bold {
+#czhgxnenfa .gt_font_bold {
   font-weight: bold;
 }
 
-#zzwmjjcnku .gt_font_italic {
+#czhgxnenfa .gt_font_italic {
   font-style: italic;
 }
 
-#zzwmjjcnku .gt_super {
+#czhgxnenfa .gt_super {
   font-size: 65%;
 }
 
-#zzwmjjcnku .gt_footnote_marks {
+#czhgxnenfa .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;

@@ -3,8 +3,14 @@ title: i am learning about... clean_names
 author: ''
 date: '2021-06-16'
 slug: []
-categories: []
-tags: []
+categories: 
+- i am learning about...
+- clean_names
+- janitor
+tags: 
+- i am learning about...
+- clean_names
+- janitor
 ---
 
 

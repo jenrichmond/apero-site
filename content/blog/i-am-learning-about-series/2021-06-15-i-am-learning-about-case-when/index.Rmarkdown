@@ -3,8 +3,14 @@ title: i am learning about... case_when
 author: ''
 date: '2022-01-14'
 slug: []
-categories: []
-tags: []
+categories: 
+- i am learning about...
+- case_when
+- dplyr
+tags: 
+- i am learning about...
+- case_when
+- dplyr
 ---
 
 

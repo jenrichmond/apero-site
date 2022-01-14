@@ -3,15 +3,25 @@ title: joining dataframes
 author: ''
 date: '2022-01-14'
 slug: []
-categories: []
-tags: []
+categories:
+  - howto
+  - dplyr
+  - join
+tags:
+  - howto
+  - dplyr
+  - join
+
 ---
 
 
 
 
 
-The `dplyr` package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable. My strategy with joins up until now has been to just try them at random and see which one delivers the data output I'm expecting. Not very efficient. Here I work through the examples in the documentation to see if I can figure out the difference between inner, left, right, and full joins. And then try out my join skills on a Tidy Tuesday example. 
+The `dplyr` package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable. My strategy with joins up until now has been to just try them at random and see which one delivers the data output I'm expecting. Not very efficient. 
+
+
+Here I work through the examples in the documentation to see if I can figure out the difference between inner, left, right, and full joins. And then I try out my join skills on a Tidy Tuesday example about formula one. 
 
 
 
@@ -57,7 +67,7 @@ band_instruments
 ## 3 Keith guitar
 ```
 
-... but the instruments data has info about John Paul and Keith (but not Mick)
+... but the instruments data has info about John, Paul and Keith (but not Mick)
 
 ## left_join()
 

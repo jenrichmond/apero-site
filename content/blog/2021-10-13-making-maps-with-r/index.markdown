@@ -2,10 +2,17 @@
 title: making maps with R
 author: Jen Richmond
 date: '2021-10-13'
-slug: []
-image: "/map.png"
-categories: []
-tags: []
+categories:
+  - codeclub
+  - tidytuesday
+  - maps
+  - ggplot
+tags:
+  - codeclub
+  - tidytuesday
+  - maps
+  - ggplot
+summary: "Using TidyTuesday data to learn how to make maps in R"
 ---
 
 For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven't done in R before, so thought it might be useful to document my process. 
@@ -284,17 +291,18 @@ Then you use the `animate()` function, playing with the frames per second to wor
 anim <- animate(transition, fps=10)
 ```
 
+```
+## Warning: No renderer available. Please install the gifski, av, or magick package
+## to create animated output
+```
+
 You will end up with a gif image called "anim" which you can preview in the Viewer pane and/or save to .gif using the `anim_save()` function. 
 
 
 ```r
 # show in the viewer
 anim
-```
 
-![](index_files/figure-html/unnamed-chunk-14-1.gif)<!-- -->
-
-```r
 # save to .gif
 
 anim_save("map_nurses.gif", anim)

@@ -3,8 +3,15 @@ title: writing in Rmd with inline code
 author: ''
 date: '2022-01-14'
 slug: []
-categories: []
-tags: []
+categories:
+  - Rmd
+  - writing
+  - reproducibility
+tags:
+  - Rmd
+  - writing
+  - reproducibility
+
 ---
 
 One of the best things about RMarkdown is that you can use inline code to report summary and inferential statistics in your text. This means that it is impossible to make an error and if your data/values change, the text automatically updates.
@@ -39,12 +46,12 @@ count_penguins <- penguins %>%
 gt(count_penguins)
 ```
 
-<div id="jilczmnnnm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qezpshpaho" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jilczmnnnm .gt_table {
+#qezpshpaho .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -69,7 +76,7 @@ gt(count_penguins)
   border-left-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_heading {
+#qezpshpaho .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -81,7 +88,7 @@ gt(count_penguins)
   border-right-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_title {
+#qezpshpaho .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -91,7 +98,7 @@ gt(count_penguins)
   border-bottom-width: 0;
 }
 
-#jilczmnnnm .gt_subtitle {
+#qezpshpaho .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -101,13 +108,13 @@ gt(count_penguins)
   border-top-width: 0;
 }
 
-#jilczmnnnm .gt_bottom_border {
+#qezpshpaho .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_col_headings {
+#qezpshpaho .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -122,7 +129,7 @@ gt(count_penguins)
   border-right-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_col_heading {
+#qezpshpaho .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -142,7 +149,7 @@ gt(count_penguins)
   overflow-x: hidden;
 }
 
-#jilczmnnnm .gt_column_spanner_outer {
+#qezpshpaho .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -154,15 +161,15 @@ gt(count_penguins)
   padding-right: 4px;
 }
 
-#jilczmnnnm .gt_column_spanner_outer:first-child {
+#qezpshpaho .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jilczmnnnm .gt_column_spanner_outer:last-child {
+#qezpshpaho .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jilczmnnnm .gt_column_spanner {
+#qezpshpaho .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -174,7 +181,7 @@ gt(count_penguins)
   width: 100%;
 }
 
-#jilczmnnnm .gt_group_heading {
+#qezpshpaho .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -196,7 +203,7 @@ gt(count_penguins)
   vertical-align: middle;
 }
 
-#jilczmnnnm .gt_empty_group_heading {
+#qezpshpaho .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -211,15 +218,15 @@ gt(count_penguins)
   vertical-align: middle;
 }
 
-#jilczmnnnm .gt_from_md > :first-child {
+#qezpshpaho .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jilczmnnnm .gt_from_md > :last-child {
+#qezpshpaho .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jilczmnnnm .gt_row {
+#qezpshpaho .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -238,7 +245,7 @@ gt(count_penguins)
   overflow-x: hidden;
 }
 
-#jilczmnnnm .gt_stub {
+#qezpshpaho .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -250,7 +257,7 @@ gt(count_penguins)
   padding-left: 12px;
 }
 
-#jilczmnnnm .gt_summary_row {
+#qezpshpaho .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -260,7 +267,7 @@ gt(count_penguins)
   padding-right: 5px;
 }
 
-#jilczmnnnm .gt_first_summary_row {
+#qezpshpaho .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -270,7 +277,7 @@ gt(count_penguins)
   border-top-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_grand_summary_row {
+#qezpshpaho .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -280,7 +287,7 @@ gt(count_penguins)
   padding-right: 5px;
 }
 
-#jilczmnnnm .gt_first_grand_summary_row {
+#qezpshpaho .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -290,11 +297,11 @@ gt(count_penguins)
   border-top-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_striped {
+#qezpshpaho .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jilczmnnnm .gt_table_body {
+#qezpshpaho .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -303,7 +310,7 @@ gt(count_penguins)
   border-bottom-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_footnotes {
+#qezpshpaho .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -317,13 +324,13 @@ gt(count_penguins)
   border-right-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_footnote {
+#qezpshpaho .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#jilczmnnnm .gt_sourcenotes {
+#qezpshpaho .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -337,41 +344,41 @@ gt(count_penguins)
   border-right-color: #D3D3D3;
 }
 
-#jilczmnnnm .gt_sourcenote {
+#qezpshpaho .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#jilczmnnnm .gt_left {
+#qezpshpaho .gt_left {
   text-align: left;
 }
 
-#jilczmnnnm .gt_center {
+#qezpshpaho .gt_center {
   text-align: center;
 }
 
-#jilczmnnnm .gt_right {
+#qezpshpaho .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jilczmnnnm .gt_font_normal {
+#qezpshpaho .gt_font_normal {
   font-weight: normal;
 }
 
-#jilczmnnnm .gt_font_bold {
+#qezpshpaho .gt_font_bold {
   font-weight: bold;
 }
 
-#jilczmnnnm .gt_font_italic {
+#qezpshpaho .gt_font_italic {
   font-style: italic;
 }
 
-#jilczmnnnm .gt_super {
+#qezpshpaho .gt_super {
   font-size: 65%;
 }
 
-#jilczmnnnm .gt_footnote_marks {
+#qezpshpaho .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -411,7 +418,7 @@ Now I can use inline text to refer to values in the count_penguins dataframe. Th
 
 For example, the following text in my Rmd file…
 
-<img src="/Users/jennyrichmond/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Desktop - N591/git/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/count_inline.png" width="741" />
+<img src="/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/count_inline.png" width="741" />
 
 … knits into the text below.
 
@@ -427,12 +434,12 @@ body_mass <- penguins %>%
 gt(body_mass)
 ```
 
-<div id="ucpzszsfyi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ptutpsnktu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ucpzszsfyi .gt_table {
+#ptutpsnktu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -457,7 +464,7 @@ gt(body_mass)
   border-left-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_heading {
+#ptutpsnktu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -469,7 +476,7 @@ gt(body_mass)
   border-right-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_title {
+#ptutpsnktu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -479,7 +486,7 @@ gt(body_mass)
   border-bottom-width: 0;
 }
 
-#ucpzszsfyi .gt_subtitle {
+#ptutpsnktu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -489,13 +496,13 @@ gt(body_mass)
   border-top-width: 0;
 }
 
-#ucpzszsfyi .gt_bottom_border {
+#ptutpsnktu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_col_headings {
+#ptutpsnktu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -510,7 +517,7 @@ gt(body_mass)
   border-right-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_col_heading {
+#ptutpsnktu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -530,7 +537,7 @@ gt(body_mass)
   overflow-x: hidden;
 }
 
-#ucpzszsfyi .gt_column_spanner_outer {
+#ptutpsnktu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -542,15 +549,15 @@ gt(body_mass)
   padding-right: 4px;
 }
 
-#ucpzszsfyi .gt_column_spanner_outer:first-child {
+#ptutpsnktu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ucpzszsfyi .gt_column_spanner_outer:last-child {
+#ptutpsnktu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ucpzszsfyi .gt_column_spanner {
+#ptutpsnktu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -562,7 +569,7 @@ gt(body_mass)
   width: 100%;
 }
 
-#ucpzszsfyi .gt_group_heading {
+#ptutpsnktu .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -584,7 +591,7 @@ gt(body_mass)
   vertical-align: middle;
 }
 
-#ucpzszsfyi .gt_empty_group_heading {
+#ptutpsnktu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -599,15 +606,15 @@ gt(body_mass)
   vertical-align: middle;
 }
 
-#ucpzszsfyi .gt_from_md > :first-child {
+#ptutpsnktu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ucpzszsfyi .gt_from_md > :last-child {
+#ptutpsnktu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ucpzszsfyi .gt_row {
+#ptutpsnktu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -626,7 +633,7 @@ gt(body_mass)
   overflow-x: hidden;
 }
 
-#ucpzszsfyi .gt_stub {
+#ptutpsnktu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -638,7 +645,7 @@ gt(body_mass)
   padding-left: 12px;
 }
 
-#ucpzszsfyi .gt_summary_row {
+#ptutpsnktu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -648,7 +655,7 @@ gt(body_mass)
   padding-right: 5px;
 }
 
-#ucpzszsfyi .gt_first_summary_row {
+#ptutpsnktu .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -658,7 +665,7 @@ gt(body_mass)
   border-top-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_grand_summary_row {
+#ptutpsnktu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -668,7 +675,7 @@ gt(body_mass)
   padding-right: 5px;
 }
 
-#ucpzszsfyi .gt_first_grand_summary_row {
+#ptutpsnktu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -678,11 +685,11 @@ gt(body_mass)
   border-top-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_striped {
+#ptutpsnktu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ucpzszsfyi .gt_table_body {
+#ptutpsnktu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -691,7 +698,7 @@ gt(body_mass)
   border-bottom-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_footnotes {
+#ptutpsnktu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -705,13 +712,13 @@ gt(body_mass)
   border-right-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_footnote {
+#ptutpsnktu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ucpzszsfyi .gt_sourcenotes {
+#ptutpsnktu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -725,41 +732,41 @@ gt(body_mass)
   border-right-color: #D3D3D3;
 }
 
-#ucpzszsfyi .gt_sourcenote {
+#ptutpsnktu .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ucpzszsfyi .gt_left {
+#ptutpsnktu .gt_left {
   text-align: left;
 }
 
-#ucpzszsfyi .gt_center {
+#ptutpsnktu .gt_center {
   text-align: center;
 }
 
-#ucpzszsfyi .gt_right {
+#ptutpsnktu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ucpzszsfyi .gt_font_normal {
+#ptutpsnktu .gt_font_normal {
   font-weight: normal;
 }
 
-#ucpzszsfyi .gt_font_bold {
+#ptutpsnktu .gt_font_bold {
   font-weight: bold;
 }
 
-#ucpzszsfyi .gt_font_italic {
+#ptutpsnktu .gt_font_italic {
   font-style: italic;
 }
 
-#ucpzszsfyi .gt_super {
+#ptutpsnktu .gt_super {
   font-size: 65%;
 }
 
-#ucpzszsfyi .gt_footnote_marks {
+#ptutpsnktu .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -788,7 +795,7 @@ gt(body_mass)
 
 Now this text in my Rmd file…
 
-<img src="/Users/jennyrichmond/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Desktop - N591/git/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/mean.png" width="840" />
+<img src="/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/mean.png" width="840" />
 
 … knits into the text below.
 
@@ -814,6 +821,6 @@ rownames(body_mass)
 
 Once the species values are rownames, you can refer to a particular row,column by their name within square brackets. Not sure why you need quotes to refer by row/col name… its a mystery but it works!
 
-<img src="/Users/jennyrichmond/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Desktop - N591/git/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/rownames.png" width="837" />
+<img src="/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2022-01-14-writing-in-rmd-with-inline-code/rownames.png" width="837" />
 
 On average, Gentoo penguins are the heaviest (*M* = 5076.02 g); Chinstrap (*M* = 3733.09 g) and Adelie (*M* = 3700.66 g) penguins are smaller.

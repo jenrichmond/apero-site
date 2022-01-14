@@ -3,12 +3,12 @@ title: knitting to pdf
 author: Jen Richmond
 date: '2021-11-10'
 categories:
-  - howto
-  - rmarkdown
+  - pdf
+  - Rmd
 tags:
   - pdf
-  - rmarkdown
-  - font
+  - Rmd
+
 summary: "Working out how to change the font when knitting Rmd to pdf"
 ---
 

@@ -2,9 +2,13 @@
 title: parameterised penguins
 author: Jen Richmond
 date: '2021-08-31'
-slug: []
-categories: []
-tags: []
+categories:
+  - Rmd
+  - parameters
+tags:
+  - Rmd
+  - parameters
+summary: "Knit many reports at once using parameters in RMarkdown"
 ---
 
 ### How to use parameters and purrr to render many Rmd reports
@@ -33,6 +37,8 @@ Before I can render lots of reports, I need to write the code and make it run on
 The next chunk uses that species dataframe to make a plot of body mass by flipper length. I can also refer to the params I set to make the level 1 header and subtitle of my plot reflect which species of penguin are being plotted. 
 
 <img src="chunk2.png" width="539" />
+
+
 When I knit the document I end up with a pretty nice looking report about Adelie penguins [see RPubs here](https://rpubs.com/jenrichmond/adelie). 
 
 #### how to render many reports

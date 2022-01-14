@@ -4,8 +4,8 @@ author: Jen Richmond
 date: '2021-11-11'
 slug: []
 categories:
-  - howto
   - blogdown
+  - workflow
 tags:
   - blogdown
   - workflow

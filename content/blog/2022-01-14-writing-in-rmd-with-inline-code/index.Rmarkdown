@@ -11,7 +11,7 @@ tags:
   - Rmd
   - writing
   - reproducibility
-tags: []
+
 ---
 One of the best things about RMarkdown is that you can use inline code to report summary and inferential statistics in your text. This means that it is impossible to make an error and if your data/values change, the text automatically updates. 
 

@@ -2,9 +2,14 @@
 title: knitting to pdf
 author: Jen Richmond
 date: '2021-11-10'
-slug: []
-categories: []
-tags: []
+categories:
+  - pdf
+  - Rmd
+tags:
+  - pdf
+  - Rmd
+
+summary: "Working out how to change the font when knitting Rmd to pdf"
 ---
 
 I've never really liked the default font that is used when Rmd knits to pdf. When knitting to pdf, R uses LaTex (which is why you often need to install the `tinytex` package) and the default in LaTex is called Computer Modern. 

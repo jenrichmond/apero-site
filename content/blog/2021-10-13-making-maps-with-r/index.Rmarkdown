@@ -238,7 +238,7 @@ anim <- animate(transition, fps=10)
 
 You will end up with a gif image called "anim" which you can preview in the Viewer pane and/or save to .gif using the `anim_save()` function. 
 
-```{r}
+```{r eval = FALSE}
 
 # show in the viewer
 anim

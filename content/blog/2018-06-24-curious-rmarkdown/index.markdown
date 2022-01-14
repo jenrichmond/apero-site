@@ -3,9 +3,10 @@ title: curious
 author: Jen Richmond
 date: '2018-06-24'
 slug: curious-rmarkdown
-categories: []
-tags: 
- - tips
+categories:
+  - Rmd
+tags:
+  - Rmd
 output:
   html_document:
     keep_md: yes

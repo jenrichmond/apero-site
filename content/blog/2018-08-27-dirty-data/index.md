@@ -3,7 +3,12 @@ title: dirty data
 author: Jen Richmond
 date: '2018-08-27'
 slug: dirty-data
-categories: []
+categories:
+  - datawrangling
+  - tidyverse
+tags:
+  - datawrangling
+  - tidyverse
 output:
   html_document:
     keep_md: yes

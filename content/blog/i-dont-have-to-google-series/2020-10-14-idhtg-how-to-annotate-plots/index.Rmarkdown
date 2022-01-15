@@ -1,5 +1,5 @@
 ---
-title: idhtg how to annotate plots
+title: how to annotate plots
 author: ''
 date: '2020-10-14'
 slug: idhtg-how-to-annotate-plots

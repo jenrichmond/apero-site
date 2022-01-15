@@ -1,5 +1,5 @@
 ---
-title: IDHTG working with factors
+title: working with factors
 author: ''
 date: '2020-01-13'
 slug: working-with-factors

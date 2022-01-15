@@ -1,5 +1,5 @@
 ---
-title: IDHTG recoding variables
+title: recoding variables
 author: ''
 date: '2020-02-08'
 slug: recoding-variables

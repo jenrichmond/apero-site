@@ -1,5 +1,5 @@
 ---
-title: IDHTG counting things
+title: counting things
 author: ''
 date: '2020-01-20'
 slug: counting-things

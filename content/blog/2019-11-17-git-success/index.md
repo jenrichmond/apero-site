@@ -3,6 +3,8 @@ title: what did we just do?
 author: ''
 date: '2019-11-17'
 slug: git-success
+categories:
+  - github
 output:
   html_document:
     keep_md: yes

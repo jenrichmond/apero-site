@@ -3,6 +3,8 @@ title: serious git thinking
 author: ''
 date: '2019-11-12'
 slug: serious-git-thinking
+categories:
+  - github
 image: "img/Octocat.png"
 output:
   html_document:

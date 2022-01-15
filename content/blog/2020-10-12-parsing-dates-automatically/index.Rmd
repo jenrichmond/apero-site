@@ -3,7 +3,8 @@ title: lubridate parsing dates automatically
 author: ''
 date: '2020-10-18'
 slug: parsing-dates-automatically
-
+categories:
+  - lubridate
 image: "img/gs.png"
 output:
   html_document:

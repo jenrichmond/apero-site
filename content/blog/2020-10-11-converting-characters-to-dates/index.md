@@ -3,7 +3,8 @@ title: lubridate characters to dates
 author: ''
 date: '2020-10-11'
 slug: converting-characters-to-dates
-
+categories: 
+- lubridate
 image: "img/r_rollercoaster.png"
 output:
   html_document:
@@ -96,15 +97,20 @@ sales <- read_csv("sales.csv")
 ```
 
 ```
-## 
+## Rows: 48 Columns: 5
+```
+
+```
 ## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   artist = col_character(),
-##   title = col_character(),
-##   country = col_character(),
-##   sales = col_double(),
-##   released = col_character()
-## )
+## Delimiter: ","
+## chr (4): artist, title, country, released
+## dbl (1): sales
+```
+
+```
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 ```r

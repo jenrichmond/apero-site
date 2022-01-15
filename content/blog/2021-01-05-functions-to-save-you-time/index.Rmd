@@ -3,6 +3,9 @@ title: functions to save you time
 author: ''
 date: '2021-01-05'
 slug: []
+categories:
+  - functions
+  - workflow
 image: "img/cost.png"
 output:
   html_document:
@@ -36,7 +39,7 @@ This [post from Maddie Pickins](https://rpubs.com/mclaire19/ggplot2-custom-theme
 
 Here is my custom theme... 
 
-```{r eval = FALSE}
+```{r}
 
 theme_jen <- function () {
   
@@ -142,7 +145,7 @@ cost %>%
 
 Here I have applied my custom theme and used ggeasy::easy_remove_legend(). Now I want the bars to sit on the x axis. I google this EVERYTIME `scale_y_continuous(expand = c(0.0))`, so lets wrap it in a function I might remember. 
 
-```{r eval = FALSE}
+```{r}
 easy_expand_y_axis <- function () 
   
 {

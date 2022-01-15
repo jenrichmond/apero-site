@@ -3,7 +3,8 @@ title: lubridate month() + wday()
 author: ''
 
 image: "img/lubridate_ymd.png"
-
+categories:
+  - lubridate
 
 date: '2020-09-26'
 slug: lubridate-month-wday

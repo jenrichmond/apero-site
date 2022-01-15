@@ -4,6 +4,9 @@ author: ''
 date: '2020-11-18'
 slug: digging-into-the-janitor-package
 image: "img/dirty_penguin.jpg"
+categories:
+  - janitor
+  - data wrangling
 output:
   html_document:
     keep_md: yes
@@ -50,7 +53,7 @@ The penguin data isn’t very dirty out of the package, but I added some funky t
 dirty <- read_csv("penguin_raw_dirty.csv")
 ```
 
-# 1. clean\_names()
+# 1. clean_names()
 
 The penguin variable names are not great. A nasty mix of capital and little letters, gaps and brackets- not fun to type over and over again.
 
@@ -81,7 +84,7 @@ names(clean)
     ## [13] "flipper_length_mm" "body_mass_g"       "sex"              
     ## [16] "delta_15_n_o_oo"   "delta_13_c_o_oo"   "comments"
 
-# 2. remove\_empty()
+# 2. remove_empty()
 
 Sometimes dirty data contains whole rows or columns that are empty. You can quickly remove them with `remove_empty()`. By default it is a “quiet” function, but specify quiet = FALSE and it will give you a little feedback about what it has done.
 
@@ -103,7 +106,7 @@ empty %>%
   get_dupes(sample_number, species)
 ```
 
-    ## # A tibble: 4 x 18
+    ## # A tibble: 4 × 18
     ##   sample_number species  dupe_count study_name region island stage individual_id
     ##           <dbl> <chr>         <int> <chr>      <chr>  <chr>  <chr> <chr>        
     ## 1            18 Adelie …          2 PAL0708    Anvers Torge… Adul… N9A2         
@@ -127,7 +130,7 @@ dupes_gone %>%
 
     ## No duplicate combinations found of: sample_number, species
 
-    ## # A tibble: 0 x 18
+    ## # A tibble: 0 × 18
     ## # … with 18 variables: sample_number <dbl>, species <chr>, dupe_count <int>,
     ## #   study_name <chr>, region <chr>, island <chr>, stage <chr>,
     ## #   individual_id <chr>, clutch_completion <chr>, date_egg <chr>,
@@ -141,7 +144,7 @@ But perhaps the most surprisingly awesome function in the janitor package is `ta
 
 Advantages…
 
--   works with %&gt;%
+-   works with %>%
 -   takes a dataframe
 -   outputs a dataframe
 -   is compatible with other table packages like `kableExtra` and `gt`
@@ -339,11 +342,12 @@ dupes_gone %>%
   gt()
 ```
 
+<div id="erojajxrgq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lfftokllhe .gt_table {
+#erojajxrgq .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -368,7 +372,7 @@ dupes_gone %>%
   border-left-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_heading {
+#erojajxrgq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -380,7 +384,7 @@ dupes_gone %>%
   border-right-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_title {
+#erojajxrgq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -390,23 +394,23 @@ dupes_gone %>%
   border-bottom-width: 0;
 }
 
-#lfftokllhe .gt_subtitle {
+#erojajxrgq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#lfftokllhe .gt_bottom_border {
+#erojajxrgq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_col_headings {
+#erojajxrgq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -421,7 +425,7 @@ dupes_gone %>%
   border-right-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_col_heading {
+#erojajxrgq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -441,7 +445,7 @@ dupes_gone %>%
   overflow-x: hidden;
 }
 
-#lfftokllhe .gt_column_spanner_outer {
+#erojajxrgq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -453,27 +457,27 @@ dupes_gone %>%
   padding-right: 4px;
 }
 
-#lfftokllhe .gt_column_spanner_outer:first-child {
+#erojajxrgq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lfftokllhe .gt_column_spanner_outer:last-child {
+#erojajxrgq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lfftokllhe .gt_column_spanner {
+#erojajxrgq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#lfftokllhe .gt_group_heading {
+#erojajxrgq .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -495,7 +499,7 @@ dupes_gone %>%
   vertical-align: middle;
 }
 
-#lfftokllhe .gt_empty_group_heading {
+#erojajxrgq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -510,15 +514,15 @@ dupes_gone %>%
   vertical-align: middle;
 }
 
-#lfftokllhe .gt_from_md > :first-child {
+#erojajxrgq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lfftokllhe .gt_from_md > :last-child {
+#erojajxrgq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lfftokllhe .gt_row {
+#erojajxrgq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -537,7 +541,7 @@ dupes_gone %>%
   overflow-x: hidden;
 }
 
-#lfftokllhe .gt_stub {
+#erojajxrgq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -549,7 +553,7 @@ dupes_gone %>%
   padding-left: 12px;
 }
 
-#lfftokllhe .gt_summary_row {
+#erojajxrgq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -559,7 +563,7 @@ dupes_gone %>%
   padding-right: 5px;
 }
 
-#lfftokllhe .gt_first_summary_row {
+#erojajxrgq .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -569,7 +573,7 @@ dupes_gone %>%
   border-top-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_grand_summary_row {
+#erojajxrgq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -579,7 +583,7 @@ dupes_gone %>%
   padding-right: 5px;
 }
 
-#lfftokllhe .gt_first_grand_summary_row {
+#erojajxrgq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -589,11 +593,11 @@ dupes_gone %>%
   border-top-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_striped {
+#erojajxrgq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lfftokllhe .gt_table_body {
+#erojajxrgq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -602,7 +606,7 @@ dupes_gone %>%
   border-bottom-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_footnotes {
+#erojajxrgq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -616,13 +620,13 @@ dupes_gone %>%
   border-right-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_footnote {
+#erojajxrgq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#lfftokllhe .gt_sourcenotes {
+#erojajxrgq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -636,46 +640,47 @@ dupes_gone %>%
   border-right-color: #D3D3D3;
 }
 
-#lfftokllhe .gt_sourcenote {
+#erojajxrgq .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#lfftokllhe .gt_left {
+#erojajxrgq .gt_left {
   text-align: left;
 }
 
-#lfftokllhe .gt_center {
+#erojajxrgq .gt_center {
   text-align: center;
 }
 
-#lfftokllhe .gt_right {
+#erojajxrgq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lfftokllhe .gt_font_normal {
+#erojajxrgq .gt_font_normal {
   font-weight: normal;
 }
 
-#lfftokllhe .gt_font_bold {
+#erojajxrgq .gt_font_bold {
   font-weight: bold;
 }
 
-#lfftokllhe .gt_font_italic {
+#erojajxrgq .gt_font_italic {
   font-style: italic;
 }
 
-#lfftokllhe .gt_super {
+#erojajxrgq .gt_super {
   font-size: 65%;
 }
 
-#lfftokllhe .gt_footnote_marks {
+#erojajxrgq .gt_footnote_marks {
   font-style: italic;
+  font-weight: normal;
   font-size: 65%;
 }
 </style>
-<div id="lfftokllhe" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -686,25 +691,20 @@ dupes_gone %>%
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">Adelie Penguin (Pygoscelis adeliae)</td>
-      <td class="gt_row gt_left">48.0%</td>
-      <td class="gt_row gt_left">48.0%</td>
-      <td class="gt_row gt_left">3.9%</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Chinstrap penguin (Pygoscelis antarctica)</td>
-      <td class="gt_row gt_left">50.0%</td>
-      <td class="gt_row gt_left">50.0%</td>
-      <td class="gt_row gt_left">0.0%</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Gentoo penguin (Pygoscelis papua)</td>
-      <td class="gt_row gt_left">46.8%</td>
-      <td class="gt_row gt_left">49.2%</td>
-      <td class="gt_row gt_left">4.0%</td>
-    </tr>
+    <tr><td class="gt_row gt_left">Adelie Penguin (Pygoscelis adeliae)</td>
+<td class="gt_row gt_left">48.0%</td>
+<td class="gt_row gt_left">48.0%</td>
+<td class="gt_row gt_left">3.9%</td></tr>
+    <tr><td class="gt_row gt_left">Chinstrap penguin (Pygoscelis antarctica)</td>
+<td class="gt_row gt_left">50.0%</td>
+<td class="gt_row gt_left">50.0%</td>
+<td class="gt_row gt_left">0.0%</td></tr>
+    <tr><td class="gt_row gt_left">Gentoo penguin (Pygoscelis papua)</td>
+<td class="gt_row gt_left">46.8%</td>
+<td class="gt_row gt_left">49.2%</td>
+<td class="gt_row gt_left">4.0%</td></tr>
   </tbody>
   
   
-</table></div>
+</table>
+</div>

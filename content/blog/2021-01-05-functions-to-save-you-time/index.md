@@ -3,6 +3,9 @@ title: functions to save you time
 author: ''
 date: '2021-01-05'
 slug: []
+categories:
+  - functions
+  - workflow
 image: "img/cost.png"
 output:
   html_document:

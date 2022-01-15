@@ -3,7 +3,8 @@ title: lubridate month() + wday()
 author: ''
 
 image: "img/lubridate_ymd.png"
-
+categories:
+  - lubridate
 
 date: '2020-09-26'
 slug: lubridate-month-wday
@@ -97,7 +98,7 @@ head(tests)
 ```
 
 ```
-## # A tibble: 6 x 3
+## # A tibble: 6 × 3
 ##   test_date  age_group      test_count
 ##   <date>     <chr>               <dbl>
 ## 1 2020-03-09 AgeGroup_0-9          238
@@ -128,7 +129,7 @@ today()
 ```
 
 ```
-## [1] "2021-05-09"
+## [1] "2022-01-15"
 ```
 
 ```r
@@ -136,7 +137,7 @@ year(today())
 ```
 
 ```
-## [1] 2021
+## [1] 2022
 ```
 
 ```r
@@ -144,7 +145,7 @@ month(today())
 ```
 
 ```
-## [1] 5
+## [1] 1
 ```
 
 ```r
@@ -152,7 +153,7 @@ day(today())
 ```
 
 ```
-## [1] 9
+## [1] 15
 ```
 
 Lets use the `month()` function to count how many tests have been conducted in each month since the beginning of the pandemic.
@@ -165,7 +166,7 @@ total_tests %>%
 ```
 
 ```
-## # A tibble: 7 x 2
+## # A tibble: 7 × 2
 ##   `month(test_date, label = TRUE)` month_tests
 ##   <ord>                                  <dbl>
 ## 1 Mar                                   106256

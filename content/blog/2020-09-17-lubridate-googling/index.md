@@ -4,6 +4,8 @@ author: ''
 date: '2020-09-17'
 slug: lubridate-googling
 image: "img/datenight.jpg"
+categories: 
+- lubridate
 output:
   html_document:
     keep_md: yes

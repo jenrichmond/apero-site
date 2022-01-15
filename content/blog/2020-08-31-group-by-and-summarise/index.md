@@ -3,7 +3,9 @@ title: group_by and summarise
 author: ''
 date: '2020-08-31'
 slug: group-by-and-summarise
-categories: []
+categories: 
+  - data wrangling
+  - dplyr
 image: "img/penguin.png"
 output:
   html_document:
@@ -58,7 +60,7 @@ penguins %>%
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   species    mean     n stdev stderr
 ##   <fct>     <dbl> <int> <dbl>  <dbl>
 ## 1 Adelie     190.   152  6.54  0.530

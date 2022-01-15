@@ -4,7 +4,9 @@ author: ''
 date: '2019-08-10'
 slug: pivoting
 image: "img/gatherspread.jpeg"
-categories: []
+categories: 
+  - datawrangling
+  - tidyr
 tags: []
 output:
   html_document:
@@ -38,7 +40,7 @@ head(loco, 10)
 ```
 
 ```
-## # A tibble: 10 x 6
+## # A tibble: 10 × 6
 ##    pp_no   resp_type age_months loco_stats count resptype       
 ##    <chr>       <dbl>      <dbl> <chr>      <dbl> <chr>          
 ##  1 AE1104          1         12 w             10 affirmative    
@@ -78,7 +80,7 @@ head(spread_loco_wide, 3)
 ```
 
 ```
-## # A tibble: 3 x 6
+## # A tibble: 3 × 6
 ##   pp_no  age_months loco_stats prop_aff prop_desc prop_action
 ##   <chr>       <dbl> <chr>         <dbl>     <dbl>       <dbl>
 ## 1 AE1104         12 w             0.5        0.25       0.25 
@@ -97,7 +99,7 @@ head(gather_loco_long, 3)
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   pp_no  age_months loco_stats resptype    proportion
 ##   <chr>       <dbl> <chr>      <chr>            <dbl>
 ## 1 AE1104         12 w          prop_aff          0.5 
@@ -159,7 +161,7 @@ head(pivot_loco_wide, 10)
 ```
 
 ```
-## # A tibble: 10 x 6
+## # A tibble: 10 × 6
 ##    pp_no   age_months loco_stats prop_aff prop_desc prop_action
 ##    <chr>        <dbl> <chr>         <dbl>     <dbl>       <dbl>
 ##  1 AE1104          12 w             0.5       0.25        0.25 
@@ -192,7 +194,7 @@ head(pivot_loco_long, 10)
 ```
 
 ```
-## # A tibble: 10 x 5
+## # A tibble: 10 × 5
 ##    pp_no   age_months loco_stats resp        proportion
 ##    <chr>        <dbl> <chr>      <chr>            <dbl>
 ##  1 AE1104          12 w          prop_aff         0.5  

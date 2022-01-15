@@ -4,7 +4,8 @@ author: ''
 date: '2019-07-27'
 slug: making-memes-in-r
 image: "img/kitty.jpg"
-categories: []
+categories: 
+  - fun
 tags: []
 output:
   html_document:
@@ -28,6 +29,11 @@ Check out the [memer vignette](https://github.com/sctyner/memer) here.
 devtools::install_github("sctyner/memer")
 ```
 
+```
+## Skipping install of 'memer' from a github remote, the SHA1 (cacff3d9) has not changed since last install.
+##   Use `force = TRUE` to force installation
+```
+
 ### load the package, get a list of available memes
 
 
@@ -37,18 +43,19 @@ meme_list()
 ```
 
 ```
-##  [1] "AllTheThings"       "AmericanChopper"    "AncientAliens"     
-##  [4] "BatmanRobin"        "DistractedBf"       "EvilKermit"        
-##  [7] "ExpandingBrain"     "FirstWorldProbs"    "FryNotSure"        
-## [10] "HotlineDrake"       "IsThisAPigeon"      "NoneOfMyBusiness"  
-## [13] "CheersLeo"          "OneDoesNotSimply"   "DosEquisMan"       
-## [16] "OffRamp"            "OprahGiveaway"      "Philosoraptor"     
-## [19] "PicardFacePalm"     "PicardWTH"          "Purples"           
-## [22] "PutItPatrick"       "Rainbow"            "ShiaJustDoIt"      
-## [25] "Spongebob"          "SuccessKid"         "ThatWouldBeGreat"  
-## [28] "TheRockDriving"     "ThinkAboutIt"       "TrumpBillSigning"  
-## [31] "TwoButtonsAnxiety"  "WhatIfIToldYou"     "CondescendingWonka"
-## [34] "YoDawg"             "Y-U-NOguy"
+##  [1] "AgnesWink"          "AllTheThings"       "AmericanChopper"   
+##  [4] "AnakinPadmeRight"   "AncientAliens"      "BatmanRobin"       
+##  [7] "DistractedBf"       "EvilKermit"         "ExpandingBrain"    
+## [10] "FirstWorldProbs"    "FryNotSure"         "HotlineDrake"      
+## [13] "IsThisAPigeon"      "NoneOfMyBusiness"   "CheersLeo"         
+## [16] "MoneyPrinter"       "OneDoesNotSimply"   "DosEquisMan"       
+## [19] "OffRamp"            "OprahGiveaway"      "Philosoraptor"     
+## [22] "PicardFacePalm"     "PicardWTH"          "Purples"           
+## [25] "PutItPatrick"       "Rainbow"            "ShiaJustDoIt"      
+## [28] "Spongebob"          "SuccessKid"         "SuezExcavator"     
+## [31] "ThatWouldBeGreat"   "TheRockDriving"     "ThinkAboutIt"      
+## [34] "TrumpBillSigning"   "TwoButtonsAnxiety"  "WhatIfIToldYou"    
+## [37] "CondescendingWonka" "YoDawg"             "Y-U-NOguy"
 ```
 
 ### choose a meme
@@ -57,16 +64,12 @@ meme_list()
 meme_get("OprahGiveaway") 
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="250" />
-
 ### replace the text with your own
 
 ```r
 meme_get("OprahGiveaway") %>%
   meme_text_bottom("Happy Birthday \n R-Ladies Sydney!")
 ```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="250" />
 
 Some memes of the memes that come with the `memer` package have more than 1 text field. Thank you Mr Trump. 
 
@@ -75,8 +78,6 @@ Some memes of the memes that come with the `memer` package have more than 1 text
 meme_get("TrumpBillSigning") %>% 
   meme_text_trump("R-Ladies Sydney", "Happy Birthday")
 ```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="250" />
 
 If you have the `rtweet` package and a twitter token set up, you can tweet your meme straight from R using the meme_tweet() function. I didn't work that out... yet. 
 

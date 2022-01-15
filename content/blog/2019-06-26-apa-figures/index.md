@@ -4,7 +4,8 @@ author: ''
 date: '2019-06-26'
 slug: apa-figures
 image: "img/portfolio/plotforpaper.png"
-categories: []
+categories: 
+  - ggplot
 tags: []
 output:
   html_document:
@@ -29,27 +30,29 @@ library(papaja)
 ### Read in data
 
 ```r
-plotdata <- read_csv(here("plotdata.csv"))
+plotdata <- read_csv("plotdata.csv")
 ```
 
 ```
-## Warning: Missing column names filled in: 'X1' [1]
+## New names:
+## * `` -> ...1
+```
+
+```
+## Rows: 8 Columns: 9
+```
+
+```
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (4): direction, group, detailtype, groupnew
+## dbl (5): ...1, mean, stdev, n, stderr
 ```
 
 ```
 ## 
-## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   X1 = col_double(),
-##   direction = col_character(),
-##   group = col_character(),
-##   detailtype = col_character(),
-##   mean = col_double(),
-##   stdev = col_double(),
-##   n = col_double(),
-##   stderr = col_double(),
-##   groupnew = col_character()
-## )
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 
@@ -58,8 +61,8 @@ head(plotdata)
 ```
 
 ```
-## # A tibble: 6 x 9
-##      X1 direction group     detailtype  mean stdev     n stderr groupnew       
+## # A tibble: 6 × 9
+##    ...1 direction group     detailtype  mean stdev     n stderr groupnew       
 ##   <dbl> <chr>     <chr>     <chr>      <dbl> <dbl> <dbl>  <dbl> <chr>          
 ## 1     1 future    control   episodic    9.46  4.04    28  0.764 control group  
 ## 2     2 future    control   semantic    4.57  2.35    28  0.444 control group  

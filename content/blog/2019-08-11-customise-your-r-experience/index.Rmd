@@ -4,7 +4,8 @@ author: ''
 date: '2019-08-11'
 slug: customise-your-r-experience
 image: "img/cropped.png"
-categories: []
+categories: 
+  - workflow
 tags: []
 output:
   html_document:

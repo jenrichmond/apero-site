@@ -4,6 +4,8 @@ author: ''
 date: '2019-10-02'
 slug: insights-from-the-markdown-whisperer
 image: "img/alison.JPG"
+categories:
+  - Rmd
 output:
   html_document:
     keep_md: yes

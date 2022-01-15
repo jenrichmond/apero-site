@@ -5,7 +5,6 @@ date: '2021-06-22'
 categories:
   - github
 tags:
-  - pat
   - github
 summary: "How to set up a personalised authentiation token for github"
 ---

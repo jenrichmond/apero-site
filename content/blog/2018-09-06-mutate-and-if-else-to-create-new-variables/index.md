@@ -3,6 +3,9 @@ title: mutate + if else = new conditional variable
 author: ''
 date: '2019-08-21'
 slug: mutate-and-if-else-to-create-new-variables
+categories:
+  - datawrangling
+  - dplyr
 output:
   html_document:
     keep_md: yes

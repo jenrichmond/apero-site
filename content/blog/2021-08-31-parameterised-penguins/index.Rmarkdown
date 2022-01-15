@@ -3,11 +3,11 @@ title: parameterised penguins
 author: Jen Richmond
 date: '2021-08-31'
 categories:
+  - purrr
   - Rmd
-  - parameters
 tags:
+  - purrr
   - Rmd
-  - parameters
 summary: "Knit many reports at once using parameters in RMarkdown"
 ---
 

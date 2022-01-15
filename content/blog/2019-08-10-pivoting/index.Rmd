@@ -4,7 +4,9 @@ author: ''
 date: '2019-08-10'
 slug: pivoting
 image: "img/gatherspread.jpeg"
-categories: []
+categories: 
+  - datawrangling
+  - tidyr
 tags: []
 output:
   html_document:

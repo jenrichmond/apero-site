@@ -3,6 +3,9 @@ title: calculating z scores
 author: ''
 date: '2020-07-16'
 slug: calculating-z-scores
+categories:
+  - stats
+  - EMG
 output:
   html_document:
     keep_md: yes
@@ -38,7 +41,7 @@ glimpse(emg)
 ```
 ## Rows: 1,760
 ## Columns: 8
-## $ X1        <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…
+## $ ...1      <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…
 ## $ pp_no     <chr> "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1…
 ## $ condition <chr> "stimtype1", "stimtype1", "stimtype1", "stimtype1", "stimtyp…
 ## $ bin       <chr> "bin_0", "bin_0", "bin_1", "bin_1", "bin_2", "bin_2", "bin_3…
@@ -66,7 +69,7 @@ glimpse(emg_wide)
 ```
 ## Rows: 1,760
 ## Columns: 8
-## $ X1        <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…
+## $ ...1      <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…
 ## $ pp_no     <chr> "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1", "pp1…
 ## $ condition <chr> "stimtype1", "stimtype1", "stimtype1", "stimtype1", "stimtyp…
 ## $ bin       <chr> "bin_0", "bin_0", "bin_1", "bin_1", "bin_2", "bin_2", "bin_3…
@@ -109,7 +112,7 @@ summary(emg_z_scale)
 ```
 
 ```
-##        X1            pp_no            condition             bin           
+##       ...1           pp_no            condition             bin           
 ##  Min.   :   1.0   Length:1760        Length:1760        Length:1760       
 ##  1st Qu.: 440.8   Class :character   Class :character   Class :character  
 ##  Median : 880.5   Mode  :character   Mode  :character   Mode  :character  
@@ -160,7 +163,7 @@ emg_z_scale_bypp %>%
 ```
 
 ```
-##        X1            pp_no            condition             bin           
+##       ...1           pp_no            condition             bin           
 ##  Min.   :  1.00   Length:352         Length:352         Length:352        
 ##  1st Qu.: 88.75   Class :character   Class :character   Class :character  
 ##  Median :176.50   Mode  :character   Mode  :character   Mode  :character  

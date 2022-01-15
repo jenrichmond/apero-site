@@ -4,7 +4,8 @@ author: ''
 date: '2019-07-27'
 slug: making-memes-in-r
 image: "img/kitty.jpg"
-categories: []
+categories: 
+  - fun
 tags: []
 output:
   html_document:
@@ -25,31 +26,34 @@ Check out the [memer vignette](https://github.com/sctyner/memer) here.
 
 ### install the package
 
-```{r eval=FALSE}
+```{r}
 devtools::install_github("sctyner/memer")
 ```
 
 ### load the package, get a list of available memes
 
 ```{r}
+
 library(memer)
 meme_list()
 ```
 
 ### choose a meme
-```{r}
+```{r eval = FALSE}
 meme_get("OprahGiveaway") 
 ```
 
 ### replace the text with your own
-```{r}
+```{r eval = FALSE}
+
 meme_get("OprahGiveaway") %>%
   meme_text_bottom("Happy Birthday \n R-Ladies Sydney!")
+
 ```
 
 Some memes of the memes that come with the `memer` package have more than 1 text field. Thank you Mr Trump. 
 
-```{r}
+```{r eval = FALSE}
 meme_get("TrumpBillSigning") %>% 
   meme_text_trump("R-Ladies Sydney", "Happy Birthday")
 ```

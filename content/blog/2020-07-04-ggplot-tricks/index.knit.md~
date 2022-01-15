@@ -1,0 +1,80 @@
+---
+title: ggplot tricks
+author: ''
+date: '2020-07-04'
+image: "img/portfolio/testplot.png"
+slug: ggplot-tricks
+categories:
+  - ggplot
+output:
+  html_document:
+    keep_md: yes
+---
+
+
+
+Here are some ggplot tricks that I shared at the R-Ladies Sydney June Show and Tell. 
+
+# Why is my internet speed so terrible?
+
+Working from home and pivoting to teaching online has made me realise that my wifi connection is really bad, particularly when it rains. I have been teaching new honours students R and needed a little dataset to demo how to get data into R, so made a google form and put it out on twitter to confirm to myself that my connection really is worse than most other people. You can contribute to the [data here](www.tinyurl.com/howcrappyisyourinternet). 
+
+
+# Packages for reading data into R
+
+
+```r
+library(tidyverse) # includes readr for .csv files
+library(readxl) #for excel files
+library(googlesheets4) #read straight from google sheets
+library(datapasta) # for pasting data into R
+library(janitor) # quick name cleaning
+```
+
+
+#### 1. read csv or xlsx
+
+The standard way to get data into R is to read a file that you have downloaded. 
+
+Read a .csv file
+
+
+```r
+speed1 <- read_csv("crappy_internet.csv")
+```
+
+Read an excel file
+
+```r
+ speed2 <- read_excel("crappy_internet.xlsx")
+```
+
+
+#### 2. direct from google docs
+
+But the `googlesheets4` package allows you to authenticate your google account and read data straight from from googlesheets using only the url. More info here https://googlesheets4.tidyverse.org/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,9 @@ title: lesser known stars of the tidyverse
 author: ''
 date: '2018-08-30'
 slug: lesser-known-stars-of-the-tidyverse
-categories: []
+categories: 
+  - tidyverse
+  - datawrangling
 output:
   html_document:
     keep_md: yes

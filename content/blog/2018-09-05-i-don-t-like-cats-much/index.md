@@ -3,6 +3,8 @@ title: I don’t like cats much
 author: Jen Richmond
 date: '2018-09-05'
 slug: i-don-t-like-cats-much
+categories:
+  - purrr
 output:
   html_document:
     keep_md: yes

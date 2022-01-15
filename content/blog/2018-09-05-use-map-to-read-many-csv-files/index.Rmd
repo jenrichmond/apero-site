@@ -3,6 +3,8 @@ title: Use map to read many csv files
 author: ''
 date: '2018-09-06'
 slug: use-map-to-read-many-csv-files
+categories:
+  - purrr
 output:
   html_document:
     keep_md: yes

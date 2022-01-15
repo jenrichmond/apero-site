@@ -4,7 +4,8 @@ author: ''
 date: '2019-06-26'
 slug: apa-figures
 image: "img/portfolio/plotforpaper.png"
-categories: []
+categories: 
+  - ggplot
 tags: []
 output:
   html_document:
@@ -28,7 +29,7 @@ library(papaja)
 
 ### Read in data
 ```{r}
-plotdata <- read_csv(here("plotdata.csv"))
+plotdata <- read_csv("plotdata.csv")
 ```
 
 ```{r}

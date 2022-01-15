@@ -6,6 +6,7 @@ slug: parsing-dates-automatically
 categories:
   - lubridate
 image: "img/gs.png"
+summary: "I've been looking at old Tidy Tuesday datasets this week to try and work out why sometimes date data is automatically parsed as dates, like in the palmer penguin dataset..."
 output:
   html_document:
     keep_md: yes
@@ -76,7 +77,7 @@ To test this hypothesis, I made a google form that asked respondents to enter th
 
 
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, eval = FALSE}
 # read data from googlesheets
 
 bday <- read_sheet("https://docs.google.com/spreadsheets/d/18OaHGFe33kvbB3GMCDHdXrmudnR7zEm4Swr-0_JEw4U/edit#gid=1811856339") 
@@ -96,7 +97,7 @@ Hmmmmm..
 
 Maybe the number formating in google sheets makes a difference. Here I have copied the iso column into a different sheet and used Format-Number-Date to change the format to be Date in googlesheets. 
 
-```{r}
+```{r eval = FALSE}
 # read data from google sheets
 bday_copy <- read_sheet("https://docs.google.com/spreadsheets/d/12xGBGjoCll8TbT6PpbhVksZGPavAVJqWGUOsWEPSS9c/edit#gid=0") 
 

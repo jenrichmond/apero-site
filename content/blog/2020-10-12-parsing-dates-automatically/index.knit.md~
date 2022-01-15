@@ -6,6 +6,7 @@ slug: parsing-dates-automatically
 categories:
   - lubridate
 image: "img/gs.png"
+summary: "I've been looking at old Tidy Tuesday datasets this week to try and work out why sometimes date data is automatically parsed as dates, like in the palmer penguin dataset..."
 output:
   html_document:
     keep_md: yes
@@ -93,12 +94,87 @@ To test this hypothesis, I made a google form that asked respondents to enter th
 
 
 
+```r
+# read data from googlesheets
+
+bday <- read_sheet("https://docs.google.com/spreadsheets/d/18OaHGFe33kvbB3GMCDHdXrmudnR7zEm4Swr-0_JEw4U/edit#gid=1811856339") 
+
+glimpse(bday)
+```
+
+Well that didn't turn out as I had expected. The free date entry parses as a list! When you let people enter date without any instructions you end up with data that is REALLY hard to parse. 
+
+The template date is recognised as dttm (datetime format) and appears in R as yyyy-mm-dd, even though in the google sheet it appears in AUS date format (dd-mm-yyyy). 
+
+Most surprising to me is that the data that I asked respondants to enter in ISO format (yyyy-mm-dd) is parsed as characters NOT dates. 
+
+Hmmmmm..
+
+### what happens if change the date format in googlesheets? 
+
+Maybe the number formating in google sheets makes a difference. Here I have copied the iso column into a different sheet and used Format-Number-Date to change the format to be Date in googlesheets. 
 
 
+```r
+# read data from google sheets
+bday_copy <- read_sheet("https://docs.google.com/spreadsheets/d/12xGBGjoCll8TbT6PpbhVksZGPavAVJqWGUOsWEPSS9c/edit#gid=0") 
+
+glimpse(bday_copy)
+```
+Ahhhh so googlesheet dates in date format will read as dates in R. Good to know...
+
+Now I'm kinda interested, what about .csv or .xlsx format??
+
+### What happens if I download the the bday sheet and read it in as a .csv?
 
 
+```r
+# read data from csv
+bday_csv <- read_csv("bday_csv.csv")
+
+glimpse(bday_csv)
+```
+
+```
+## Rows: 21
+## Columns: 4
+## $ timestamp     <chr> "12/10/2020 22:02:35", "12/10/2020 22:18:20", "12/10/202…
+## $ free_date     <chr> "30 June 1978", "17 Feb, 2011", "March 25 2014", "1977/7…
+## $ template_date <chr> "30/06/1978", "17/02/2011", "25/03/2014", "11/07/1977", …
+## $ iso_date      <date> 1978-06-30, 2011-02-17, 2014-03-25, 1977-07-11, 1981-09…
+```
+What? the template date is characters, but the ISO formatted date is a date....
+
+# What about excel?
 
 
+```r
+# read data from xl
+bday_xl <- read_excel("bday_xl.xlsx")
+
+glimpse(bday_xl)
+```
+
+```
+## Rows: 21
+## Columns: 4
+## $ timestamp     <dttm> 2020-10-12 22:02:34, 2020-10-12 22:18:19, 2020-10-12 22…
+## $ free_date     <chr> "30 June 1978", "17 Feb, 2011", "March 25 2014", "1977/7…
+## $ template_date <dttm> 1978-06-30, 2011-02-17, 2014-03-25, 1977-07-11, 1981-09…
+## $ iso_date      <chr> "1978-06-30", "2011-02-17", "2014-03-25", "1977-07-11", …
+```
+
+Well that is weird... from .xlsx the template date is dttm but the ISO formatted date is characters- which is the OPPOSITE to what happens with the same data read from a .csv file. 
+
+# When will R recognise my dates as dates?
+
+Bottom line, it depends... where you are reading data from makes a difference.  R is more likely to read your dates if the variable in googlesheets or excel is in date format, but from .csv, it seems to like ISO format (yyyy-mm-dd). 
+
+# Free entry dates
+
+OK what you do with the free date data, when you have forgotten to restrict the way that your participants enter their date. 
+
+Let's make a new df that includes just the free date and template date variables. 
 
 
 

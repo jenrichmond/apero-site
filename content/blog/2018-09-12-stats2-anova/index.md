@@ -3,7 +3,8 @@ title: next up anova
 author: ''
 date: '2018-09-12'
 slug: next-up-anova
-categories: []
+categories: 
+  - stats
 output:
   html_document:
     keep_md: yes

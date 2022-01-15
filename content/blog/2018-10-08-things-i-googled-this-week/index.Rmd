@@ -3,7 +3,9 @@ title: things i googled this week
 author: ''
 date: '2018-10-08'
 slug: things-i-googled-this-week
-categories: []
+categories: 
+  - github
+  - counting
 tags: []
 output:
   html_document:

@@ -3,7 +3,10 @@ title: more wrangling tips
 author: ''
 date: '2018-09-11'
 slug: more-wrangling-tips
-categories: []
+categories: 
+  - datawrangling
+  - dplyr
+  - tidyr
 output:
   html_document:
     keep_md: yes

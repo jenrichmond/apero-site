@@ -3,7 +3,9 @@ title: creating data using rep()
 author: ''
 date: '2018-09-07'
 slug: creating-data-using-rep
-categories: []
+categories: 
+  - base
+  - simulation
 output:
   html_document:
     keep_md: yes

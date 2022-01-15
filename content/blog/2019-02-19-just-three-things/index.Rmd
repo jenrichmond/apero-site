@@ -3,7 +3,8 @@ title: Just Three Things
 author: ''
 date: '2019-02-19'
 slug: just-three-things
-categories: []
+categories: 
+  - datawrangling
 tags: []
 output:
   html_document:

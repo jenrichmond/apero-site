@@ -3,7 +3,9 @@ title: blogdown
 author: ''
 date: '2019-06-18'
 slug: blogdown
-categories: []
+categories: 
+  - blogdown
+  - Rmd
 tags: []
 output:
   html_document:

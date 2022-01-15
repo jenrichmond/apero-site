@@ -3,7 +3,9 @@ title: Writing about LMM
 author: ''
 date: '2018-09-25'
 slug: writing-lmm
-categories: []
+categories: 
+  - stats
+  - lmm
 tags: []
 output:
   html_document:

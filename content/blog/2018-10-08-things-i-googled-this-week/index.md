@@ -3,7 +3,9 @@ title: things i googled this week
 author: ''
 date: '2018-10-08'
 slug: things-i-googled-this-week
-categories: []
+categories: 
+  - github
+  - counting
 tags: []
 output:
   html_document:
@@ -102,7 +104,7 @@ iris %>%
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   Species    mean_Petal count_flowers
 ##   <fct>           <dbl>         <int>
 ## 1 setosa           1.46            50

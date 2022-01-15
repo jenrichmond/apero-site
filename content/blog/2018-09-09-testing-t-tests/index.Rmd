@@ -3,7 +3,9 @@ title: testing out t-tests
 author: ''
 date: '2018-09-08'
 slug: testing-out-t-tests
-categories: []
+categories: 
+  - stats
+  - ttest
 tags: []
 output:
   html_document:

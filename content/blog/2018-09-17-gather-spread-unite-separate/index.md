@@ -3,7 +3,10 @@ title: gather spread unite separate
 author: ''
 date: '2018-09-17'
 slug: gather-spread-unite-separate
-categories: []
+categories: 
+  - datawrangling
+  - tidyr
+  - pivot
 output:
   html_document:
     keep_md: yes

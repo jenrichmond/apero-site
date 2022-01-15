@@ -3,7 +3,8 @@ title: how to add a gif
 author: ''
 date: '2018-12-18'
 slug: how-to-add-a-gif
-categories: []
+categories: 
+  - ggplot
 tags: []
 output:
   html_document:

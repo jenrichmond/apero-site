@@ -3,7 +3,8 @@ title: infinite moon reader
 author: ''
 date: '2019-01-03'
 slug: infinite-moon-reader
-categories: []
+categories: 
+  - Rmd
 tags: []
 output:
   html_document:

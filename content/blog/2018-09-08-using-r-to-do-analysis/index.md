@@ -3,7 +3,8 @@ title: using R for analysis
 author: ''
 date: '2018-09-08'
 slug: using-r-for-analysis
-categories: []
+categories: 
+  - stats
 output:
   html_document:
     keep_md: yes

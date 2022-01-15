@@ -3,7 +3,9 @@ title: where is here?
 author: ''
 date: '2018-09-18'
 slug: where-is-here
-categories: []
+categories: 
+  - workflow
+  - filepaths
 tags: []
 output:
   html_document:

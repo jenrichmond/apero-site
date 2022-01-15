@@ -3,7 +3,9 @@ title: testing out t-tests
 author: ''
 date: '2018-09-08'
 slug: testing-out-t-tests
-categories: []
+categories: 
+  - stats
+  - ttest
 tags: []
 output:
   html_document:
@@ -50,14 +52,14 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
 ```
 
 ```
-## ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-## ✓ tibble  3.1.0     ✓ dplyr   1.0.5
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.4.0     ✓ forcats 0.5.1
+## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
+## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
+## ✓ readr   2.1.1     ✓ forcats 0.5.1
 ```
 
 ```
@@ -447,7 +449,7 @@ t.test(homeawaygames$attendance ~ homeawaygames$game_type, paired=FALSE, var.equ
 ## 
 ## data:  homeawaygames$attendance by homeawaygames$game_type
 ## t = 20.249, df = 209.14, p-value < 2.2e-16
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group finals and group regular is not equal to 0
 ## 95 percent confidence interval:
 ##  27416.75 33330.80
 ## sample estimates:

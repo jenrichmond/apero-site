@@ -3,7 +3,9 @@ title: how to use the `here` package
 author: ''
 date: '2018-10-14'
 slug: how-to-use-the-here-package
-categories: []
+categories: 
+  - workflow
+  - filepaths
 tags: []
 output:
   html_document:

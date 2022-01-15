@@ -3,7 +3,9 @@ title: let me count the ways
 author: ''
 date: '2018-09-24'
 slug: let-me-count-the-ways
-categories: []
+categories: 
+  - stats
+  - lmm
 output:
   html_document:
     keep_md: yes

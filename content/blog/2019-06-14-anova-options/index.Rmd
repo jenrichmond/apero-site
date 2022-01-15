@@ -3,7 +3,9 @@ title: rm anova options
 author: ''
 date: '2019-06-14'
 slug: anova-options
-categories: []
+categories: 
+  - stats
+  - anova
 tags: []
 output:
   html_document:

@@ -53,6 +53,8 @@ rm -v #remove a directory
 
 You can find files that meet certain criteria too. The dot stands in for this directory. Here I am looking for all files with the ext .icloud
 
+https://stackoverflow.com/questions/5905054/how-can-i-recursively-find-all-files-in-current-and-subfolders-based-on-wildcard
+
 ``` 
 
 find . -name "*.icloud"
@@ -60,6 +62,8 @@ find . -name "*.icloud"
 ```
 
 The rename package seems to be something that you need to use brew to install, but once you have it, you can easily rename things. Here we are renaming all .jpeg files with .jpg. 
+
+https://www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux/
 
 
 ```
@@ -88,6 +92,22 @@ rename 's/.icloud//' .index*
 
 ```
 
+Fixing rid of hidden files starting with, - this resource was useful
+
+https://askubuntu.com/questions/1089485/how-to-rename-unhide-all-files-and-subdirectories-within-a-directory
+
+
+THIS prints what it will do…
+
+```
+-depth -name ".*" -exec rename -n 's|(.*/)\.(.*)|$1$2|' {} +
+```
+
+Remove the -n to get it to run 
+
+```
+-depth -name ".*" -exec rename 's|(.*/)\.(.*)|$1$2|' {} +
+```
 Ultimately these bash did what I wanted (rename the hidden files and remove the weird extensions) but it didn't solve my problem. I managed to rename the files and then they still wouldn't open, so had to copy them back in from another back up... but it was a useful bash exploration anyway! 
 
 

@@ -30,7 +30,7 @@ library(gt)
 
 ## here::here()
 
-The here() package makes dealing with filepaths and telling R where you work lives really easy. If you work within a R project (always recommended), here::here() defaults to the top level of your project folder. You can refer to everything relative to there and use quotes to specify folder levels. Today I am writing in my blogdown project, so here tells me that I am currently…
+The `here` package makes dealing with file paths and telling R where your work lives really easy. If you work within a R project (always recommended), here::here() defaults to the top level of your project folder. You can refer to everything relative to there and use quotes to specify folder levels. Today I am writing in my blogdown project, so here tells me that I am currently…
 
 ``` r
 here::here()
@@ -48,7 +48,7 @@ practice_penguins <- read_csv(here("content", "blog", "2022-01-17-my-favourite-t
 
 ## janitor::clean_names()
 
-I messed up the penguin data to make the variable names a bit ugly so I could demo my favourite function, clean_names(). So often little thought is put into naming conventions at the time of data entry and it is really common to be given a dataset that has really longwinded and inconsistently variable names.
+I messed up the penguin data to make the variable names a bit ugly so I could demo my favourite function, `clean_names()`. So often little thought is put into naming conventions at the time of data entry and it is really common to be given a dataset that has really longwinded and inconsistently formatted variable names.
 
 ``` r
 names(practice_penguins)
@@ -57,7 +57,7 @@ names(practice_penguins)
     ## [1] "Species"        "island"         "Bill length"    "bill_depth"    
     ## [5] "flipper length" "Body_Mass"      "Sex"            "year"
 
-In this case there is a mix of upper and lower case, some gaps between words, some underscores. When you are coding, you need to type the names of variables a lot, it can save you lots of time to make the variable names consistent… enter clean_names()
+In this case there is a mix of upper and lower case, some gaps between words, some underscores. When you are coding, you need to type the names of variables a lot, so it can save you lots of time to make the variable names consistent… enter `clean_names()`
 
 ``` r
 clean_penguins <- practice_penguins %>%
@@ -75,7 +75,7 @@ In one line of code, everything is lower case with underscores in the gaps (aka 
 
 ## janitor::tabyl()
 
-Often the first thing you want to do in R is count how many observations you have of different type. The tabyl() function from janitor works much like the count() function, but the output is more concise and user friendly and includes % automatically.
+Often the first thing you want to do in R is count how many observations you have of different type. The `tabyl()` function from janitor works much like the `count()` function, but the output is more concise and user friendly and includes percentages automatically.
 
 ``` r
 clean_penguins %>%
@@ -87,7 +87,7 @@ clean_penguins %>%
     ##  Chinstrap  68 0.1976744
     ##     Gentoo 124 0.3604651
 
-You can count just one variable, or two. There are a series of adorn\_ functions that also allow you to add totals.
+You can count just one variable, or get something a bit like a cross tab with two. There are a series of adorn\_ functions that also allow you to add totals.
 
 ``` r
 clean_penguins %>%
@@ -101,7 +101,7 @@ clean_penguins %>%
     ##     Gentoo     58   61   5
     ##      Total    165  168  11
 
-You can assign the output to a dataframe or pipe into gt() to get a nice looking rendered output.
+You can assign the output to a dataframe or pipe into `gt()` to get a nice looking rendered output.
 
 ``` r
 clean_penguins %>%
@@ -110,12 +110,12 @@ clean_penguins %>%
   gt()
 ```
 
-<div id="qpxmpybjoe" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zhysxcsayv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#qpxmpybjoe .gt_table {
+#zhysxcsayv .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -140,7 +140,7 @@ clean_penguins %>%
   border-left-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_heading {
+#zhysxcsayv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -152,7 +152,7 @@ clean_penguins %>%
   border-right-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_title {
+#zhysxcsayv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -162,7 +162,7 @@ clean_penguins %>%
   border-bottom-width: 0;
 }
 
-#qpxmpybjoe .gt_subtitle {
+#zhysxcsayv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -172,13 +172,13 @@ clean_penguins %>%
   border-top-width: 0;
 }
 
-#qpxmpybjoe .gt_bottom_border {
+#zhysxcsayv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_col_headings {
+#zhysxcsayv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -193,7 +193,7 @@ clean_penguins %>%
   border-right-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_col_heading {
+#zhysxcsayv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -213,7 +213,7 @@ clean_penguins %>%
   overflow-x: hidden;
 }
 
-#qpxmpybjoe .gt_column_spanner_outer {
+#zhysxcsayv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -225,15 +225,15 @@ clean_penguins %>%
   padding-right: 4px;
 }
 
-#qpxmpybjoe .gt_column_spanner_outer:first-child {
+#zhysxcsayv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qpxmpybjoe .gt_column_spanner_outer:last-child {
+#zhysxcsayv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qpxmpybjoe .gt_column_spanner {
+#zhysxcsayv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -245,7 +245,7 @@ clean_penguins %>%
   width: 100%;
 }
 
-#qpxmpybjoe .gt_group_heading {
+#zhysxcsayv .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -267,7 +267,7 @@ clean_penguins %>%
   vertical-align: middle;
 }
 
-#qpxmpybjoe .gt_empty_group_heading {
+#zhysxcsayv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -282,15 +282,15 @@ clean_penguins %>%
   vertical-align: middle;
 }
 
-#qpxmpybjoe .gt_from_md > :first-child {
+#zhysxcsayv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qpxmpybjoe .gt_from_md > :last-child {
+#zhysxcsayv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qpxmpybjoe .gt_row {
+#zhysxcsayv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -309,7 +309,7 @@ clean_penguins %>%
   overflow-x: hidden;
 }
 
-#qpxmpybjoe .gt_stub {
+#zhysxcsayv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -321,7 +321,7 @@ clean_penguins %>%
   padding-left: 12px;
 }
 
-#qpxmpybjoe .gt_summary_row {
+#zhysxcsayv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -331,7 +331,7 @@ clean_penguins %>%
   padding-right: 5px;
 }
 
-#qpxmpybjoe .gt_first_summary_row {
+#zhysxcsayv .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -341,7 +341,7 @@ clean_penguins %>%
   border-top-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_grand_summary_row {
+#zhysxcsayv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -351,7 +351,7 @@ clean_penguins %>%
   padding-right: 5px;
 }
 
-#qpxmpybjoe .gt_first_grand_summary_row {
+#zhysxcsayv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -361,11 +361,11 @@ clean_penguins %>%
   border-top-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_striped {
+#zhysxcsayv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qpxmpybjoe .gt_table_body {
+#zhysxcsayv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -374,7 +374,7 @@ clean_penguins %>%
   border-bottom-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_footnotes {
+#zhysxcsayv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -388,13 +388,13 @@ clean_penguins %>%
   border-right-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_footnote {
+#zhysxcsayv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#qpxmpybjoe .gt_sourcenotes {
+#zhysxcsayv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -408,41 +408,41 @@ clean_penguins %>%
   border-right-color: #D3D3D3;
 }
 
-#qpxmpybjoe .gt_sourcenote {
+#zhysxcsayv .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#qpxmpybjoe .gt_left {
+#zhysxcsayv .gt_left {
   text-align: left;
 }
 
-#qpxmpybjoe .gt_center {
+#zhysxcsayv .gt_center {
   text-align: center;
 }
 
-#qpxmpybjoe .gt_right {
+#zhysxcsayv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qpxmpybjoe .gt_font_normal {
+#zhysxcsayv .gt_font_normal {
   font-weight: normal;
 }
 
-#qpxmpybjoe .gt_font_bold {
+#zhysxcsayv .gt_font_bold {
   font-weight: bold;
 }
 
-#qpxmpybjoe .gt_font_italic {
+#zhysxcsayv .gt_font_italic {
   font-style: italic;
 }
 
-#qpxmpybjoe .gt_super {
+#zhysxcsayv .gt_super {
   font-size: 65%;
 }
 
-#qpxmpybjoe .gt_footnote_marks {
+#zhysxcsayv .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -497,7 +497,7 @@ naniar::vis_miss(clean_penguins)
 
 ## tidyr::pivot_longer()
 
-When we enter data it is usually in wide format, which is problematic when you want to use ggplot, which expects your data to be long. The new pivot functions from `tidyr` make it really easy to switch your data from wide to long (and back again if you need). Here I am selecting just species and the two variables that start with “bill” to make a smaller demo dataset.
+When we enter data it is usually in wide format. This is problematic when you want to use ggplot, which expects your data to be long. The new pivot functions from `tidyr` make it really easy to switch your data from wide to long (and back again if you need). Here I am selecting just species and the two variables that start with “bill” to make a smaller demo dataset.
 
 ``` r
 penguin_bill <- clean_penguins %>%
@@ -512,9 +512,9 @@ glimpse(penguin_bill)
     ## $ bill_length <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, …
     ## $ bill_depth  <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, …
 
-Technically this bill data is in wide format. The two columns contain bill measurements, about two different parts of the penguin bill. We could represent this data in long format by making a new column that contained info about which part of the bill we were measuring, and another column with the measurement value.
+Technically this bill data is in wide format (it is not the best example but lets run with it). The two columns contain bill measurements, about two different parts of the penguin bill. We could represent this data in long format by making a new column that contained info about which part of the bill we were measuring, and another column with the measurement value.
 
-The pivot_longer() function asks you to specify what you want to call the column that will contain what is currently in the variable names (i.e. names_to), what you want to call the column that will contain the values (i.e. values to) and the range of columns that are currently wide that you want to be long.
+The `pivot_longer()` function asks you to specify what you want to call the column that will contain what is currently in the variable names (i.e. names_to), what you want to call the column that will contain the values (i.e. values to) and the range of columns that are currently wide that you want to be long.
 
 ``` r
 long_bill <- penguin_bill %>%
@@ -538,18 +538,19 @@ head(long_bill)
 
 ## ggeasy::easy_remove_legend()
 
-Once you have your head around how to construct figures in ggplot, you can spend a lot of time googling how to customise it. The ggeasy package contains a whole lot of easy to use wrappers for really common ggplot adjustments. Like removing the legend…the code to remove the legend is p + theme(legend.position = “none”) … or you can use ggeasy::easy_remove_legend()
+Once you have your head around how to construct figures in ggplot, you can spend a lot of time googling how to customise it. The `ggeasy` package contains a whole lot of easy to use wrappers for really common ggplot adjustments. Like removing the legend…the code to remove the legend is p + theme(legend.position = “none”) … or you can use `ggeasy::easy_remove_legend()`
 
 https://www.datanovia.com/en/blog/ggplot-legend-title-position-and-labels/
 
 ``` r
-clean_penguins %>% 
-  ggplot(aes(x = species, y = bill_length, colour = species)) +
+long_bill %>% 
+  ggplot(aes(x = species, y = measurement, colour = species)) +
   geom_jitter(width = 0.2, alpha = 0.5) +
+  facet_wrap(~ bill_part) +
   easy_remove_legend()
 ```
 
-    ## Warning: Removed 2 rows containing missing values (geom_point).
+    ## Warning: Removed 4 rows containing missing values (geom_point).
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
@@ -557,9 +558,9 @@ clean_penguins %>%
 
 ## dplyr::case_when()
 
-Sometimes you need to compute a new variable based on values in other variables, `case_when()` is your friend. Lets say we were interested in which penguins have extremely long or short bills. Here I am filtering for just the gentoo penguins, and calcuating the mean and sd for bill length. Then I am using mutate() to make a new variable and case_when() to flag values of bill length than are more than 2sd greater than the mean as “long” and values of bill length that are more than 2sd below the mean as short. The TRUE \~ “ordinary,” puts ordinary in the cells that don’t meet those criteria.
+Sometimes you need to compute a new variable based on values in other variables, `case_when()` is your friend. Lets say we were interested in which penguins have extremely long or short bills. Here I am filtering for just the Gentoo penguins, and calculating the mean and sd for bill length. Then I am using `mutate()` to make a new variable and `case_when()` to flag values of bill length than are more than 2sd greater than the mean as “long” and values of bill length that are more than 2sd below the mean as short. The TRUE \~ “ordinary,” puts ordinary in the cells that don’t meet those criteria.
 
-Then we can use tabyl() to count how many penguins have extraordinarily long or short bills.
+Then we can use `tabyl()` to count how many penguins have extraordinarily long or short bills.
 
 ``` r
 gentoo <- clean_penguins %>%
@@ -586,7 +587,7 @@ gentoo %>% tabyl(long_short)
 
 ## dplyr::relocate()
 
-When using mutate() to make a new variable, the default is to add it to the right side of the dataframe. With small datasets that is ok, but when you have lots of variables and you want to check whether the mutate has done what you want, it can be annoying. There is a relatively new function in `dplyr` that allows you to relocate a variable. Here I am moving the long_short variable we just made to the position after bill_length.
+When using `mutate()` to make a new variable, the default is to add it to the right side of the dataframe. With small datasets that is ok, but when you have lots of variables and you want to check whether the mutate has done what you want, it can be annoying. There is a relatively new function in `dplyr` that allows you to relocate a variable. Here I am moving the long_short variable we just made to the position after bill_length.
 
 ``` r
 gentoo <- gentoo %>%
@@ -607,7 +608,7 @@ Lets make a plot to illustrate the variability in Gentoo penguins bill length.
 ``` r
 gentoo %>%
   ggplot(aes(x = sex, y = bill_length, colour = long_short)) + 
-  geom_jitter(width = 0.2) 
+  geom_jitter(width = 0.2)
 ```
 
     ## Warning: Removed 1 rows containing missing values (geom_point).
@@ -620,24 +621,17 @@ gentoo %>%
 
 You might have noticed that in the default Rmd template there is a chunk at the top that controls how your document knits. The default knit settings have echo = TRUE which makes your code appear in your knitted document along with your output. But you can add other knit settings.
 
-``` r
-knitr::include_graphics(here::here("content", "blog", "2022-01-17-my-favourite-things-about-r", "default.png"))
-```
-
-<img src="/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2022-01-17-my-favourite-things-about-r/default.png" width="1111" />
+<img src="default.png" width="1111" />
 
 You can add fig.width, fig.height, and fig.path to control how big your plots appear in your knitted document. You can also add fig.path to have your plots be rendered in png format to a folder within your project. And if you want all the ggplots in your document to be the same theme, you can add that as a default.
 
-``` r
-knitr::include_graphics(here::here("content", "blog", "2022-01-17-my-favourite-things-about-r", "custom.png"))
-```
+<img src="custom.png" width="990" />
 
-<img src="/Users/jennyrichmond/Documents/GitHub/apero-site/content/blog/2022-01-17-my-favourite-things-about-r/custom.png" width="990" />
 # Write new data to csv
 
 ## readr::write_csv()
 
-My data analysis process often involves reading in raw data, cleaning it up, and then writing it out to csv so that you can read the clean data in to another process (visualisation, modelling). I use `write_csv()` and here::here to write out a csv that can then be used in a different script.
+My data analysis process often involves reading in raw data, cleaning it up, and then writing it out to csv so that you can read the clean data in to another process (visualisation, modelling). I use `write_csv()` and `here::here()` to write out a csv that can then be used in a different script.
 
 ``` r
 gentoo %>%

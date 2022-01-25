@@ -214,14 +214,14 @@ gentoo %>%
 You might have noticed that in the default Rmd template there is a chunk at the top that controls how your document knits. The default knit settings have echo = TRUE which makes your code appear in your knitted document along with your output. But you can add other knit settings.
 
 ```{r echo=FALSE}
-knitr::include_graphics(here::here("content", "blog", "2022-01-17-my-favourite-things-about-r", "default.png"))
+knitr::include_graphics("default.png")
 
 ```
 
 You can add fig.width, fig.height, and fig.path to control how big your plots appear in your knitted document. You can also add fig.path to have your plots be rendered in png format to a folder within your project. And if you want all the ggplots in your document to be the same theme, you can add that as a default. 
 
 ```{r echo=FALSE}
-knitr::include_graphics(here::here("content", "blog", "2022-01-17-my-favourite-things-about-r", "custom.png"))
+knitr::include_graphics("custom.png")
 
 ```
 

@@ -129,7 +129,11 @@ enableEmoji = true
     title = "Talks"
     url = "/talk/"
     weight = 4
-  
+  [[menu.header]]
+    name = "Links"
+    title = "Find things fast"
+    url = "/quick/"
+    weight = 5  
     
   # Configure footer  
   [[menu.footer]]

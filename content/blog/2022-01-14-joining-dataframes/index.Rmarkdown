@@ -11,7 +11,7 @@ tags:
   - howto
   - dplyr
   - join
-
+summary: "The `dplyr` package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable. My strategy with joins up until now has been to just try them at random and see which one delivers the data output I'm expecting. Not very efficient."
 ---
 
 

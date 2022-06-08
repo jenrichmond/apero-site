@@ -13,6 +13,7 @@ tags:
 output:
   html_document:
     keep_md: yes
+summary: "Don't make objects that have the same name as a function and how to use across() to get summary statistics"
 ---
 
 

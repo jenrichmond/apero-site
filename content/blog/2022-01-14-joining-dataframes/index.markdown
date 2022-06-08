@@ -11,7 +11,7 @@ tags:
   - howto
   - dplyr
   - join
-
+summary: "The `dplyr` package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable."
 ---
 
 
@@ -22,7 +22,6 @@ The `dplyr` package includes several different kind of joining functions which a
 
 
 Here I work through the examples in the documentation to see if I can figure out the difference between inner, left, right, and full joins. And then I try out my join skills on a Tidy Tuesday example about formula one. 
-
 
 
 
@@ -370,6 +369,13 @@ The `vis_miss()` function from the `naniar` package is a useful way of seeing wh
 
 ```r
 vis_miss(winner_race_right)
+```
+
+```
+## Warning: `gather_()` was deprecated in tidyr 1.2.0.
+## Please use `gather()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" />

@@ -2,4 +2,4 @@
 
 new space for my R notes blog, using apero theme
 
-jennyrichmond.netlify.org
+jennyrichmond.netlify.app

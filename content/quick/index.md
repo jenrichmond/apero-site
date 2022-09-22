@@ -75,6 +75,28 @@
 - [thinking about git](https://jennyrichmond.netlify.app/blog/serious-git-thinking/)
 - [collaborating w git](https://jennyrichmond.netlify.app/blog/git-success/)
 
+### learning logs RPubs
+- [table options: kableExtra, gt, DT](https://rpubs.com/jenrichmond/w1LL)
+- [word count w tidytext](https://rpubs.com/jenrichmond/w2LL)
+- [reproducible example aka reprex](https://rpubs.com/jenrichmond/reprex)
+- [using across to get summary stats](https://rpubs.com/jenrichmond/w3LL)
+- [making wordclouds](https://rpubs.com/jenrichmond/w4LL)
+- [raincloud plots](https://rpubs.com/jenrichmond/W6LL)
+- [using walk to try out palettes](https://rpubs.com/jenrichmond/w5LL)
+- [patchwork plots together](https://rpubs.com/jenrichmond/W7LL)
+- [pwr analysis](https://rpubs.com/jenrichmond/W8LL)
+- [interactive plots w ggplotly](https://rpubs.com/jenrichmond/W9LL)
+- [automagically reporting penguin stats with report](https://rpubs.com/jenrichmond/W10LL)
+- [join points with lines using group aesthetic](https://rpubs.com/jenrichmond/point_line)
+- [tidy tuesday: bechdel test](https://rpubs.com/jenrichmond/TT_w2)
+- [tidy tuesday: billboard](https://rpubs.com/jenrichmond/tt_billboard)
+- [tidy tuesday: emmys](https://rpubs.com/jenrichmond/ttw39)
+- [hunting missing penguins narniar](https://rpubs.com/jenrichmond/missing_penguins)
+- [rowwise & c_across](https://rpubs.com/jenrichmond/rowwise)
+- [learning about: case_when](https://rpubs.com/jenrichmond/case_when)
+- [learning about: pillar & glimpse](https://rpubs.com/jenrichmond/pillar_glimpse)
+- [learning about: clean_names](https://rpubs.com/jenrichmond/clean_names)
+- [adventofcode: lag and lead](https://rpubs.com/jenrichmond/advent1)
 
 ### misc
 

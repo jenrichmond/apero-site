@@ -10,13 +10,13 @@ cascade:
     text_link_label: View recent posts
     text_link_url: /blog/
 description: "Blogging about new things I learn about R is how I consolidate what I am learning and make it useful to others. Enjoy!"
-layout: list-grid
+layout: list-sidebar
 show_author_byline: true
 show_post_date: true
 show_post_thumbnail: true
 sidebar:
   author: Jen Richmond
-  description: "Blogging about new things that I am learning about R is how I consolidate what I am learning and make it useful to others. Enjoy!"
+  description: "Blogging about new things that I am learning about R is how I consolidate what I am learning and make it useful to others. Enjoy! (Art by Allison Horst)"
   show_sidebar_adunit: true
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml

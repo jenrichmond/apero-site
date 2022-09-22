@@ -1,0 +1,34 @@
+---
+title: using lists in R
+author: Jen Richmond
+date: '2022-06-27'
+slug: []
+categories: []
+tags: []
+---
+
+One of my goals while on long service leave is to learn some new R things that have been on my radar for a while... the first of these is purrr. The purrr package allows you to iterate a function across different elements in a list or dataframe. 
+
+I have started to try and learn purr before ([see google post here](https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/) and  I have copied other people's purrr code a couple of times and used [map to read in a LOT of .csv files](https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/) and [pwalk to output plots in different colour schemes](https://rpubs.com/jenrichmond/w5LL), but when you copy purrr code from someone else and adjust it to suit you own problem... you can't really say you know how to use purrr. 
+
+The first thing I think I need to get my head around in order to understand purrr is lists. Dataframes are the bread and butter of the tidyverse and up until now I have avoided them, or tried desperately to use `as.dataframe()` or `unnest()` to turn them into a datastructure that i understand. Lists allow you to bundle together different kinds of data elements together, so now is the time to get my head aroun them. 
+
+# how to make a list
+
+This is a example I copied from [a tutorial](https://techvidvan.com/tutorials/r-list/#:~:text=How%20to%20Create%20Lists%20in,function%20to%20create%20a%20list.&text=Another%20way%20to%20create%20a,into%20components%20of%20a%20list.) 
+
+```{r}
+myfirstlist <- list1 <- list(2, "hello", c(3,5,4), 1:5, list(FALSE, c("this", "is","a","list"),c(FALSE,TRUE,TRUE,TRUE,FALSE))) 
+```
+
+
+The list() function lets to put elements of all different types (and lengths) into a listy bundle; one of the elements is this list of 5 items is even ANOTHER list made up of 3 items. Lists within lists--- eeeekk.  
+
+```{r}
+class(myfirstlist)
+
+str(myfirstlist)
+```
+
+
+![](https://i.stack.imgur.com/6Vwry.png)

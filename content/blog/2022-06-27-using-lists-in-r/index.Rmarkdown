@@ -9,20 +9,26 @@ tags: []
 
 One of my goals while on long service leave is to learn some new R things that have been on my radar for a while... the first of these is purrr. The purrr package allows you to iterate a function across different elements in a list or dataframe. 
 
-I have started to try and learn purr before ([see google post here](https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/) and  I have copied other people's purrr code a couple of times and used [map to read in a LOT of .csv files](https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/) and [pwalk to output plots in different colour schemes](https://rpubs.com/jenrichmond/w5LL), but when you copy purrr code from someone else and adjust it to suit you own problem... you can't really say you know how to use purrr. 
+I have started to try and learn purr before ([see a list of resources here](https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/) and  I have copied other people's purrr code a couple of times and used [map to read in a LOT of .csv files](https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/) and [pwalk to output plots in different colour schemes](https://rpubs.com/jenrichmond/w5LL), but when you copy purrr code from someone else and adjust it to suit you own problem... you can't really say you know how to use purrr. 
 
-The first thing I think I need to get my head around in order to understand purrr is lists. Dataframes are the bread and butter of the tidyverse and up until now I have avoided them, or tried desperately to use `as.dataframe()` or `unnest()` to turn them into a datastructure that i understand. Lists allow you to bundle together different kinds of data elements together, so now is the time to get my head aroun them. 
+The first thing I think I need to get my head around in order to understand purrr is lists. Dataframes are the bread and butter of the tidyverse and up until now I have avoided them, or tried desperately to use `as.dataframe()` or `unnest()` to turn them into a data structure that i understand. Lists allow you to bundle together different kinds of data elements together, so now is the time to get my head around them. 
 
 # how to make a list
 
 This is a example I copied from [a tutorial](https://techvidvan.com/tutorials/r-list/#:~:text=How%20to%20Create%20Lists%20in,function%20to%20create%20a%20list.&text=Another%20way%20to%20create%20a,into%20components%20of%20a%20list.) 
 
 ```{r}
-myfirstlist <- list1 <- list(2, "hello", c(3,5,4), 1:5, list(FALSE, c("this", "is","a","list"),c(FALSE,TRUE,TRUE,TRUE,FALSE))) 
+myfirstlist <-  list(2, 
+                     "hello", 
+                     c(3,5,4), 
+                     1:5, 
+                     list(FALSE, 
+                          c("this", "is","a","list"),
+                          c(FALSE,TRUE,TRUE,TRUE,FALSE))) 
 ```
 
 
-The list() function lets to put elements of all different types (and lengths) into a listy bundle; one of the elements is this list of 5 items is even ANOTHER list made up of 3 items. Lists within lists--- eeeekk.  
+The `list()` function lets you put elements of all different types (and lengths) into a listy bundle; characters and numbers and logicals. One of the elements in this list of 5 items when others have 3 items or even 1. Another item is ANOTHER list made up of 3 items. Lists within lists--- eeeekk. We can use the `class()` function to check that our list is a list and the `str()` function to get our head around what we are dealing with. 
 
 ```{r}
 class(myfirstlist)
@@ -30,5 +36,46 @@ class(myfirstlist)
 str(myfirstlist)
 ```
 
+This iconic image (which I think comes from a Jenny Bryan talk) is supposed to help me understand how to access elements of a list. 
+
+Lets see if I can unpack it. 
 
 ![](https://i.stack.imgur.com/6Vwry.png)
+
+
+OK the pepper shaker is your list, it contains elements (aka packets) but those elements can also contain other elements (aka the ground pepper). You can use single square brackets and double square brackets to "break into" your list. 
+
+To get the first element of your list use a single square bracket. Here I am making a new object called firstelement (note: you can get the 2nd or 3rd ot 4th by using 2, 3, or 4 instead of 1). I get a new object in my environment, but it is still a list (aka its still in the pepper shaker). 
+
+```{r}
+firstelement <- myfirstlist[1]
+
+
+class(firstelement)
+```
+
+If I want to get that element out of the list, I can use double square brackets. 
+```{r}
+singleelement <- myfirstlist[[1]]
+
+class(singleelement)
+```
+
+You can get subelements of an element, by combining double brackets. Here we can get the 3rd element and the 2nd subelement (i.e. 5). 
+
+```{r}
+five <- myfirstlist[[3]][[2]]
+```
+
+You can put lots of double brackets together. If I want the word "a", I am looking for the 5th element, the 2nd subelement, and the 3rd subsubelement
+
+```{r}
+a <- myfirstlist[[5]][[2]][[3]]
+```
+
+
+
+
+
+
+

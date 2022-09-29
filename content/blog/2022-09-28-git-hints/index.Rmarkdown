@@ -1,0 +1,20 @@
+---
+title: git hints
+author: Jen Richmond
+date: '2022-09-28'
+slug: []
+categories: []
+tags: []
+---
+
+I am getting pretty good at avoiding git merge conflicts by always remembering to pull before I push when using github. But the terminal in RStudio has been giving me this hint for a while and I have been ignoring it. 
+
+![](hint.png)
+
+
+I think this hint is trying to help me but I don't know what rebase or fast-forward means... to google...
+
+[This post](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only) suggests that I should only use git pull -ff, going as far as setting -ff as a global config setting. 
+
+Apparently git pull (if you don't specify -rebase or -ff), is actually a two step thing. First, it fetches the content from the remote and then it merges that content into your local. That is USUALLY fine
+

@@ -1,7 +1,7 @@
 ---
 title: I Don't Have To Google Series
 description:
-  In which I dig into FGFs (frequently google functions)
+  In which I dig into FGFs (frequently googled functions)
 author: Jen Richmond
 show_post_thumbnail: true
 show_author_byline: true

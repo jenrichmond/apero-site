@@ -1,5 +1,5 @@
 ---
-title: IDHTG how to subset strings
+title: how to subset strings
 author: Jen Richmond
 date: '2022-09-29'
 slug: []
@@ -8,7 +8,7 @@ tags: []
 ---
 
 
-Sometimes you have a column in your data frame that is text, but some of it you don't need. Lets say your data looks like this...
+Sometimes you have a column in your data frame that is text, but there is some of it that you don't need. Lets say your data looks like this...
 
 
 
@@ -27,9 +27,11 @@ df
 ## 3 this is a tiger
 ```
 
-And perhaps only want the animal names... you can use `sub_str()` from the `stringr` package to strip out the extra characters. The `sub_str()` function allows you to specify the character you want to start and end with. 
+And perhaps only want the animal names... you can use `sub_str()` from the `stringr` package to strip out the extra characters. The `sub_str()` function allows you to specify the position of the character you want to start and end with. 
 
-Here I want to start at the 11th character and keep the rest. Note: spaces are included in your character count. 
+Here I want to start at the 11th character and keep the rest. 
+
+> Note: spaces are included in your character count. 
 
 
 ```r

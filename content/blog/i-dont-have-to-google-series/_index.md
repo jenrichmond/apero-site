@@ -14,7 +14,7 @@ sidebar:
   title: I Don't Have To Google Series
   author: Jen Richmond
   description: |
-    In which I dig into FGFs (frequently google functions)
+    In which I dig into FGFs (frequently googled functions)
     
     Check out the _index.md file in the /blog/spoonful-series
     folder to edit this content.

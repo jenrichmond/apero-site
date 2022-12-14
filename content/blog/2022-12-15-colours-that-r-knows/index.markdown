@@ -25,7 +25,8 @@ ggplot(aes(x=type, y=height))+
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 
-A little googling revealed that you can have R list the names of all the colours it knows (there are 657 of them) using the colours() function, but that is not so useful if you want to see the difference between hotpink1 and hotpink2. 
+A little googling revealed that you can have R list the names of all the colours it knows (there are 657 of them) using the `colours()` function, but that is not so useful if you want to see the difference between hotpink1 and hotpink2. 
+
 
 We eventually found a function in the `epitools` package that will display all the colours and allow you to point a click the ones you want! It doesn't work so well in an Rmd chunk- you are best to try it in the console. 
 

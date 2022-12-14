@@ -3,8 +3,8 @@ author: Jen Richmond
 categories:
 - workshop
 - writing
-date: "2020-10-15"
-date_end: "2020-10-15"
+date: "2022-10-14"
+date_end: "2022-10-14"
 draft: false
 event: UNSW Psychology Honours
 excerpt: Here is a talk I gave for UNSW Honours students about writing their honours general discussion. 

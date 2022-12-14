@@ -3,11 +3,11 @@ author: Jen Richmond
 categories:
 - workshop
 - writing
-date: "2020-10-15"
-date_end: "2020-10-15"
+date: "2022-10-15"
+date_end: "2022-10-15"
 draft: false
 event: UNSW Psychology Honours
-excerpt: Here is a talk I gave for UNSW PsychSoc about how revising their writing with the reviewer in mind.
+excerpt: Here is a talk I gave for UNSW Psychology Honours about how revising their writing with the reviewer in mind.
 featured: true
 layout: single
 links:

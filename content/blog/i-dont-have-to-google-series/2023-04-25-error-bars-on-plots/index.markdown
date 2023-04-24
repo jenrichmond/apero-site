@@ -12,7 +12,6 @@ Repurposing this APA figures post as a IDHTG post.
 
 As I write my first paper reporting data analysis coming out of R (woot!!!), here are some notes summarising all the googling I have done this morning about how to produce APA style figures in ggplot. 
 
-<iframe src="https://giphy.com/embed/31lPv5L3aIvTi" width="480" height="364" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/friends-excited-31lPv5L3aIvTi">via GIPHY</a></p>
 
 __________________
 

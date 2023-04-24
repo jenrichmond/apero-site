@@ -1,7 +1,7 @@
 ---
 title: colours that R knows
 author: Jen Richmond
-date: '2022-12-15'
+date: '2022-12-14'
 slug: []
 categories: []
 tags: []

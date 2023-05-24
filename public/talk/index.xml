@@ -6,7 +6,25 @@
     <description>Recent content in Talks that Last on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Put your reviewer hat on</title>
+      <link>https://jennyrichmond.netlify.app/talk/reviewerhat/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/reviewerhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Art of General Discussion Writing</title>
+      <link>https://jennyrichmond.netlify.app/talk/art/</link>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/art/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Polish your thesis</title>
       <link>https://jennyrichmond.netlify.app/talk/polish/</link>
@@ -17,7 +35,7 @@
     </item>
     
     <item>
-      <title>A campfire</title>
+      <title>Date Night</title>
       <link>https://jennyrichmond.netlify.app/talk/lubridate/</link>
       <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
       

@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dplyr</title>
+      <link>https://jennyrichmond.netlify.app/tags/dplyr/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howto</title>
+      <link>https://jennyrichmond.netlify.app/tags/howto/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>join</title>
+      <link>https://jennyrichmond.netlify.app/tags/join/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/join/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>https://jennyrichmond.netlify.app/tags/reproducibility/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rmd</title>
+      <link>https://jennyrichmond.netlify.app/tags/rmd/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/rmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>https://jennyrichmond.netlify.app/tags/writing/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/writing/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blogdown</title>
       <link>https://jennyrichmond.netlify.app/tags/blogdown/</link>
@@ -22,6 +76,177 @@
       <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/tags/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pdf</title>
+      <link>https://jennyrichmond.netlify.app/tags/pdf/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codeclub</title>
+      <link>https://jennyrichmond.netlify.app/tags/codeclub/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/codeclub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>https://jennyrichmond.netlify.app/tags/ggplot/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maps</title>
+      <link>https://jennyrichmond.netlify.app/tags/maps/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidytuesday</title>
+      <link>https://jennyrichmond.netlify.app/tags/tidytuesday/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/tidytuesday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>purrr</title>
+      <link>https://jennyrichmond.netlify.app/tags/purrr/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/purrr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://jennyrichmond.netlify.app/tags/github/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>across</title>
+      <link>https://jennyrichmond.netlify.app/tags/across/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/across/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tables</title>
+      <link>https://jennyrichmond.netlify.app/tags/tables/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/tables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo-site</title>
+      <link>https://jennyrichmond.netlify.app/tags/hugo-site/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/hugo-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>count</title>
+      <link>https://jennyrichmond.netlify.app/tags/count/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/count/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>janitor</title>
+      <link>https://jennyrichmond.netlify.app/tags/janitor/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/janitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>factors</title>
+      <link>https://jennyrichmond.netlify.app/tags/factors/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/factors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datawrangling</title>
+      <link>https://jennyrichmond.netlify.app/tags/datawrangling/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/datawrangling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidyverse</title>
+      <link>https://jennyrichmond.netlify.app/tags/tidyverse/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcuts</title>
+      <link>https://jennyrichmond.netlify.app/tags/shortcuts/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/shortcuts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datapasta</title>
+      <link>https://jennyrichmond.netlify.app/tags/datapasta/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/datapasta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EMG</title>
+      <link>https://jennyrichmond.netlify.app/tags/emg/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/emg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lubridate</title>
+      <link>https://jennyrichmond.netlify.app/tags/lubridate/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/tags/lubridate/</guid>
       <description></description>
     </item>
     

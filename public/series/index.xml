@@ -5,6 +5,16 @@
     <link>https://jennyrichmond.netlify.app/series/</link>
     <description>Recent content in Series on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://jennyrichmond.netlify.app/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IDHTG</title>
+      <link>https://jennyrichmond.netlify.app/series/idhtg/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/series/idhtg/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

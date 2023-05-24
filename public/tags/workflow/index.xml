@@ -16,5 +16,19 @@
       <description>Working out how to Marie Kondo my blogdown workflow with categories and tags</description>
     </item>
     
+    <item>
+      <title>hotkeys</title>
+      <link>https://jennyrichmond.netlify.app/blog/hotkeys/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/hotkeys/</guid>
+      <description>There are some commands that as I get more and more familiar with Rstudio I find myself typing again and again.
+Keyboard shortcuts are helpful (disclaimer: these mac versions).
+  Option-Command-i will open a new Rmarkdown code chunk.
+  Option - is a handy way of typing assignment (&amp;lt;-)
+  Shift-Command-M is a fast way of adding a pipe (%&amp;gt;%)
+  A little googling and here is a whole list that I am yet to learn.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -6,7 +6,34 @@
     <description>Recent content in writing on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/writing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Put your reviewer hat on</title>
+      <link>https://jennyrichmond.netlify.app/talk/reviewerhat/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/reviewerhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Art of General Discussion Writing</title>
+      <link>https://jennyrichmond.netlify.app/talk/art/</link>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/talk/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing in Rmd with inline code</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-14-writing-in-rmd-with-inline-code/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-14-writing-in-rmd-with-inline-code/</guid>
+      <description>One of the best things about RMarkdown is that you can use inline code to report summary and inferential statistics in your text. This means that it is impossible to make an error and if your data/values change, the text automatically updates.</description>
+    </item>
+    
     <item>
       <title>Polish your thesis</title>
       <link>https://jennyrichmond.netlify.app/talk/polish/</link>

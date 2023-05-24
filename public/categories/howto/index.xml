@@ -6,14 +6,14 @@
     <description>Recent content in howto on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/howto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/howto/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>spark joy</title>
-      <link>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</link>
-      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      <title>joining dataframes</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-14-joining-dataframes/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</guid>
-      <description>Working out how to Marie Kondo my blogdown workflow with categories and tags</description>
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-14-joining-dataframes/</guid>
+      <description>The &lt;code&gt;dplyr&lt;/code&gt; package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable.</description>
     </item>
     
   </channel>

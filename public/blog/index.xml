@@ -6,7 +6,73 @@
     <description>Recent content in R Notes to Myself on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git hints</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/</guid>
+      <description>I am getting pretty good at avoiding git merge conflicts by always remembering to pull before I push when using github. But the terminal in RStudio has been giving me this hint for a while and I have been ignoring it.
+I think this hint is trying to help me but I don&amp;rsquo;t know what rebase or fast-forward means&amp;hellip; to google&amp;hellip;
+ This post suggests that I should only use git pull -ff, going as far as setting -ff as a global config setting.</description>
+    </item>
+    
+    <item>
+      <title>analysing smartwatch data</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-07-13-analysing-smartwatch-data/</link>
+      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-07-13-analysing-smartwatch-data/</guid>
+      <description>Sometimes trying to replicate what someone is doing in a blogpost you find on twitter is a great way to learn something new. I am half heartedly thinking about trying to learn Python so when I saw this post about analysing smartwatch data on twitter I thought that it looked like interesting data and perhaps if I tried to do what they had done in R, that would be a useful way of starting to translate my R knowledge into python… maybe.</description>
+    </item>
+    
+    <item>
+      <title>using lists in R</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-06-27-using-lists-in-r/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-06-27-using-lists-in-r/</guid>
+      <description>One of my goals while on long service leave is to learn some new R things that have been on my radar for a while&amp;hellip; the first of these is purrr. The purrr package allows you to iterate a function across different elements in a list or dataframe.
+I have started to try and learn purr before ( see a list of resources here and I have copied other people&amp;rsquo;s purrr code a couple of times and used map to read in a LOT of .</description>
+    </item>
+    
+    <item>
+      <title>my favourite things about R</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-17-my-favourite-things-about-r/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-17-my-favourite-things-about-r/</guid>
+      <description>I am prepping a talk for R-Ladies Sydney about my favourite R things, the packages and functions that end up in every script I write.</description>
+    </item>
+    
+    <item>
+      <title>useful bash commands</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-16-useful-bash-commands/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-16-useful-bash-commands/</guid>
+      <description>Finding a reason to learn how to bash my way around in the terminal</description>
+    </item>
+    
+    <item>
+      <title>joining dataframes</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-14-joining-dataframes/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-14-joining-dataframes/</guid>
+      <description>The &lt;code&gt;dplyr&lt;/code&gt; package includes several different kind of joining functions which allow you to join dataframes together, when they share a common id variable.</description>
+    </item>
+    
+    <item>
+      <title>writing in Rmd with inline code</title>
+      <link>https://jennyrichmond.netlify.app/blog/2022-01-14-writing-in-rmd-with-inline-code/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2022-01-14-writing-in-rmd-with-inline-code/</guid>
+      <description>One of the best things about RMarkdown is that you can use inline code to report summary and inferential statistics in your text. This means that it is impossible to make an error and if your data/values change, the text automatically updates.</description>
+    </item>
+    
     <item>
       <title>spark joy</title>
       <link>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</link>
@@ -22,8 +88,7 @@
       <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/</guid>
-      <description>I&amp;rsquo;ve never really liked the default font that is used when Rmd knits to pdf. When knitting to pdf, R uses LaTex (which is why you often need to install the tinytex package) and the default in LaTex is called Computer Modern.
-You can customise fonts, size, and line spacing in the yaml. To change the font style you need to use a LaTex engine like xelatex and specify the mainfont (your main text) and monofont (code chunks and output).</description>
+      <description>Working out how to change the font when knitting Rmd to pdf</description>
     </item>
     
     <item>
@@ -32,8 +97,7 @@ You can customise fonts, size, and line spacing in the yaml. To change the font 
       <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/</guid>
-      <description>For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven&amp;rsquo;t done in R before, so thought it might be useful to document my process.
-first google   When I am trying something completely new in R, I generally google &amp;ldquo;how to do X in R blog&amp;rdquo;.</description>
+      <description>Using TidyTuesday data to learn how to make maps in R</description>
     </item>
     
     <item>
@@ -42,8 +106,7 @@ first google   When I am trying something completely new in R, I generally googl
       <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/</guid>
-      <description>How to use parameters and purrr to render many Rmd reports I am beginning a project where we want to create a distill site that has lots of profile pages that all have the same format but pull different data from a dataframe. Here I am learning how to use set up parameters within RMarkdown so that I can use purrr to render many reports at once.
-how to customise your yaml yaml stands for “yet another markup language” and it is the code that you see at the top of your RMarkdown document that is between the sets of dashes.</description>
+      <description>Knit many reports at once using parameters in RMarkdown</description>
     </item>
     
     <item>
@@ -52,10 +115,7 @@ how to customise your yaml yaml stands for “yet another markup language” and
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/</guid>
-      <description>I have been avoiding setting up a Personal Access Token to authenticate my github account for a while because it seemed complicated. Never fear Happy Git with R and usethis() to the rescue.
-create a token     install.packages(&amp;quot;usethis&amp;quot;) library(usethis) usethis::create_github_token() This will take you to github and create a token for you. Accept the defaults and copy the token.
-Go back to RStudio
-store it in your credentials     install.</description>
+      <description>How to set up a personalised authentiation token for github</description>
     </item>
     
     <item>
@@ -64,21 +124,92 @@ store it in your credentials     install.</description>
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/</guid>
-      <description>Thanks to Tom Mock for saving me from this blogpost on twitter. I was monster number 6… beginning to convince myself that there were gremlins in the across() function.
-In fact, I had forgotten the golden rule:
- don’t make objects that have the same names a functions
- That is for another post…
-the across() function   I have been playing with the new across() function in dplyr which is a magical solution when you are looking to get several summary statistics across a range of variables.</description>
+      <description>Don&amp;rsquo;t make objects that have the same name as a function and how to use across() to get summary statistics</description>
     </item>
     
     <item>
-      <title>idhtg how to annotate plots</title>
-      <link>https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      <title>my first pull request</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-01-08-my-first-pull-request/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/</guid>
-      <description>A new post in my I Don&amp;rsquo;t Have to Google (idhtg) series. I&amp;rsquo;ve been wanting to work out how to add annotations to plots for a while and this plot from the @WeAreRladies account this week got me inspired!
-I also looked at activity by week. You can see that there are some weeks when there was a break between curators. You can also see curators are totally different - both in terms of number of tweets and the number of retweets and replies.</description>
+      <guid>https://jennyrichmond.netlify.app/blog/2021-01-08-my-first-pull-request/</guid>
+      <description>There are so many lovely packages for colour palettes (see links at the bottom of this post for more).
+This new one called feather by Shandiya Balasubramanium is inspired by Australian birds and is delightful.
+Today I built my first R package! Meet feather: a set of colour palettes inspired by the plumage of Australian birds. It&amp;#39;s a work in progress and a bit rough around the edges, but I&amp;#39;m pretty proud of it#RStats #WildOz #DataVisualization https://t.</description>
+    </item>
+    
+    <item>
+      <title>functions to save you time</title>
+      <link>https://jennyrichmond.netlify.app/blog/2021-01-05-functions-to-save-you-time/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2021-01-05-functions-to-save-you-time/</guid>
+      <description>Last year my R resolution was to google less. I think I succeeded (kinda). I wrote a few posts in my IDHTG series.
+  counting things  recoding variable  work with factors  annotating plots  use colour palettes  I don&amp;rsquo;t necessary remember exactly how to recode variables or to make factors behave, but I know I have notes in my blog about those things to refer to, so that makes the googling much faster.</description>
+    </item>
+    
+    <item>
+      <title>cleaning penguins with the janitor package</title>
+      <link>https://jennyrichmond.netlify.app/blog/digging-into-the-janitor-package/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/digging-into-the-janitor-package/</guid>
+      <description>The janitor package by Sam Firke contains probably my FAVOURITE R function: clean_names(). By default when I am reading data into R, I pipe clean_names() onto the end of my read_csv(). I never have to look at inconsistently formatted variable names. But janitor package includes lots of other useful functions that make it easier to deal with dirty data and count stuff.
+new_df &amp;lt;- read_csv(here(&amp;quot;data&amp;quot;, &amp;quot;df.csv&amp;quot;) %&amp;gt;% clean_names())  Exploring package functions   Are you keen to dig into the little known functions of a package that you use all the time?</description>
+    </item>
+    
+    <item>
+      <title>lubridate characters to dates</title>
+      <link>https://jennyrichmond.netlify.app/blog/converting-characters-to-dates/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/converting-characters-to-dates/</guid>
+      <description>Art by Allison Horst @allison_horst
+ So far I have learned that lubridate has some nice functions for pulling date components like day, month, or year and using them within group_by() and summarise() or ggplot(). But most of the time when I am working with date data in the real world, R doesn&amp;rsquo;t even think my dates are dates. Most of the time date data that I read into R gets parsed as characters.</description>
+    </item>
+    
+    <item>
+      <title>lubridate month() &#43; wday()</title>
+      <link>https://jennyrichmond.netlify.app/blog/lubridate-month-wday/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/lubridate-month-wday/</guid>
+      <description>Art by Allison Horst @allison_horst
+ When I am trying to work out a problem with R, I generally skip the package documentation, I avoid stack overflow, and I go straight for a blog post written by someone who has just learned what I am trying to learn.
+I think when you have just learned something, you are in THE BEST PLACE to teach someone else. You are acutely aware of what it feels like to not &amp;ldquo;get it&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>lubridate first google</title>
+      <link>https://jennyrichmond.netlify.app/blog/lubridate-googling/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/lubridate-googling/</guid>
+      <description>I have set myself a challenge of learning to deal with dates in R. Nothing like setting a date for an R-Ladies Sydney event where you will teach other people to spur the motivation for learning how to use the lubridate package.
+The plan is to learn how to use the package and document my learning process along the way so that at the end of Oct I can tell everyone&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>group_by and summarise</title>
+      <link>https://jennyrichmond.netlify.app/blog/group-by-and-summarise/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/group-by-and-summarise/</guid>
+      <description>Some students have been asking me how they can calcuate means and standard errors by condition. Here is a quick example using the palmer penguin data.
+Details of the palmer penguin data, with art by Allison Horst, can be found here.
+load packages     library(palmerpenguins) library(tidyverse)  read in data     penguins &amp;lt;- penguins glimpse(penguins) ## Rows: 344 ## Columns: 8 ## $ species &amp;lt;fct&amp;gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel… ## $ island &amp;lt;fct&amp;gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse… ## $ bill_length_mm &amp;lt;dbl&amp;gt; 39.</description>
+    </item>
+    
+    <item>
+      <title>calculating z scores</title>
+      <link>https://jennyrichmond.netlify.app/blog/calculating-z-scores/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/calculating-z-scores/</guid>
+      <description>The scale() function will center and/or scale a numeric object. Use center = TRUE to subtract the mean from the values; use scale = TRUE to divide the centered values by the standard deviation to produce z scores.
+center variable A    scale(A, center = TRUE, scale = FALSE)
+ generate z-scores for variable A    scale(A, center = TRUE, scale = TRUE)
+ Lets try it with EMG data</description>
     </item>
     
     <item>
@@ -89,6 +220,364 @@ I also looked at activity by week. You can see that there are some weeks when th
       <guid>https://jennyrichmond.netlify.app/blog/ggplot-tricks/</guid>
       <description>Here are some ggplot tricks that I shared at the R-Ladies Sydney June Show and Tell.
 Why is my internet speed so terrible?   Working from home and pivoting to teaching online has made me realise that my wifi connection is really bad, particularly when it rains. I have been teaching new honours students R and needed a little dataset to demo how to get data into R, so made a google form and put it out on twitter to confirm to myself that my connection really is worse than most other people.</description>
+    </item>
+    
+    <item>
+      <title>Spending in COVID</title>
+      <link>https://jennyrichmond.netlify.app/blog/bank/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/bank/</guid>
+      <description>There is no doubt that COVID19 has massively disrupted how we spend our time and money. In this post, I update code inspired by this R-bloggers blog to look at how much less money we have been spending on eating in the last month, compared to April 2019.
+Download a copy of your bank transactions in csv format.
+Load packages   library(tidyverse) library(janitor) library(lubridate)  Read in data   Clean and rename, select just date, description, debit amount, add new column for class with default value = &amp;ldquo;Other&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>what did we just do?</title>
+      <link>https://jennyrichmond.netlify.app/blog/git-success/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/git-success/</guid>
+      <description>I started a blog post and pushed it to the git repo that contains my blog. Charles forked my repo, cloned it to her machine, contributed to the post, and then pushed the updates to her forked copy of the repo.
+Then she did a pull request. People in git-land talk about PRs (pull requests) all the time, and the term seems backwards to me. A pull request is when you request that the owner of a repo &amp;ldquo;pull&amp;rdquo; the changes that you have made.</description>
+    </item>
+    
+    <item>
+      <title>serious git thinking</title>
+      <link>https://jennyrichmond.netlify.app/blog/serious-git-thinking/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/serious-git-thinking/</guid>
+      <description>I have been a git user for 513 days.
+When I was first setting up this blog, my dear friend Charles T Gray helped me learn the 3 terminal commands that you need to know to interact with git in the most rudimentary of ways.
+ git add .
+  git commit -m &amp;ldquo;something meaningful&amp;rdquo;
+  git push
+ Since then I have mostly just used these 3 commands to push blog posts to git.</description>
+    </item>
+    
+    <item>
+      <title>best stats meme ive seen in a while</title>
+      <link>https://jennyrichmond.netlify.app/blog/best-stats-meme-ive-seen-in-a-while/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/best-stats-meme-ive-seen-in-a-while/</guid>
+      <description>Just putting this here because I&amp;rsquo;m sure it will come in handy some day.
+not untrue https://t.co/TR8uueTsk9
+&amp;mdash; Shit Academics Say (@AcademicsSay) October 8, 2019  </description>
+    </item>
+    
+    <item>
+      <title>insights from the RMarkdown whisperer</title>
+      <link>https://jennyrichmond.netlify.app/blog/insights-from-the-markdown-whisperer/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/insights-from-the-markdown-whisperer/</guid>
+      <description>I had the pleasure of attending Alison Hill&amp;rsquo;s RMarkdown workshop in Canberra on Monday and I came away with so many tips and tricks! It was brillant.
+Alison covered A LOT over the course of the day. I learned lots of the power of yaml, how to create parameterised reports, and how to make a package that contains customised .Rmd templates. Each of those topics are blogposts for another day, but my favourite bit was making a beautiful Academic theme blogdown site.</description>
+    </item>
+    
+    <item>
+      <title>mutate &#43; if else = new conditional variable</title>
+      <link>https://jennyrichmond.netlify.app/blog/mutate-and-if-else-to-create-new-variables/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/mutate-and-if-else-to-create-new-variables/</guid>
+      <description>&lt;p&gt;I keep googling 
+&lt;a href=&#34;https://rstudio-pubs-static.s3.amazonaws.com/116317_e6922e81e72e4e3f83995485ce686c14.html#/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these slides&lt;/a&gt; by 
+&lt;a href=&#34;@daranzolin&#34;&gt;David Ranzolin&lt;/a&gt; each time I try to combine mutate with ifelse to create a new variable that is conditional on values in other variables.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>customise your R experience</title>
+      <link>https://jennyrichmond.netlify.app/blog/customise-your-r-experience/</link>
+      <pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/customise-your-r-experience/</guid>
+      <description>Would you like RStudio to show you a random The Good Place quote, spoken by a ASCII animal along with some random message of praise/encouragement each time you start a coding session or restart R?
+Of course you would!!!
+how to customise your .rprofile   You will need to install the following packages:
+ usethis goodshirt cowsay praise  Use usethis to open your .rprofile file     usethis::edit_r_profile() Copy and paste this text into your .</description>
+    </item>
+    
+    <item>
+      <title>Pivoting</title>
+      <link>https://jennyrichmond.netlify.app/blog/pivoting/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/pivoting/</guid>
+      <description>Cute #rstats monster art by the amazing Allison Horst.
+knitr::include_graphics(&amp;#34;gatherspread.jpeg&amp;#34;) I have been using gather() and spread() a lot lately. I&amp;rsquo;m on the tidy data train; long data is essential for ggplot etc, but sometimes you want to do calculations row wise, which is kinda complicated.
+For example, this week Matilda and I were working with her language/locomotion data and we were looking at the number of action-directed, affirmative, and descriptive responses that parents make to their infants.</description>
+    </item>
+    
+    <item>
+      <title>making memes in R</title>
+      <link>https://jennyrichmond.netlify.app/blog/making-memes-in-r/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/making-memes-in-r/</guid>
+      <description>I having been prepping for my lightning talk at the R-Ladies Sydney Birthday this weekend and learning about all the packages that you can use to make memes in R. I&amp;rsquo;m going going to talk about my favourite option (which is the memery package), but here is what I learned about other packages.
+Option 1: memer     The memer package by Sam Tyner is a tidyverse compatible package that allows you to replace text in popular memes with your own.</description>
+    </item>
+    
+    <item>
+      <title>apa figures</title>
+      <link>https://jennyrichmond.netlify.app/blog/apa-figures/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/apa-figures/</guid>
+      <description>As I write my first paper reporting data analysis coming out of R (woot!!!), here are some notes summarising all the googling I have done this morning about how to produce APA style figures in ggplot.
+via GIPHY
+ Load libraries     Start by loading tidyverse to get ggplot, here to make finding the data easy, and papaja to get the theme_apa() function.
+library(tidyverse) library(here) library(papaja)  Read in data     plotdata &amp;lt;- read_csv(&amp;#34;plotdata.</description>
+    </item>
+    
+    <item>
+      <title>blogdown</title>
+      <link>https://jennyrichmond.netlify.app/blog/blogdown/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/blogdown/</guid>
+      <description>There has been lots of talk about blogdown on #rstats Twitter recently and people have been talking up the Hugo &amp;ldquo;Academic theme&amp;rdquo;.
+I want to give it a go to update my lab website, so thought it might be a good idea to pull together all the useful links I&amp;rsquo;ve seen recently into one place.
+Alison Hill   I used Alison&amp;rsquo;s blog post when I first set up this blog.</description>
+    </item>
+    
+    <item>
+      <title>newposttest</title>
+      <link>https://jennyrichmond.netlify.app/blog/newposttest/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/newposttest/</guid>
+      <description>I think I have broken hugo   testing whether this works</description>
+    </item>
+    
+    <item>
+      <title>rm anova options</title>
+      <link>https://jennyrichmond.netlify.app/blog/anova-options/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/anova-options/</guid>
+      <description>I&amp;rsquo;ve been analysing some future thinking data and playing around with packages that can do repeated ANOVA (I know, I should do LMM). There is more than one way to skin a cat and the differences come down to two things.
+ the intuitiveness of the function arguments the readibility of the output  Some checks to do before you start
+ all of these packages assume that you within and between subjects variables are factors, but also that your participant id is a factor  A few favourites     Option 1: old school aov()   This code comes from the ANOVA cookbook</description>
+    </item>
+    
+    <item>
+      <title>Just Three Things</title>
+      <link>https://jennyrichmond.netlify.app/blog/just-three-things/</link>
+      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/just-three-things/</guid>
+      <description>I love me a good #rstats screencast. David Robinson has been screencasting his #TidyTuesday efforts for the past few months and while it is GREAT to watch a master at work, I just don’t have time to watch someone code for an hour, in order to extract a handful of tips.
+So when I saw Nick Tierney tweet about posting short videos that contain Just Three Things, I thought “that is a GREAT idea.</description>
+    </item>
+    
+    <item>
+      <title>infinite moon reader</title>
+      <link>https://jennyrichmond.netlify.app/blog/infinite-moon-reader/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/infinite-moon-reader/</guid>
+      <description>I saw an intriguing tweet this afternoon.
+🧙 ♂️Live preview for R Markdown!
+TIL that you can have a live preview of your #rstats Markdown docs!
+Just use the infinite_moon_reader function from the xaringan package.
+It works for all single-HTML-file outputs and even comes with a pre-made RStudio Addin!
+&amp;mdash; Jozef Hajnala (@jozefhajnala) January 2, 2019  When Charles was visiting for #RCurious in June, she had written her slides in xaringan and was raving about infinite moon reader.</description>
+    </item>
+    
+    <item>
+      <title>how to add a gif</title>
+      <link>https://jennyrichmond.netlify.app/blog/how-to-add-a-gif/</link>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/how-to-add-a-gif/</guid>
+      <description>Sometimes your plot needs a celebratory gif.
+I have just finished the vizwhiz module for #RYouWithMe and to top off the series I worked out how to add an RLady Wizard to our final plot.
+Just so I&amp;rsquo;ll remember for next time, here is a step by step how to&amp;hellip;
+knitr::include_graphics(&amp;#34;beachwiz.gif&amp;#34;) how to add a gif to your ggplot      Install the magick package and load it with ggplot.</description>
+    </item>
+    
+    <item>
+      <title>how to use the `here` package</title>
+      <link>https://jennyrichmond.netlify.app/blog/how-to-use-the-here-package/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/how-to-use-the-here-package/</guid>
+      <description>I&amp;rsquo;m still working on getting my head around where R thinks we work and how to tell it where my stuff lives (aka working directories).
+On twitter yesterday Alison Hill, Adam Gruer, Zoe Meers and Irene Steves helped me sort out my issues with here.
+hi #rstats friends, how do YOU use the `here` package? I thought I had my head around it but I&amp;#39;m doing something wrong. Here my markdown lives within the &amp;quot;markdown&amp;quot; folder, so I set here to the &amp;quot;data&amp;quot; folder, call read_csv(here(&amp;quot;datafile.</description>
+    </item>
+    
+    <item>
+      <title>things i googled this week</title>
+      <link>https://jennyrichmond.netlify.app/blog/things-i-googled-this-week/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/things-i-googled-this-week/</guid>
+      <description>How would we learn R if not for google? Here are some things I googled this week (and mostly not for the first time).
+1. how to install a package from github.   95% of the time, packages I want are on CRAN and I can just use the install.packages function to install them.
+install.packages(&amp;quot;nameofthepackage&amp;quot;) Occasionally though, I see something cool and new on Twitter and need to install from github.</description>
+    </item>
+    
+    <item>
+      <title>Writing about LMM</title>
+      <link>https://jennyrichmond.netlify.app/blog/writing-lmm/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/writing-lmm/</guid>
+      <description>Learning new things is HARD. Stats methods are particularly hard because it not just about running the test. You have to&amp;hellip;
+ learn when to run the test learn how to run the test learn how to interpret the test AND learn how to write about the results of the test  Part of what makes this learning hard is that our research methods training has drummed into us that there is a RIGHT WAY TO DO IT.</description>
+    </item>
+    
+    <item>
+      <title>let me count the ways</title>
+      <link>https://jennyrichmond.netlify.app/blog/let-me-count-the-ways/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/let-me-count-the-ways/</guid>
+      <description>When we want to learn how to do something new in R, we all start by googling it. Having worked out simple ANOVA, next on my list is repeated measures.
+ Domnique Makowski has an excellent blog post that comes up at the top of the search results when you google &amp;ldquo;how to do repeated measures ANOVA in R&amp;rdquo;.
+He lures you in with a post that seems like it is going to solve all your problems and then and BAM&amp;hellip; starts the post by saying &amp;ldquo;DON&amp;rsquo;T do it&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>where is here?</title>
+      <link>https://jennyrichmond.netlify.app/blog/where-is-here/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/where-is-here/</guid>
+      <description>As I add new projects to my rstats portfolio and work collaboratively on projects with students the issue of working directories is becoming more and more complicated. Not really understanding how working directories and file paths actually work, I have been relying on the beginner logic&amp;hellip;
+ Everything will be just fine as long as you keep your datafiles in the same folder as your .rmd file
+ via GIPHY</description>
+    </item>
+    
+    <item>
+      <title>next up anova</title>
+      <link>https://jennyrichmond.netlify.app/blog/next-up-anova/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/next-up-anova/</guid>
+      <description>In the kind of research that we do, t-tests can only take you so far. Most often we design factorial experiments where we are interested in both main effects and interactions. Because we work with infants and young children, who are both expensive to recruit/test and notoriously variable in their behaviour, we try to design experiments that use within-subjects designs; each child gives us more than one data point and we need to use repeated-measures analyses.</description>
+    </item>
+    
+    <item>
+      <title>more wrangling tips</title>
+      <link>https://jennyrichmond.netlify.app/blog/more-wrangling-tips/</link>
+      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/more-wrangling-tips/</guid>
+      <description>It is definitely true that it takes much longer to get your data ready for analysis than it does to actually analyse it. Apparently up to 80% of the data analysis time is spent wrangling data (and cursing and swearing).
+Did you know up to 80% of data analysis is spent on the process of cleaning and preparing data? - cf. Wickham, 2014 and Dasu and Johnson, 2003
+So here is an excellent approach to data wrangling in #rstats https://t.</description>
+    </item>
+    
+    <item>
+      <title>testing out t-tests</title>
+      <link>https://jennyrichmond.netlify.app/blog/testing-out-t-tests/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/testing-out-t-tests/</guid>
+      <description>I was trying to work out how to do t-tests using my own data and the lsr package but ended up working with Dani&amp;rsquo;s AFL data from her book while trying to work out why R insisted that my outcome variable wasn&amp;rsquo;t numeric (it definitely was). Turns out that the lsr package doesn&amp;rsquo;t deal well with tibbles (which are created by default when you use read_csv to get your data) but if you use read.</description>
+    </item>
+    
+    <item>
+      <title>using R for analysis</title>
+      <link>https://jennyrichmond.netlify.app/blog/using-r-for-analysis/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/using-r-for-analysis/</guid>
+      <description>I am feeling more confident about my resolution to get rid of Excel and only use R for data wrangling and visualisation. Next steps&amp;hellip; analysis.
+I&amp;rsquo;m starting simple (I presume) with t-tests. Mostly commonly I want to determine whether there is a difference in the performance of independent groups of kids, or a difference between kids&#39; performance on two different conditions, or whether kids are just guessing (i.e. whether their performance differs significantly chance).</description>
+    </item>
+    
+    <item>
+      <title>creating data using rep()</title>
+      <link>https://jennyrichmond.netlify.app/blog/creating-data-using-rep/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/creating-data-using-rep/</guid>
+      <description>The frequency with which my data is missing important information when it gets to R is a bit embarrassing. I&amp;rsquo;m sure as I learn what kind of information R needs I&amp;rsquo;ll get better at this but for the moment using functions like rep() to create variables like trial number or block has been super useful.
+Alison Smith has a great blog called Very Statisticious and her post about simulating data is super helpful.</description>
+    </item>
+    
+    <item>
+      <title>Use map to read many csv files</title>
+      <link>https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/</link>
+      <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/</guid>
+      <description>Dipping my toes in purrr here and replicating options from a super useful blog post I found by ClausWilke
+How to use map() to read in and bind together several .csv files   Option 1   The simplest option; use when your .csv files contain ID/participant and all live your working directory
+Get list of .csv files called files. The code below looks for files that have .csv as part of the filename in the the working directory</description>
+    </item>
+    
+    <item>
+      <title>I don’t like cats much</title>
+      <link>https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/</guid>
+      <description>I don&amp;rsquo;t love cats. I am not a member of @RCatLadies. So the fact that Tidyverse packages for dealing with factors and functional programming have cat-related names (forcats and purrr) does not endear them to me.
+I knew there was a time when I would encounter an R problem that needed the power of for loops, so when I asked the Twittersphere whether there was an alternative (hopefully a tidyverse one) that would allow me to avoid loops a little longer, I was a bit disappointed to hear that it is the purrr package.</description>
+    </item>
+    
+    <item>
+      <title>lesser known stars of the tidyverse</title>
+      <link>https://jennyrichmond.netlify.app/blog/lesser-known-stars-of-the-tidyverse/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/lesser-known-stars-of-the-tidyverse/</guid>
+      <description>Emily Robinson writes a great blog called www.hookedondata.org. She talked at the 2018 New York R conference recently and shared some of her favourite (less well known) stars of the Tidyverse. Here are her slides www.tiny.cc/nyrtalk and my notes&amp;hellip;
+1.use as_tibble()     Tibble = modern dataframe. Use instead of printing your dataset to the console.
+as_tibble() will only print the first 10 rows and columns that fit on the screen.</description>
+    </item>
+    
+    <item>
+      <title>dirty data</title>
+      <link>https://jennyrichmond.netlify.app/blog/dirty-data/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/dirty-data/</guid>
+      <description>I have been doing lots of data wrangling recently and decided a needed a quick rundown of data cleaning in R. Here are notes on useful things I learned recently.
+Quick summaries   class() will let you know whether you are working with a dataframe or not
+dim() gives you a little info about the dimensions of your data by telling you how many rows nd columns you have</description>
+    </item>
+    
+    <item>
+      <title>hotkeys</title>
+      <link>https://jennyrichmond.netlify.app/blog/hotkeys/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/hotkeys/</guid>
+      <description>There are some commands that as I get more and more familiar with Rstudio I find myself typing again and again.
+Keyboard shortcuts are helpful (disclaimer: these mac versions).
+  Option-Command-i will open a new Rmarkdown code chunk.
+  Option - is a handy way of typing assignment (&amp;lt;-)
+  Shift-Command-M is a fast way of adding a pipe (%&amp;gt;%)
+  A little googling and here is a whole list that I am yet to learn.</description>
+    </item>
+    
+    <item>
+      <title>cooking with datapasta</title>
+      <link>https://jennyrichmond.netlify.app/blog/cooking-with-datapasta/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/cooking-with-datapasta/</guid>
+      <description>Another day&amp;hellip; another data set. This time I am trying to get EMG data from LabChart into R. LabChart is the software we use to record EMG data and do the first steps of data cleaning/processing. At the moment a good chunk of the cleaning process involves Excel macros, so my goal is to replicate what we have traditionally done in Excel in R, so that it is more automated and more reproducible.</description>
+    </item>
+    
+    <item>
+      <title>calculating age</title>
+      <link>https://jennyrichmond.netlify.app/blog/calculating-age/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/calculating-age/</guid>
+      <description>I have been playing with a new (not actually new, but new to R) dataset this week.
+Successes:    I loaded the data in using read_csv. I made dates into dates.   The interview group is listed as 1s and 2s in the file so R thought those were integers. So I used as.factor to convert.  dataframe$variable &amp;lt;- as.factor(dataframe$variable) I used lubridate package to specify that DOB and Test_date were dates with Day Month Year (dmy) format.</description>
     </item>
     
   </channel>

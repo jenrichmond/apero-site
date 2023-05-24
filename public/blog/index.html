@@ -38,9 +38,10 @@
 
 
     
-        <meta property="og:image" content="https://jennyrichmond.netlify.app/img/papillons.jpg" >
+        <meta property="og:image" content="https://jennyrichmond.netlify.app/blog/featured-sidebar.jpg" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://jennyrichmond.netlify.app/img/papillons.jpg" >
+        <meta name="twitter:image" content="https://jennyrichmond.netlify.app/blog/featured-sidebar.jpg" >
+    
     
   <meta itemprop="name" content="R Notes to Myself">
 <meta itemprop="description" content="Blogging about new things I learn about R is how I consolidate what I am learning and make it useful to others. Enjoy!">
@@ -61,7 +62,7 @@
   <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
 </head>
 <body>
-      <div class="grid-container list-grid">
+      <div class="grid-container list-sidebar">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
     <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://jennyrichmond.netlify.app" title="Home">
@@ -89,149 +90,213 @@
         
       <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
       
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/quick/" title="Find things fast">Links</a>
+      
       
     </div>
   </nav>
 </header>
 
 
-<main class="page-main pa4" role="main">
-  <section class="blog-intro mw8 center tc mb5">
-    <h2 class="f2 f1-ns lh-solid center fw4">R Notes to Myself</h2>
-    <p class="f6 f5-ns measure lh-copy center">Blogging about new things I learn about R is how I consolidate what I am learning and make it useful to others. Enjoy!</p>
-    <p class="f7 measure lh-copy tc center i">Written by Jen Richmond PhD</p>
-  </section>
-  <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
+<main class="page-main pa4 section" role="main">
+  <section class="blog-content mw7 center">
     
       
         
                                    
      
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/" class="db">
         
-
-<article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  
-  
-  <div class="ph0 ph2-m ph3-l">
-    
-    <div class="aspect-ratio aspect-ratio--1x1 cover dim"style="background: url('https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/featured.jpeg') center center no-repeat"><a href="https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/" class="w-100 absolute top-0 bottom-0"></a></div>
-  </div>
-  
-  <div class="ph0 pa2-m pa3-l">
-    <h1 class="f3 f4-l mv2 lh-title fw4"><a href="/blog/2021-11-11-spark-joy/" class="db">spark joy</a></h1>
-    
+          <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/featured.png" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/" class="db">colours that R knows</a></h1>
+        
+        <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="/blog/i-dont-have-to-google-series/">IDHTG</a></h2>
+        
+      </header>
       
-      <p class="f6 lh-copy">Working out how to Marie Kondo my blogdown workflow with categories and tags</p>
-    
-    <p class="f7 db mv1">By Jen Richmond in <a href="https://jennyrichmond.netlify.app/categories/howto">howto</a> </p>
-    <p class="f7 db mv1">November 11, 2021</p>
+      <p class="f6 lh-copy mv2 flex-auto">I have been working through the ggplot R Advent calendar by Kiirsti Owen with some lovely RLadies friends and we got up to Day 15 where we started controlling colours in ggplot with scale_fill_manual(). Our immediate question was “how to you know what the names of the colours that R knows are?”
+This is a “I don’t have to google” post about finding the colours that R knows about.
+trees %&gt;% ggplot(aes(x=type, y=height))+ geom_boxplot(aes(fill=type), colour=&quot;black&quot;)+ theme_classic()+ scale_fill_manual(values=c(&quot;darkgreen&quot;, &quot;firebrick2&quot;, &quot;mediumseagreen&quot;)) You can have R list the names of all the colours it knows (there are 657 of them) using the colours() function, but that is not so useful if you want to see the difference between hotpink1 and hotpink2.</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Jen Richmond</p>
+      <p class="f7 db mv1">December 14, 2022</p>
+    </footer>
+    </div>
   </div>
+  
+  
+  
 </article>
 
       
         
                                    
      
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/" class="db">
         
-
-<article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  
-  
-  <div class="ph0 ph2-m ph3-l">
-    
-    <div class="aspect-ratio aspect-ratio--1x1 cover dim"style="background: url('https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/featured.png') center center no-repeat"><a href="https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/" class="w-100 absolute top-0 bottom-0"></a></div>
-  </div>
-  
-  <div class="ph0 pa2-m pa3-l">
-    <h1 class="f3 f4-l mv2 lh-title fw4"><a href="/blog/2021-11-10-knitting-to-pdf/" class="db">knitting to pdf</a></h1>
-    
+          <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/featured.jpeg" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/" class="db">how to subset strings</a></h1>
+        
+        <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="/blog/i-dont-have-to-google-series/">IDHTG</a></h2>
+        
+      </header>
       
-      <p class="f6 lh-copy">I’ve never really liked the default font that is used when Rmd knits to pdf. When knitting to pdf, R uses LaTex (which is why you often need to install the tinytex package) and the default in LaTex is called Computer Modern.
-You can customise fonts, size, and line spacing in the yaml. To change the font style you need to use a LaTex engine like xelatex and specify the mainfont (your main text) and monofont (code chunks and output).</p>
-    
-    <p class="f7 db mv1">By Jen Richmond</p>
-    <p class="f7 db mv1">November 10, 2021</p>
+      <p class="f6 lh-copy mv2 flex-auto">Sometimes you have a column in your data frame that is text, but there is some of it that you don’t need. Lets say your data looks like this…
+df &lt;- data.frame(animals = c(&quot;this is a bear&quot;, &quot;this is a lion&quot;, &quot;this is a tiger&quot;)) df ## animals ## 1 this is a bear ## 2 this is a lion ## 3 this is a tiger And perhaps only want the animal names… you can use sub_str() from the stringr package to strip out the extra characters.</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Jen Richmond</p>
+      <p class="f7 db mv1">September 29, 2022</p>
+    </footer>
+    </div>
   </div>
+  
+  
+  
 </article>
 
       
         
                                    
      
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/2022-09-28-git-hints/" class="db">
         
-
-<article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  
-  
-  <div class="ph0 ph2-m ph3-l">
-    
-    <div class="aspect-ratio aspect-ratio--1x1 cover dim"style="background: url('https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png') center center no-repeat"><a href="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/" class="w-100 absolute top-0 bottom-0"></a></div>
-  </div>
-  
-  <div class="ph0 pa2-m pa3-l">
-    <h1 class="f3 f4-l mv2 lh-title fw4"><a href="/blog/2021-10-13-making-maps-with-r/" class="db">making maps with R</a></h1>
-    
+          <img src="https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/featured.png" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2022-09-28-git-hints/" class="db">git hints</a></h1>
+        
+      </header>
       
-      <p class="f6 lh-copy">For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven’t done in R before, so thought it might be useful to document my process.
-first google   When I am trying something completely new in R, I generally google “how to do X in R blog”.</p>
-    
-    <p class="f7 db mv1">By Jen Richmond</p>
-    <p class="f7 db mv1">October 13, 2021</p>
+      <p class="f6 lh-copy mv2 flex-auto">I am getting pretty good at avoiding git merge conflicts by always remembering to pull before I push when using github. But the terminal in RStudio has been giving me this hint for a while and I have been ignoring it.
+I think this hint is trying to help me but I don’t know what rebase or fast-forward means… to google…
+This post suggests that I should only use git pull -ff, going as far as setting -ff as a global config setting.</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Jen Richmond</p>
+      <p class="f7 db mv1">September 28, 2022</p>
+    </footer>
+    </div>
   </div>
+  
+  
+  
 </article>
 
       
         
                                    
      
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/2022-07-13-analysing-smartwatch-data/" class="db">
         
-
-<article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  
-  
-  <div class="ph0 ph2-m ph3-l">
-    
-    <div class="aspect-ratio aspect-ratio--1x1 cover dim"style="background: url('https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/featured.jpg') center center no-repeat"><a href="https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/" class="w-100 absolute top-0 bottom-0"></a></div>
-  </div>
-  
-  <div class="ph0 pa2-m pa3-l">
-    <h1 class="f3 f4-l mv2 lh-title fw4"><a href="/blog/2021-08-31-parameterised-penguins/" class="db">parameterised penguins</a></h1>
-    
+          <img src="https://jennyrichmond.netlify.app/blog/2022-07-13-analysing-smartwatch-data/featured.png" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2022-07-13-analysing-smartwatch-data/" class="db">analysing smartwatch data</a></h1>
+        
+      </header>
       
-      <p class="f6 lh-copy">How to use parameters and purrr to render many Rmd reports I am beginning a project where we want to create a distill site that has lots of profile pages that all have the same format but pull different data from a dataframe. Here I am learning how to use set up parameters within RMarkdown so that I can use purrr to render many reports at once.
-how to customise your yaml yaml stands for “yet another markup language” and it is the code that you see at the top of your RMarkdown document that is between the sets of dashes.</p>
-    
-    <p class="f7 db mv1">By Jen Richmond</p>
-    <p class="f7 db mv1">August 31, 2021</p>
+      <p class="f6 lh-copy mv2 flex-auto">Sometimes trying to replicate what someone is doing in a blogpost you find on twitter is a great way to learn something new. I am half heartedly thinking about trying to learn Python so when I saw this post about analysing smartwatch data on twitter I thought that it looked like interesting data and perhaps if I tried to do what they had done in R, that would be a useful way of starting to translate my R knowledge into python… maybe.</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Jen Richmond</p>
+      <p class="f7 db mv1">July 13, 2022</p>
+    </footer>
+    </div>
   </div>
+  
+  
+  
 </article>
 
       
         
                                    
      
+     
+<article class="mv4 mv5-l bb">
+  
+  
+  
+  
+  <div class="flex flex-column mb4 mb5-l  flex-row-ns">
+    <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
+      <a href="/blog/2022-06-27-using-lists-in-r/" class="db">
         
-
-<article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  
-  
-  <div class="ph0 ph2-m ph3-l">
-    
-    <div class="aspect-ratio aspect-ratio--1x1 cover dim"style="background: url('https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/featured.jpg') center center no-repeat"><a href="https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/" class="w-100 absolute top-0 bottom-0"></a></div>
-  </div>
-  
-  <div class="ph0 pa2-m pa3-l">
-    <h1 class="f3 f4-l mv2 lh-title fw4"><a href="/blog/2021-06-22-pat-for-github/" class="db">PAT for GitHub</a></h1>
-    
+          <img src="https://jennyrichmond.netlify.app/blog/2022-06-27-using-lists-in-r/featured.jpeg" class="db ma0 dim" alt="">
+        
+      </a>
+    </figure>
+    <div class="flex flex-column w-100 w-60-ns pr3-ns">
+      <header class="w-100">
+        <h1 class="f3 mv2 lh-title underline"><a href="/blog/2022-06-27-using-lists-in-r/" class="db">using lists in R</a></h1>
+        
+      </header>
       
-      <p class="f6 lh-copy">I have been avoiding setting up a Personal Access Token to authenticate my github account for a while because it seemed complicated. Never fear Happy Git with R and usethis() to the rescue.
-create a token     install.packages(&quot;usethis&quot;) library(usethis) usethis::create_github_token() This will take you to github and create a token for you. Accept the defaults and copy the token.
-Go back to RStudio
-store it in your credentials     install.</p>
-    
-    <p class="f7 db mv1">By Jen Richmond</p>
-    <p class="f7 db mv1">June 22, 2021</p>
+      <p class="f6 lh-copy mv2 flex-auto">One of my goals while on long service leave is to learn some new R things that have been on my radar for a while… the first of these is purrr. The purrr package allows you to iterate a function across different elements in a list or dataframe.
+I have started to try and learn purr before ( see a list of resources here and I have copied other people’s purrr code a couple of times and used map to read in a LOT of .</p>
+      <footer class="w-100">
+      
+      <p class="f7 db mv1">By Jen Richmond</p>
+      <p class="f7 db mv1">June 27, 2022</p>
+    </footer>
+    </div>
   </div>
+  
+  
+  
 </article>
 
       
@@ -247,7 +312,7 @@ store it in your credentials     install.</p>
     
     </li>
     <li class="dtc w-50 v-mid">
-      <span class="page_number fw6 f7 ttu tracked">1 of 2</span>
+      <span class="page_number fw6 f7 ttu tracked">1 of 13</span>
     </li>
     <li class="dtc w-25 tr v-mid">
     
@@ -260,10 +325,50 @@ store it in your credentials     install.</p>
 
   </section>
 </main>
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/featured-sidebar.jpg" class="db ma0">
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">R Notes to Myself</h1>
+  <p class="f6 lh-copy measure">Blogging about new things that I am learning about R is how I consolidate what I am learning and make it useful to others. Enjoy! (Art by Allison Horst)</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Jen Richmond</p>
+
+
+  <small class="db f7"><a href="/index.xml" class="dib fw7 ttu bt bw1 b--black-10 pt3">Subscribe via RSS</a></small>
+</div>
+
+
+<div class="ad-unit pa4">
+  
+  <p class="f7 measure-narrow lh-copy mv0 pt5"><span class="b ttu db">Made by Formspree</span><span><a href="https://formspree.io" target="_blank">Formspree is a form backend, API and email  service for HTML forms</a>. It is the simplest way to collect form submissions on your static website.</span></p>
+  
+</div>
+
+</aside>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2021
+      &copy; 2023
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

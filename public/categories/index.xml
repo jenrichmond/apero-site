@@ -6,20 +6,11 @@
     <description>Recent content in Categories on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>howto</title>
-      <link>https://jennyrichmond.netlify.app/categories/howto/</link>
-      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jennyrichmond.netlify.app/categories/howto/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>workshop</title>
       <link>https://jennyrichmond.netlify.app/categories/workshop/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/categories/workshop/</guid>
       <description></description>
@@ -28,9 +19,189 @@
     <item>
       <title>writing</title>
       <link>https://jennyrichmond.netlify.app/categories/writing/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/categories/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datawrangling</title>
+      <link>https://jennyrichmond.netlify.app/categories/datawrangling/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/datawrangling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dplyr</title>
+      <link>https://jennyrichmond.netlify.app/categories/dplyr/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>https://jennyrichmond.netlify.app/categories/ggplot/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>janitor</title>
+      <link>https://jennyrichmond.netlify.app/categories/janitor/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/janitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow</title>
+      <link>https://jennyrichmond.netlify.app/categories/workflow/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howto</title>
+      <link>https://jennyrichmond.netlify.app/categories/howto/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>join</title>
+      <link>https://jennyrichmond.netlify.app/categories/join/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/join/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>https://jennyrichmond.netlify.app/categories/reproducibility/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rmd</title>
+      <link>https://jennyrichmond.netlify.app/categories/rmd/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/rmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogdown</title>
+      <link>https://jennyrichmond.netlify.app/categories/blogdown/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pdf</title>
+      <link>https://jennyrichmond.netlify.app/categories/pdf/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codeclub</title>
+      <link>https://jennyrichmond.netlify.app/categories/codeclub/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/codeclub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maps</title>
+      <link>https://jennyrichmond.netlify.app/categories/maps/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidytuesday</title>
+      <link>https://jennyrichmond.netlify.app/categories/tidytuesday/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/tidytuesday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>purrr</title>
+      <link>https://jennyrichmond.netlify.app/categories/purrr/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/purrr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://jennyrichmond.netlify.app/categories/github/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>across</title>
+      <link>https://jennyrichmond.netlify.app/categories/across/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/across/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tables</title>
+      <link>https://jennyrichmond.netlify.app/categories/tables/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/tables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functions</title>
+      <link>https://jennyrichmond.netlify.app/categories/functions/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data wrangling</title>
+      <link>https://jennyrichmond.netlify.app/categories/data-wrangling/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/data-wrangling/</guid>
       <description></description>
     </item>
     
@@ -40,6 +211,168 @@
       <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jennyrichmond.netlify.app/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lubridate</title>
+      <link>https://jennyrichmond.netlify.app/categories/lubridate/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/lubridate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EMG</title>
+      <link>https://jennyrichmond.netlify.app/categories/emg/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/emg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stats</title>
+      <link>https://jennyrichmond.netlify.app/categories/stats/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/stats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>count</title>
+      <link>https://jennyrichmond.netlify.app/categories/count/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/count/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>factors</title>
+      <link>https://jennyrichmond.netlify.app/categories/factors/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/factors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme Features</title>
+      <link>https://jennyrichmond.netlify.app/categories/theme-features/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/theme-features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidyr</title>
+      <link>https://jennyrichmond.netlify.app/categories/tidyr/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/tidyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fun</title>
+      <link>https://jennyrichmond.netlify.app/categories/fun/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anova</title>
+      <link>https://jennyrichmond.netlify.app/categories/anova/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/anova/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filepaths</title>
+      <link>https://jennyrichmond.netlify.app/categories/filepaths/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/filepaths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>counting</title>
+      <link>https://jennyrichmond.netlify.app/categories/counting/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/counting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lmm</title>
+      <link>https://jennyrichmond.netlify.app/categories/lmm/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/lmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ttest</title>
+      <link>https://jennyrichmond.netlify.app/categories/ttest/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/ttest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>base</title>
+      <link>https://jennyrichmond.netlify.app/categories/base/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/base/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simulation</title>
+      <link>https://jennyrichmond.netlify.app/categories/simulation/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/simulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidyverse</title>
+      <link>https://jennyrichmond.netlify.app/categories/tidyverse/</link>
+      <pubDate>Thu, 30 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/tidyverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcuts</title>
+      <link>https://jennyrichmond.netlify.app/categories/shortcuts/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/shortcuts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datapasta</title>
+      <link>https://jennyrichmond.netlify.app/categories/datapasta/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/categories/datapasta/</guid>
       <description></description>
     </item>
     

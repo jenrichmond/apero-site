@@ -44,11 +44,10 @@
     
     
   <meta itemprop="name" content="making maps with R">
-<meta itemprop="description" content="For code club this week we were working with the Tidy Tuesday data about registered nurses in the US. When you have data about numbers of nurses employed and median wages by state over time, the obvious thing to do is make a map! Something I haven&rsquo;t done in R before, so thought it might be useful to document my process.
-first google   When I am trying something completely new in R, I generally google &ldquo;how to do X in R blog&rdquo;."><meta itemprop="datePublished" content="2021-10-13T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Using TidyTuesday data to learn how to make maps in R"><meta itemprop="datePublished" content="2021-10-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-10-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1512"><meta itemprop="image" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png">
-<meta itemprop="keywords" content="" />
+<meta itemprop="wordCount" content="1530"><meta itemprop="image" content="https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/featured.png">
+<meta itemprop="keywords" content="codeclub,tidytuesday,maps,ggplot," />
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -92,6 +91,11 @@ first google   When I am trying something completely new in R, I generally googl
         
       <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
       
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/quick/" title="Find things fast">Links</a>
+      
       
     </div>
   </nav>
@@ -103,7 +107,7 @@ first google   When I am trying something completely new in R, I generally googl
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">making maps with R</h1>
         
-        <p class="f6 measure lh-copy mv1">By Jen Richmond</p>
+        <p class="f6 measure lh-copy mv1">By Jen Richmond in <a href="https://jennyrichmond.netlify.app/categories/codeclub">codeclub</a>  <a href="https://jennyrichmond.netlify.app/categories/tidytuesday">tidytuesday</a>  <a href="https://jennyrichmond.netlify.app/categories/maps">maps</a>  <a href="https://jennyrichmond.netlify.app/categories/ggplot">ggplot</a> </p>
         <p class="f7 db mv0 ttu">October 13, 2021</p>
 
       
@@ -361,11 +365,13 @@ plot
     <span style="color:#900;font-weight:bold">transition_time</span>(year) 
 </code></pre></div><p>Then you use the <code>animate()</code> function, playing with the frames per second to work out the optimal transition speed. This animate process will chug a little if your computer is as old and slow as mine, but be patient&hellip;</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">anim <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">animate</span>(transition, fps<span style="color:#000;font-weight:bold">=</span><span style="color:#099">10</span>)
-</code></pre></div><p>You will end up with a gif image called &ldquo;anim&rdquo; which you can preview in the Viewer pane and/or save to .gif using the <code>anim_save()</code> function.</p>
+</code></pre></div><pre><code>## Warning: No renderer available. Please install the gifski, av, or magick package
+## to create animated output
+</code></pre><p>You will end up with a gif image called &ldquo;anim&rdquo; which you can preview in the Viewer pane and/or save to .gif using the <code>anim_save()</code> function.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># show in the viewer</span>
 anim
-</code></pre></div><p><img src="index_files/figure-html/unnamed-chunk-14-1.gif" alt=""><!-- --></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># save to .gif</span>
+
+<span style="color:#998;font-style:italic"># save to .gif</span>
 
 <span style="color:#900;font-weight:bold">anim_save</span>(<span style="color:#d14">&#34;map_nurses.gif&#34;</span>, anim)
 </code></pre></div>
@@ -377,10 +383,20 @@ anim
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">8 minute read, 1512 words</dd>
+    <dd class="fw5 ml0">8 minute read, 1530 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://jennyrichmond.netlify.app/categories/codeclub">codeclub</a>  <a href="https://jennyrichmond.netlify.app/categories/tidytuesday">tidytuesday</a>  <a href="https://jennyrichmond.netlify.app/categories/maps">maps</a>  <a href="https://jennyrichmond.netlify.app/categories/ggplot">ggplot</a> </dd>
   </dl>
   
   
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://jennyrichmond.netlify.app/tags/codeclub">codeclub</a>  <a href="https://jennyrichmond.netlify.app/tags/tidytuesday">tidytuesday</a>  <a href="https://jennyrichmond.netlify.app/tags/maps">maps</a>  <a href="https://jennyrichmond.netlify.app/tags/ggplot">ggplot</a> </dd>
+  </dl>
   
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
@@ -427,7 +443,7 @@ anim
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2021
+      &copy; 2023
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

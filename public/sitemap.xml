@@ -29,25 +29,123 @@
     <loc>https://jennyrichmond.netlify.app/collection/day02/03-blogdown/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/about/about-me/</loc>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/series/idhtg/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/series/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/</loc>
+    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/talk/reviewerhat/</loc>
+    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/talk/</loc>
+    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/workshop/</loc>
+    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/writing/</loc>
+    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/talk/art/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/</loc>
+    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/</loc>
+    <lastmod>2022-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-07-13-analysing-smartwatch-data/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-06-27-using-lists-in-r/</loc>
+    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/datawrangling/</loc>
+    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/dplyr/</loc>
+    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/ggplot/</loc>
+    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/janitor/</loc>
+    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-01-17-my-favourite-things-about-r/</loc>
+    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-01-16-useful-bash-commands/</loc>
+    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/workflow/</loc>
+    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/dplyr/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/howto/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/howto/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/join/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/join/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-01-14-joining-dataframes/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/reproducibility/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/reproducibility/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/rmd/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/rmd/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/writing/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2022-01-14-writing-in-rmd-with-inline-code/</loc>
+    <lastmod>2022-01-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/tags/blogdown/</loc>
     <lastmod>2021-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jennyrichmond.netlify.app/categories/</loc>
-    <lastmod>2021-11-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/categories/howto/</loc>
-    <lastmod>2021-11-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/</loc>
-    <lastmod>2021-11-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/blog/</loc>
+    <loc>https://jennyrichmond.netlify.app/categories/blogdown/</loc>
     <lastmod>2021-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/</loc>
-    <lastmod>2021-11-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/tags/</loc>
     <lastmod>2021-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/tags/workflow/</loc>
@@ -56,7 +154,34 @@
     <loc>https://jennyrichmond.netlify.app/blog/2021-11-10-knitting-to-pdf/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/pdf/</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/pdf/</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/codeclub/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/codeclub/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/ggplot/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/2021-10-13-making-maps-with-r/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/maps/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/maps/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/tidytuesday/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/tidytuesday/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/project/2021-10-03-i-am-learning-r/</loc>
@@ -74,26 +199,56 @@
     <loc>https://jennyrichmond.netlify.app/talk/polish/</loc>
     <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jennyrichmond.netlify.app/talk/</loc>
-    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/categories/workshop/</loc>
-    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/categories/writing/</loc>
-    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/2021-08-31-parameterised-penguins/</loc>
     <lastmod>2021-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/purrr/</loc>
+    <lastmod>2021-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/purrr/</loc>
+    <lastmod>2021-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/github/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/github/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/2021-06-22-pat-for-github/</loc>
     <lastmod>2021-06-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/across/</loc>
+    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/across/</loc>
+    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/2021-02-26-across-and-summary-tables/</loc>
+    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/tables/</loc>
+    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/tables/</loc>
     <lastmod>2021-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/collection/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2021-01-08-my-first-pull-request/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/functions/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/2021-01-05-functions-to-save-you-time/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/digging-into-the-janitor-package/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/data-wrangling/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/talk/lubridate/</loc>
     <lastmod>2020-10-29T00:00:00+00:00</lastmod>
@@ -101,17 +256,125 @@
     <loc>https://jennyrichmond.netlify.app/categories/r/</loc>
     <lastmod>2020-10-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/how-to-use-colour-palettes-with-ggplot/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/hugo-site/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/talk/writing/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jennyrichmond.netlify.app/blog/idhtg-how-to-annotate-plots/</loc>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/how-to-annotate-plots/</loc>
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/lubridate/</loc>
+    <lastmod>2020-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/converting-characters-to-dates/</loc>
+    <lastmod>2020-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/lubridate-month-wday/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/lubridate-googling/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/group-by-and-summarise/</loc>
+    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/calculating-z-scores/</loc>
+    <lastmod>2020-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/emg/</loc>
+    <lastmod>2020-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/stats/</loc>
+    <lastmod>2020-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/blog/ggplot-tricks/</loc>
     <lastmod>2020-07-04T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/bank/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/recoding-variables/</loc>
+    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/talk/byod/</loc>
     <lastmod>2020-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/count/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/count/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/counting-things/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/janitor/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/factors/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/factors/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/theme-features/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/i-dont-have-to-google/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/working-with-factors/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/git-success/</loc>
+    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/serious-git-thinking/</loc>
+    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/best-stats-meme-ive-seen-in-a-while/</loc>
+    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/insights-from-the-markdown-whisperer/</loc>
+    <lastmod>2019-10-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/mutate-and-if-else-to-create-new-variables/</loc>
+    <lastmod>2019-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/customise-your-r-experience/</loc>
+    <lastmod>2019-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/pivoting/</loc>
+    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/tidyr/</loc>
+    <lastmod>2019-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/fun/</loc>
+    <lastmod>2019-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/making-memes-in-r/</loc>
+    <lastmod>2019-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/apa-figures/</loc>
+    <lastmod>2019-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/blogdown/</loc>
+    <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/newposttest/</loc>
+    <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/anova/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/anova-options/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/contact/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
@@ -119,15 +382,121 @@
     <loc>https://jennyrichmond.netlify.app/form/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/just-three-things/</loc>
+    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jennyrichmond.netlify.app/elements/</loc>
     <lastmod>2019-02-18T12:27:33-06:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/infinite-moon-reader/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/how-to-add-a-gif/</loc>
+    <lastmod>2018-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/filepaths/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/how-to-use-the-here-package/</loc>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/counting/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/things-i-googled-this-week/</loc>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/lmm/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/writing-lmm/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/let-me-count-the-ways/</loc>
+    <lastmod>2018-09-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/where-is-here/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/next-up-anova/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/more-wrangling-tips/</loc>
+    <lastmod>2018-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/testing-out-t-tests/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/ttest/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/using-r-for-analysis/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/base/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/creating-data-using-rep/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/simulation/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/use-map-to-read-many-csv-files/</loc>
+    <lastmod>2018-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/i-don-t-like-cats-much/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/lesser-known-stars-of-the-tidyverse/</loc>
+    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/tidyverse/</loc>
+    <lastmod>2018-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/datawrangling/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/dirty-data/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/tidyverse/</loc>
+    <lastmod>2018-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/hotkeys/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/shortcuts/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/shortcuts/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/cooking-with-datapasta/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/datapasta/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/categories/datapasta/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/emg/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/blog/calculating-age/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/tags/lubridate/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jennyrichmond.netlify.app/quick/</loc>
+    <priority>0</priority>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/about/</loc>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/contributors/</loc>
   </url><url>
     <loc>https://jennyrichmond.netlify.app/license/</loc>
-  </url><url>
-    <loc>https://jennyrichmond.netlify.app/series/</loc>
   </url>
 </urlset>

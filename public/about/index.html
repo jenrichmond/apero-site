@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.84.0" />
-<title>About | Hugo Apéro</title>
+<title>About me | Hugo Apéro</title>
 
 
 <meta property="twitter:site" content="@jenrichmondPhD">
@@ -24,13 +24,13 @@
   
     
   
-<meta name="description" content="A website template for Hugo developed by RStudio &amp; Formspree and available for free.
+<meta name="description" content="About Jen Richmond.
 ">
 
 
 <meta property="og:site_name" content="Hugo Apéro">
-<meta property="og:title" content="About | Hugo Apéro">
-<meta property="og:description" content="A website template for Hugo developed by RStudio &amp; Formspree and available for free.
+<meta property="og:title" content="About me | Hugo Apéro">
+<meta property="og:description" content="About Jen Richmond.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jennyrichmond.netlify.app/about/" />
@@ -44,8 +44,8 @@
         <meta property="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://jennyrichmond.netlify.app/img/papillons.jpg" >
     
-  <meta itemprop="name" content="About">
-<meta itemprop="description" content="A website template for Hugo developed by RStudio &amp; Formspree and available for free.
+  <meta itemprop="name" content="About me">
+<meta itemprop="description" content="About Jen Richmond.
 ">
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -92,6 +92,11 @@
         
       <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
       
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/quick/" title="Find things fast">Links</a>
+      
       
     </div>
   </nav>
@@ -109,7 +114,7 @@
       <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">Hi, my name is Jen Richmond.</h1>
       
         <div class="pt2 f4 measure-wide lh-copy dib"><!-- this is a subheadline -->
-<p>I am a developmental psychologist by training and have been teaching myself (and others) R for a few years now. I am a co-founder of R-Ladies Sydney and developer of #RYouWithMe. This is my place to keep the R things I can&rsquo;t remember how to do. This site makes my R googling faster! I hope it is useful to you too. <code>r emo::ji(&quot;smile&quot;)</code></div>
+<p>I am a developmental psychologist by training and have been teaching myself (and others) R for a few years now. I am a co-founder of R-Ladies Sydney and developer of #RYouWithMe. This is my place to keep notes about R things I am learning. This site makes my R googling faster! I hope it is useful to you too. :simple_smile:</div>
       
       </header>
     
@@ -125,13 +130,7 @@
         <div class="order-2 mr4-l order-1-l w-two-thirds-l w-100-ns pt5">
           
             
-              <h2 class="about-main f2 fw7 tl">Why apéro?</h2>
-            
           
-          
-            <div class="pv3 f4 measure lh-copy dib"><p>Apéro is a unique kind of casual get-together in French culture, when you gather with friends and get to know each other better over some apéritifs, snacks, and anything in between. A good apéro is one where you&rsquo;d happily spend a few hours just hanging out.</p>
-<p>I hope this theme helps you create your own virtual apéro. A place where you and your site&rsquo;s visitors enjoy spending time, and one that helps folks get to know you better.</p>
-</div>
           
           <section class="featured-content">
  
@@ -149,7 +148,7 @@
   
   
   <article class="pb1 pb2-ns">
-    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/2021-11-11-spark-joy/" class="dim no-underline">spark joy</a></h4>
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/" class="dim no-underline">colours that R knows</a></h4>
       <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
           <figure class="mr3 w-50 w-20-ns">
             
@@ -157,17 +156,68 @@
             
             
             
-            <a href="/blog/2021-11-11-spark-joy/">
+            <a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/">
               
-              <img src="https://jennyrichmond.netlify.app/blog/2021-11-11-spark-joy/featured.jpeg" align="left" class="mw-100 db">
+              <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/featured.png" align="left" class="mw-100 db">
             
             </a>
           </figure>
 
         <div class="w-100 w-80-ns pl3-ns">
       
-      <p class="measure lh-copy cf">Working out how to Marie Kondo my blogdown workflow with categories and tags</p>
-          <a href="/blog/2021-11-11-spark-joy/">Read more</a></p>
+      <p class="measure lh-copy cf">I have been working through the ggplot R Advent calendar by Kiirsti Owen with some lovely RLadies friends and we got up to Day 15 where we started controlling colours in ggplot with scale_fill_manual(). Our immediate question was “how to you know what the names of the colours that R knows are?”
+This is a “I don’t have to google” post about finding the colours that R knows about.
+trees %&gt;% ggplot(aes(x=type, y=height))+ geom_boxplot(aes(fill=type), colour=&quot;black&quot;)+ theme_classic()+ scale_fill_manual(values=c(&quot;darkgreen&quot;, &quot;firebrick2&quot;, &quot;mediumseagreen&quot;)) You can have R list the names of all the colours it knows (there are 657 of them) using the colours() function, but that is not so useful if you want to see the difference between hotpink1 and hotpink2.</p>
+          <a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/">Read more</a></p>
+        </div>
+    </article>
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/" class="dim no-underline">how to subset strings</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/">
+              
+              <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/featured.jpeg" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">Sometimes you have a column in your data frame that is text, but there is some of it that you don’t need. Lets say your data looks like this…
+df &lt;- data.frame(animals = c(&quot;this is a bear&quot;, &quot;this is a lion&quot;, &quot;this is a tiger&quot;)) df ## animals ## 1 this is a bear ## 2 this is a lion ## 3 this is a tiger And perhaps only want the animal names… you can use sub_str() from the stringr package to strip out the extra characters.</p>
+          <a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/">Read more</a></p>
+        </div>
+    </article>
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/2022-09-28-git-hints/" class="dim no-underline">git hints</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/blog/2022-09-28-git-hints/">
+              
+              <img src="https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/featured.png" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">I am getting pretty good at avoiding git merge conflicts by always remembering to pull before I push when using github. But the terminal in RStudio has been giving me this hint for a while and I have been ignoring it.
+I think this hint is trying to help me but I don’t know what rebase or fast-forward means… to google…
+This post suggests that I should only use git pull -ff, going as far as setting -ff as a global config setting.</p>
+          <a href="/blog/2022-09-28-git-hints/">Read more</a></p>
         </div>
     </article>
    
@@ -209,6 +259,54 @@ Start with Basic Basics here.</p>
           <a href="/project/2021-10-03-ryouwithme/">Read more</a></p>
         </div>
     </article>
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/project/2021-10-03-psyc3361-internship/" class="dim no-underline">PSYC3361 internship</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/project/2021-10-03-psyc3361-internship/">
+              
+              <img src="https://jennyrichmond.netlify.app/project/2021-10-03-psyc3361-internship/featured.jpeg" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">My favourite course is PSYC3361: Research internship. In recent years, we have gone all in on R and computational reproducibility.
+You can check out the course site (made with Distill) at <a href="https://internship3361.netlify.app/">https://internship3361.netlify.app/</a>.</p>
+          <a href="/project/2021-10-03-psyc3361-internship/">Read more</a></p>
+        </div>
+    </article>
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/project/2021-10-03-i-am-learning-r/" class="dim no-underline">I Am Learning R</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/project/2021-10-03-i-am-learning-r/">
+              
+              <img src="https://jennyrichmond.netlify.app/project/2021-10-03-i-am-learning-r/featured.jpg" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">Students often ask me what the best resources for learning R are… #RYouWithMe is a great start…
+…but I have another Distill site that showcases some of my other favourites at iamlearningr.netlify.app</p>
+          <a href="/project/2021-10-03-i-am-learning-r/">Read more</a></p>
+        </div>
+    </article>
    
 
   
@@ -224,6 +322,52 @@ Start with Basic Basics here.</p>
 
   
   
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/talk/reviewerhat/" class="dim no-underline">Put your reviewer hat on</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/talk/reviewerhat/">
+              
+              <img src="https://jennyrichmond.netlify.app/talk/reviewerhat/featured.jpeg" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">Here is a talk I gave for UNSW Psychology Honours about how revising their writing with the reviewer in mind.</p>
+          <a href="/talk/reviewerhat/">Read more</a></p>
+        </div>
+    </article>
+  
+  <article class="pb1 pb2-ns">
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/talk/art/" class="dim no-underline">The Art of General Discussion Writing</a></h4>
+      <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
+          <figure class="mr3 w-50 w-20-ns">
+            
+            
+            
+            
+            
+            <a href="/talk/art/">
+              
+              <img src="https://jennyrichmond.netlify.app/talk/art/featured.jpeg" align="left" class="mw-100 db">
+            
+            </a>
+          </figure>
+
+        <div class="w-100 w-80-ns pl3-ns">
+      
+      <p class="measure lh-copy cf">Here is a talk I gave for UNSW Honours students about writing their honours general discussion.</p>
+          <a href="/talk/art/">Read more</a></p>
+        </div>
+    </article>
   
   <article class="pb1 pb2-ns">
     <h4 class="f4 mt3 mb2 lh-title"><a href="/talk/polish/" class="dim no-underline">Polish your thesis</a></h4>
@@ -243,7 +387,7 @@ Start with Basic Basics here.</p>
 
         <div class="w-100 w-80-ns pl3-ns">
       
-      <p class="measure lh-copy cf">Here is a talk I gave for UNSW Honour students about how to polish your thesis so that it will make your marker smile.</p>
+      <p class="measure lh-copy cf">Here is a talk I gave for UNSW Honours students about how to polish your thesis so that it will make your marker smile.</p>
           <a href="/talk/polish/">Read more</a></p>
         </div>
     </article>
@@ -261,11 +405,25 @@ Start with Basic Basics here.</p>
   <article class="bb pb5">
   <h5 class="f4 mv4 ttu tracked lh-title bt pv3">Featured categories</h5>
   
-      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/workshop/">workshop (4)</a>
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/datawrangling/">datawrangling (7)</a>
   
-      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/r/">R (2)</a>
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/dplyr/">dplyr (7)</a>
   
-      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/writing/">writing (2)</a>
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/stats/">stats (7)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/workflow/">workflow (7)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/ggplot/">ggplot (6)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/rmd/">Rmd (6)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/workshop/">workshop (6)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/writing/">writing (5)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/github/">github (4)</a>
+  
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/lubridate/">lubridate (4)</a>
   
   </article>
 
@@ -287,8 +445,8 @@ Start with Basic Basics here.</p>
                 <img src="/about/sidebar/avatar.jpg" class="h4 w4 dib br3" alt="avatar">
               
             
-            <h2 class="f-subheadline f4-ns fw6">Hugo Apéro</h2>
-            <h5 class="f-subheadline f4 fw2 ttu tracked">A Hugo theme</h5>
+            <h2 class="f-subheadline f4-ns fw6">Jen Richmond</h2>
+            <h5 class="f-subheadline f4 fw2 ttu tracked">A/Prof UNSW Psychology</h5>
             
               <div class="site-social-links db v-mid pv2">
               <div class="social-icon-links" aria-hidden="true">
@@ -359,31 +517,21 @@ Start with Basic Basics here.</p>
             </div>
 
             
-            
-            <div class="pa1 pa2-ns tc ph4">
-                <p class="fw2 pb1">How to say my name</p>
-                <p>
-                
-                <audio src="/about/sidebar/audio.m4a" controls></audio>
-                
-                </p>
-            </div>
-            
 
           <div class="pa1 pa2-ns tc ph4">
-            <h5 class="f-subheadline f4 fw2 ttu tracked">Interests</h5>
+            <h5 class="f-subheadline f4 fw2 ttu tracked">Useful links</h5>
             <ul class="list measure center ph4 pb4">
             
               <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
-                <a href="https://en.wikipedia.org/wiki/Paris" target="_blank">Paris</a>
+                <a href="https://iamlearningr.netlify.app/" target="_blank">I am learning R</a>
               </li>
             
               <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
-                <a href="https://en.wikipedia.org/wiki/Pastry" target="_blank">Pastries</a>
+                <a href="https://rladiessydney.org/courses/ryouwithme/" target="_blank"></a>
               </li>
             
               <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
-                <a href="https://en.wikipedia.org/wiki/People" target="_blank">People</a>
+                <a href="https://internship3361.netlify.app/" target="_blank">PSYC3361</a>
               </li>
             
             </ul>
@@ -398,7 +546,7 @@ Start with Basic Basics here.</p>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2021
+      &copy; 2023
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

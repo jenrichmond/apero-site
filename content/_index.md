@@ -17,9 +17,6 @@ text_align_left: false
 
 type: home
 
-<script async src="https://cse.google.com/cse.js?cx=e19649f8e01ca4946">
-</script>
-<div class="gcse-search"></div>
 ---
 
 ** index doesn't contain a body, just front matter above.

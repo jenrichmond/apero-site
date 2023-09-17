@@ -13,7 +13,7 @@ intro: |
 
 show_outro: true
 outro: |
-  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://www.buymeacoffee.com/jenrichm9)!
+  If you are looking for a blogpost about something specific, try this search box! Good luck!
       <script async src="https://cse.google.com/cse.js?cx=e19649f8e01ca4946"></script>
       <div class="gcse-search"></div>
 ---

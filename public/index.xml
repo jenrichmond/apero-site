@@ -6,7 +6,7 @@
     <description>Recent content in Jen Richmond on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://jennyrichmond.netlify.app/collection/day02/01-netlify/</link>
@@ -91,6 +91,46 @@ My content section is: collection  My layout is: single-series   part 2!     doe
       <guid>https://jennyrichmond.netlify.app/about/about-me/</guid>
       <description>I am originally from Atlanta, Georgia, and am a proud ramblin&#39; wreck from Georgia Tech. I received my PhD in psychology and quantitative methods from Vanderbilt University in 2008. Prior to joining RStudio, I was an Assistant Professor at Arizona State University, and an Associate Professor at Oregon Health &amp;amp; Science University (OHSU). At OHSU, I was an NIH-funded Principal Investigator and an Assistant Center Director.
 My research focused on health-related applications of Natural Language Processing-based methods, and was funded by the National Institutes of Health, the Oregon Clinical and Translational Research Institute, and Autism Speaks.</description>
+    </item>
+    
+    <item>
+      <title>learning python outloud</title>
+      <link>https://jennyrichmond.netlify.app/blog/2024-07-04-learning-python-outloud/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2024-07-04-learning-python-outloud/</guid>
+      <description>When you are exploring a far off land and only know a tiny bit of the language they speak there, you ALWAYS carry a little dictionary with commonly used phrases translated from the language you speak into the other language. It is important to know how to ask someone where the toilets are while you are travelling!
+I have just started learning Python with Posit Academy in the lead up to #positconf2024 and I am trying to approach in the same way I would if I was learning French.</description>
+    </item>
+    
+    <item>
+      <title>rowwise %&gt;% mean</title>
+      <link>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-05-24-rowwise-mean/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-05-24-rowwise-mean/</guid>
+      <description>When you have data from a survey, the responses for each item are most often listed in different variables. Generally you have to average across the items to get a mean value for that scale for each participant. But dealing with calculations across rows is sometimes difficult in R.
+load packages + make some data     library(tidyverse) pID &amp;lt;- c(&amp;#34;p1&amp;#34;, &amp;#34;p2&amp;#34;, &amp;#34;p3&amp;#34;, &amp;#34;p4&amp;#34;, &amp;#34;p5&amp;#34;, &amp;#34;p6&amp;#34;) item1 = sample(1:7, 6, replace=T) item2 = sample(1:7, 6, replace=T) item3 = sample(1:7, 6, replace=T) item4 = sample(1:7, 6, replace=T) item5 = sample(1:7, 6, replace=T) survey &amp;lt;- data.</description>
+    </item>
+    
+    <item>
+      <title>error bars on plots</title>
+      <link>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-04-25-error-bars-on-plots/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-04-25-error-bars-on-plots/</guid>
+      <description>Repurposing this APA figures post as a IDHTG post.
+As I write my first paper reporting data analysis coming out of R (woot!!!), here are some notes summarising all the googling I have done this morning about how to produce APA style figures in ggplot.
+ Load libraries     Start by loading tidyverse to get ggplot, here to make finding the data easy, and papaja to get the theme_apa() function.</description>
+    </item>
+    
+    <item>
+      <title>how to do t-tests</title>
+      <link>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-04-25-move-test/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2023-04-25-move-test/</guid>
+      <description>I was trying to work out how to do t-tests using my own data and the lsr package but ended up working with Dani&amp;rsquo;s AFL data from her book while trying to work out why R insisted that my outcome variable wasn&amp;rsquo;t numeric (it definitely was). Turns out that the lsr package doesn&amp;rsquo;t deal well with tibbles (which are created by default when you use read_csv to get your data) but if you use read.</description>
     </item>
     
     <item>

@@ -6,7 +6,17 @@
     <description>Recent content in R Notes to Myself on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jennyrichmond.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>learning python outloud</title>
+      <link>https://jennyrichmond.netlify.app/blog/2024-07-04-learning-python-outloud/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://jennyrichmond.netlify.app/blog/2024-07-04-learning-python-outloud/</guid>
+      <description>When you are exploring a far off land and only know a tiny bit of the language they speak there, you ALWAYS carry a little dictionary with commonly used phrases translated from the language you speak into the other language. It is important to know how to ask someone where the toilets are while you are travelling!
+I have just started learning Python with Posit Academy in the lead up to #positconf2024 and I am trying to approach in the same way I would if I was learning French.</description>
+    </item>
+    
     <item>
       <title>git hints</title>
       <link>https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/</link>

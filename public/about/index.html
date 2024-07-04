@@ -114,7 +114,7 @@
       <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">Hi, my name is Jen Richmond.</h1>
       
         <div class="pt2 f4 measure-wide lh-copy dib"><!-- this is a subheadline -->
-<p>I am a developmental psychologist by training and have been teaching myself (and others) R for a few years now. I am a co-founder of R-Ladies Sydney and developer of #RYouWithMe. This is my place to keep notes about R things I am learning. This site makes my R googling faster! I hope it is useful to you too. :simple_smile:</div>
+<p>I am a developmental psychologist by training and have been teaching myself (and others) R for a few years now. I am a co-founder of R-Ladies Sydney and developer of #RYouWithMe. This is my place to keep notes about R things I am learning. This site makes my R googling faster! I hope it is useful to you too.</div>
       
       </header>
     
@@ -132,6 +132,10 @@
             
           
           
+            <div class="pv3 f4 measure lh-copy dib">If you are looking for a blogpost about something specific, try this search box! Good luck!
+<script async src="https://cse.google.com/cse.js?cx=e19649f8e01ca4946"></script>
+<div class="gcse-search"></div></div>
+          
           <section class="featured-content">
  
 
@@ -148,7 +152,7 @@
   
   
   <article class="pb1 pb2-ns">
-    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/" class="dim no-underline">colours that R knows</a></h4>
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/2024-07-04-learning-python-outloud/" class="dim no-underline">learning python outloud</a></h4>
       <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
           <figure class="mr3 w-50 w-20-ns">
             
@@ -156,24 +160,23 @@
             
             
             
-            <a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/">
+            <a href="/blog/2024-07-04-learning-python-outloud/">
               
-              <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/featured.png" align="left" class="mw-100 db">
+              <img src="https://jennyrichmond.netlify.app/blog/2024-07-04-learning-python-outloud/featured.png" align="left" class="mw-100 db">
             
             </a>
           </figure>
 
         <div class="w-100 w-80-ns pl3-ns">
       
-      <p class="measure lh-copy cf">I have been working through the ggplot R Advent calendar by Kiirsti Owen with some lovely RLadies friends and we got up to Day 15 where we started controlling colours in ggplot with scale_fill_manual(). Our immediate question was “how to you know what the names of the colours that R knows are?”
-This is a “I don’t have to google” post about finding the colours that R knows about.
-trees %&gt;% ggplot(aes(x=type, y=height))+ geom_boxplot(aes(fill=type), colour=&quot;black&quot;)+ theme_classic()+ scale_fill_manual(values=c(&quot;darkgreen&quot;, &quot;firebrick2&quot;, &quot;mediumseagreen&quot;)) You can have R list the names of all the colours it knows (there are 657 of them) using the colours() function, but that is not so useful if you want to see the difference between hotpink1 and hotpink2.</p>
-          <a href="/blog/i-dont-have-to-google-series/2022-12-15-colours-that-r-knows/">Read more</a></p>
+      <p class="measure lh-copy cf">When you are exploring a far off land and only know a tiny bit of the language they speak there, you ALWAYS carry a little dictionary with commonly used phrases translated from the language you speak into the other language. It is important to know how to ask someone where the toilets are while you are travelling!
+I have just started learning Python with Posit Academy in the lead up to #positconf2024 and I am trying to approach in the same way I would if I was learning French.</p>
+          <a href="/blog/2024-07-04-learning-python-outloud/">Read more</a></p>
         </div>
     </article>
   
   <article class="pb1 pb2-ns">
-    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/" class="dim no-underline">how to subset strings</a></h4>
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2023-05-24-rowwise-mean/" class="dim no-underline">rowwise %&gt;% mean</a></h4>
       <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
           <figure class="mr3 w-50 w-20-ns">
             
@@ -181,23 +184,21 @@ trees %&gt;% ggplot(aes(x=type, y=height))+ geom_boxplot(aes(fill=type), colour=
             
             
             
-            <a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/">
+            <a href="/blog/i-dont-have-to-google-series/2023-05-24-rowwise-mean/">
               
-              <img src="https://jennyrichmond.netlify.app/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/featured.jpeg" align="left" class="mw-100 db">
-            
             </a>
           </figure>
 
         <div class="w-100 w-80-ns pl3-ns">
       
-      <p class="measure lh-copy cf">Sometimes you have a column in your data frame that is text, but there is some of it that you don’t need. Lets say your data looks like this…
-df &lt;- data.frame(animals = c(&quot;this is a bear&quot;, &quot;this is a lion&quot;, &quot;this is a tiger&quot;)) df ## animals ## 1 this is a bear ## 2 this is a lion ## 3 this is a tiger And perhaps only want the animal names… you can use sub_str() from the stringr package to strip out the extra characters.</p>
-          <a href="/blog/i-dont-have-to-google-series/2022-09-29-string-stuff/">Read more</a></p>
+      <p class="measure lh-copy cf">When you have data from a survey, the responses for each item are most often listed in different variables. Generally you have to average across the items to get a mean value for that scale for each participant. But dealing with calculations across rows is sometimes difficult in R.
+load packages + make some data     library(tidyverse) pID &lt;- c(&quot;p1&quot;, &quot;p2&quot;, &quot;p3&quot;, &quot;p4&quot;, &quot;p5&quot;, &quot;p6&quot;) item1 = sample(1:7, 6, replace=T) item2 = sample(1:7, 6, replace=T) item3 = sample(1:7, 6, replace=T) item4 = sample(1:7, 6, replace=T) item5 = sample(1:7, 6, replace=T) survey &lt;- data.</p>
+          <a href="/blog/i-dont-have-to-google-series/2023-05-24-rowwise-mean/">Read more</a></p>
         </div>
     </article>
   
   <article class="pb1 pb2-ns">
-    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/2022-09-28-git-hints/" class="dim no-underline">git hints</a></h4>
+    <h4 class="f4 mt3 mb2 lh-title"><a href="/blog/i-dont-have-to-google-series/2023-04-25-move-test/" class="dim no-underline">how to do t-tests</a></h4>
       <div class="flex flex-column flex-row-ns mb2 mb3-l items-center">
           <figure class="mr3 w-50 w-20-ns">
             
@@ -205,19 +206,15 @@ df &lt;- data.frame(animals = c(&quot;this is a bear&quot;, &quot;this is a lion
             
             
             
-            <a href="/blog/2022-09-28-git-hints/">
+            <a href="/blog/i-dont-have-to-google-series/2023-04-25-move-test/">
               
-              <img src="https://jennyrichmond.netlify.app/blog/2022-09-28-git-hints/featured.png" align="left" class="mw-100 db">
-            
             </a>
           </figure>
 
         <div class="w-100 w-80-ns pl3-ns">
       
-      <p class="measure lh-copy cf">I am getting pretty good at avoiding git merge conflicts by always remembering to pull before I push when using github. But the terminal in RStudio has been giving me this hint for a while and I have been ignoring it.
-I think this hint is trying to help me but I don’t know what rebase or fast-forward means… to google…
-This post suggests that I should only use git pull -ff, going as far as setting -ff as a global config setting.</p>
-          <a href="/blog/2022-09-28-git-hints/">Read more</a></p>
+      <p class="measure lh-copy cf">I was trying to work out how to do t-tests using my own data and the lsr package but ended up working with Dani’s AFL data from her book while trying to work out why R insisted that my outcome variable wasn’t numeric (it definitely was). Turns out that the lsr package doesn’t deal well with tibbles (which are created by default when you use read_csv to get your data) but if you use read.</p>
+          <a href="/blog/i-dont-have-to-google-series/2023-04-25-move-test/">Read more</a></p>
         </div>
     </article>
    
@@ -402,7 +399,7 @@ You can check out the course site (made with Distill) at <a href="https://intern
 
 
 
-  <article class="bb pb5">
+  <article>
   <h5 class="f4 mv4 ttu tracked lh-title bt pv3">Featured categories</h5>
   
       <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="/categories/datawrangling/">datawrangling (7)</a>
@@ -428,8 +425,6 @@ You can check out the course site (made with Distill) at <a href="https://intern
   </article>
 
 </section>
-          
-            <div class="pt3 measure-wide lh-copy cf"><i class="fas fa-glass-cheers pr2"></i>Sincere thanks to <a href="https://masalmon.eu/">Maëlle Salmon</a> for her help naming this Hugo theme!</div>
           
         </div> 
         
@@ -546,7 +541,7 @@ You can check out the course site (made with Distill) at <a href="https://intern
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2023
+      &copy; 2024
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

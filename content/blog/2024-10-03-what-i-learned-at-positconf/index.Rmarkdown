@@ -1,6 +1,7 @@
 
 ---
-title: what i learned at positconf author
+
+title: what i learned at positconf
 author: Jen Richmond
 slug: []
 categories: []
